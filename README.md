@@ -6,7 +6,10 @@ Tested on Ubuntu 22.04 and Windows Server 2022.
 
 ## Install 
 
-Install Duckdb from
+On Linux install Duckdb from
+https://github.com/duckdb/duckdb/releases/download/v1.2.0/duckdb_cli-linux-amd64.zip
+
+On Windows install Duckdb from
 https://github.com/duckdb/duckdb/releases/download/v1.2.0/duckdb_cli-windows-amd64.zip
 
 In Windows it requires installation of the Microsoft Visual C++ Redistributable, from
