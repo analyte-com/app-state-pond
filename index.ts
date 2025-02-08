@@ -26,3 +26,12 @@ async function run() {
 
 run()
   .catch((err) => (console.log("Run ", err)));
+  
+/*
+const duckdb = require('duckdb');
+const db = new duckdb.Database(':memory:');
+db.all('SELECT 42 AS answer', (err, res) => {
+    if (err) throw err;
+    console.log(res);
+});
+*/
