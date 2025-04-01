@@ -18,11 +18,11 @@ async function open(dbname: string): Promise<any | null> {
     dbname = dbname || './temp.db';
     const db = await DuckDBInstance.create(dbname); 
     const dbx = await db.connect();
-    logger.info(`Open Duckdb '${dbname}':`, JSON.stringify(dbx));
+    logger.info(`duckdb open db '${dbname}':`, JSON.stringify(dbx));
     return dbx;
   }
   catch (err) {
-    logger.fatal(`Open Duckdb '${dbname}':`, err);
+    logger.fatal(`duckdb open db '${dbname}':`, err);
     return null;
   }
 }
@@ -36,12 +36,12 @@ async function exec(dbx: any, stmt: string) {
   stmt = cleanup(stmt);
   try {
     logger.level(logLevel);
-    logger.timer(`Exec: ${stmt}`);
+    logger.timer(`duckdb exec stmt= ${stmt}`);
     const done = await dbx.run(stmt);
-    logger.elapsed(`Done: `, JSON.stringify(done));
+    logger.elapsed(`duckdb exec done= `, JSON.stringify(done));
   }
   catch (err) {
-    logger.error(`Exec: `, err);
+    logger.error(`duckdb exec `, err);
     return;
   }
 }
@@ -62,14 +62,14 @@ async function query(
   stmt = cleanup(stmt);
   try {
     logger.level(logLevel);
-    logger.timer(`Query: ${stmt}`);
+    logger.timer(`duckdb query stmt= ${stmt}`);
     const reader = await dbx.runAndReadAll(stmt);
     const rows = reader.getRows();
     
     const n = rows.length;
-    logger.elapsed(`Done: ${n} rows`);
-    logger.debug(`Row 0: `, rows[0]);
-    logger.debug(`Row ${n-1}:`, rows[n-1]);
+    logger.elapsed(`duckdb query done= ${n} rows`);
+    logger.debug(`duckdb query row 0: `, rows[0]);
+    logger.debug(`duckdb query row ${n-1}:`, rows[n-1]);
 
     // run the callback on each row
     // console.log(onEach);
@@ -78,7 +78,7 @@ async function query(
     return rows;
   }
   catch (err) {
-    logger.error(`Query: `, err);
+    logger.error(`duckdb query `, err);
     return [];
   }
 }

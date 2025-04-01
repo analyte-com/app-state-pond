@@ -1,37 +1,67 @@
 import { open, exec, query} from './src/ducky.ts';
+import { connectRdb } from "./src/connect-mssql.ts";
+import { copyTo } from "./src/copyto"; 
+import { logger, LogLevel } from '@mazito/logger';
+
+logger.level(LogLevel.DEBUG);
+
+const env = process.env;
 
 async function run() {
-  let dbx = await open(`${process.env.POND_DB}`);
+  // Open the Duckdb db
+  let pond = await open(`${env.POND_DB}`);
 
-  await exec(dbx, 
-    `DROP TABLE IF EXISTS tarmue`
-  );
-  
-  await exec(dbx, 
-    `CREATE TABLE tarmue AS 
-      SELECT * 
-      FROM read_csv('${process.env.POND_IMPORTS}/TARMUE.txt')`
-  );
-  
-  await query(dbx, 
-    `SELECT 
-      concat(idmue), concat(idtarmue), concat(idtarraiz,':',idtar), 
-      cotitar, nomtar2, valor, stsval, ststar
-    FROM tarmue 
-    WHERE valor <> 'NULL'
-    ORDER BY idmue, idtarmue`,
-    // (r: any) => console.log(r) // optional onEach row callback
-  )  
-}
+  // Connect to the MSSQL database
+  const rdb = await connectRdb(env);
 
-run()
-  .catch((err) => (console.log("Run ", err)));
-  
-/*
-const duckdb = require('duckdb');
-const db = new duckdb.Database(':memory:');
-db.all('SELECT 42 AS answer', (err, res) => {
-    if (err) throw err;
-    console.log(res);
+  await copyTo(pond, 'vclients', rdb, `select 
+      IDCLI as id,
+      CODIGOCLI as code,
+      DESCCLI as description
+      from CLIENTE
+  `);
+
+  await copyTo(pond, 'vdepartments', rdb, `select 
+      IDDEPTO as id
+      ,DESCDEPTO as description
+      ,PLANTA as facility
+      ,-1 as clientId 
+      from DEPARTAMENTO
+  `);    
+
+  await copyTo(pond, 'vmaterials', rdb, `select 
+      ma.IDMAT as id
+      , ma.CODIGO as code
+      ,ma.DESCMAT as description
+      ,ma.COTIMAT as typeCode
+      ,co.DESCRIPCION as type
+      ,CASE ma.[REQUIERE_LOTE]
+          WHEN 'S' THEN CAST(1 AS BIT)
+          ELSE CAST(0 AS BIT)
+      END as batchRequired
+      ,CASE ma.[REQUIERE_REF]
+          WHEN 'S' THEN CAST(1 AS BIT)
+          ELSE CAST(0 AS BIT)
+      END as batchRefRequired
+      ,ma.[MASCARA_LOTE] batchMask
+      ,ma.[MASCARA_REF] batchRefMask
+      from MATERIAL ma, CODIGO co
+      where ma.COTIMAT = co.CODIGO and co.TIPO = 'TIMAT'
+  `);    
+
+  await copyTo(pond, 'vpoints', rdb, `select 
+      p.IDGRU as id
+      ,p.TAG as code
+      ,p.TAG as description
+      ,p.IDDEPTO as departmentId
+      ,p.COTIPTOMUE as type
+      from PTO_MUE p
+  `);    
+
+  // Close the connection
+  await rdb?.close();
+};
+
+run().catch((error) => {
+  logger.error("Error copying from MSSQL", error);
 });
-*/

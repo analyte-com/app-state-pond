@@ -1,0 +1,101 @@
+id|description|facility|clientId
+-1|Muestras Externas|Muetras externas|-1
+1|Abastecimientos|Abastecimientos|-1
+2|Almacenes Recepcion|Almacenes|-1
+3|Almacenes Administracion|Almacenes|-1
+4|Arpol Polimerizacion|Arpol/Arnipol|-1
+5|Arpol/Arnipol Terminado|Arpol/Arnipol|-1
+6|Arnipol Polimerizacion|Arpol/Arnipol|-1
+7|Arpol/Arnipol Tks Monomeros|Arpol/Arnipol|-1
+8|Arpol/Arnipol Tks Latex|Arpol/Arnipol|-1
+9|Arpol/Arnipol Area Efluentes|Arpol/Arnipol|-1
+10|Aseguramiento de la Calidad|Aseg. de la Calidad|-1
+11|Butadieno Gas Inerte|Reforma Derivados|-1
+12|Butadieno LPG|Reforma Derivados|-1
+13|Butadieno Hexano|Reforma Derivados|-1
+14|Butadieno Propelente|Reforma Derivados|-1
+15|Butadieno Area Tanques|Reforma Derivados|-1
+16|Butadieno Area Efluentes|Reforma Derivados|-1
+17|Etileno|EEE|-1
+18|Etileno Area de Tanques|EEE|-1
+19|EtilBenceno|EEE|-1
+20|Estireno|EEE|-1
+21|Estireno Area de Tanques|EEE|-1
+22|EEE Area Efluentes|EEE|-1
+23|Despachos Arpol/Arnipol|Arpol/Arnipol|-1
+24|Despachos Hidrocarburos|Despachos|-1
+33|Laboratorio de Asistencia Tecnica a Clientes|Laboratorio|-1
+34|Mantenimiento, Asistencia a ...|Mantenimiento|-1
+35|Mantenimiento|Mantenimiento|-1
+41|Reforma A 100|Reforma|-1
+42|Reforma A 200|Reforma|-1
+43|Reforma A 300|Reforma|-1
+44|Reforma A 500|Reforma|-1
+45|Reforma A 700|Reforma|-1
+46|Reforma Area Efluentes|Reforma|-1
+47|Seguridad e Higiene Industrial|Seguridad|-1
+48|Usina Servicios Auxiliares|Usina|-1
+49|Usina P.L. Despacho de Camiones|Usina|-1
+50|Usina P.L. Exp/Imp de Muelle|Usina|-1
+51|Usina Area Efluentes|Usina|-1
+52|Complejo Area Medio Ambiente|Medio Ambiente|-1
+53|G.Comercial Elast½meros|Gerencia Comercial|-1
+55|G.Planta|Gerencia de Planta|-1
+56|Almacenaje de sal|Arpol/Arnipol|-1
+57|Land Farming|Medio Ambiente|-1
+58|Area Torres despojadoras|Arpol/Arnipol|-1
+59|Arpol/Arnipol Sala de Control|Arpol/Arnipol|-1
+60|Butadieno Emisiones Fugitivas|Reforma Derivados|-1
+61|EEE Emisiones Fugitivas|EEE|-1
+62|Arpol/Arnipol Emisiones Fugitivas|Arpol/Arnipol|-1
+63|Usina Emisiones Fugitivas|Usina|-1
+64|Reforma Emisiones Fugitivas|Reforma|-1
+101|G.Comercial Hidrocarburos|Gerencia Comercial|-1
+102|Napa Freatica|Medio Ambiente|-1
+103|Muestras Internas|Medio Ambiente|-1
+104|Arpol/Arnipol Calidad de aire|Arpol/Arnipol|-1
+105|Butadieno Calidad de Aire|Reforma Derivados|-1
+106|EEE Calidad de aire|EEE|-1
+107|Reforma calidad de aire|Reforma|-1
+108|Usina Calidad de aire|Usina|-1
+111|Land Farming Calidad de aire|Medio Ambiente|-1
+112|Muestras Internas Calidad de aire|Medio Ambiente|-1
+113|Laboratorio Calidad de aire|Medio Ambiente|-1
+114|Laboratorio|Laboratorio|-1
+115|Reforma  Agua de Proceso|Reforma Derivados|-1
+116|EEE Agua de Proceso|EEE|-1
+117|Butadieno Agua de Proceso|Reforma Derivados|-1
+118|Usina  Agua de Proceso|Usina|-1
+120|Complejo San Lorenzo|SL San Lorenzo|-1
+121|Servicio Medico|Servicio Medico|-1
+122|SL Produccion Combustibles|SL San Lorenzo|-1
+123|SL Medio Ambiente|SL San Lorenzo|-1
+124|SL Laboratorio|SL San Lorenzo|-1
+125|SL Bombas y Movimientos|SL San Lorenzo|-1
+126|SL Comercial Hidrocarburos|SL San Lorenzo|-1
+127|SL Comercial Asfaltos|SL San Lorenzo|-1
+128|SL Higiene y Seguridad|SL San Lorenzo|-1
+129|SL Produccion Especialidades Asfalticas|SL San Lorenzo|-1
+131|SL Suministros|SL San Lorenzo|-1
+132|SL Servicio Medico|SL San Lorenzo|-1
+133|SL Estaciones de Servicio|SL San Lorenzo|-1
+134|Zarate Servicio Medico|Zarate|-1
+135|Despachos Emisiones Fugitivas|Despachos|-1
+136|SL Usina|SL San Lorenzo|-1
+137|SL Planta Fluvial|SL San Lorenzo|-1
+139|Arpol/Arnipol Muestras Propias|Arpol/Arnipol|-1
+140|Butadieno Muestras Propias|Reforma Derivados|-1
+141|EEE Muestras Propias|EEE|-1
+142|Reforma Muestras Propias|Reforma|-1
+143|Usina Muestras Propias|Usina|-1
+144|Complejo Area Medio Ambiente Muestras Propias|Medio Ambiente|-1
+145|SL Medio Ambiente Interno|SL San Lorenzo|-1
+146|SL Muestras Internas|SL San Lorenzo|-1
+147|Etileno SL|EEE|-1
+148|Etileno SL Area Efluentes|EEE|-1
+150|Etileno SL Calidad de Aire|EEE|-1
+151|Etileno SL Emisiones Fugitivas|EEE|-1
+152|Servicio Medico-Examen Periodico|Servicio Medico|-1
+159|Reforma A 800|Reforma|-1
+160|Despachos Calidad de Aire|Despachos|-1
+161|Despachos Muestras Propias|Despachos|-1

@@ -1,0 +1,3336 @@
+id|code|description|departmentId|type
+200|TERM. LINEA|TERM. LINEA|5|
+201|REACT. FINAL|REACT. FINAL|4|
+202|LAVADOR CAUST.ARPOL|LAVADOR CAUST.ARPOL|4|
+203|LAVADOR AGUA|LAVADOR AGUA|4|
+208|STY RECICLO|STY RECICLO|7|
+209|BUTADIENO RECICLO|BUTADIENO RECICLO|7|
+230|PTA. LINEA XIL.|PTA. LINEA XIL.|49|
+231|C.P. XILENO|C.P. XILENO|44|
+235|BENCENO, TK 529|BENCENO, TK 529|44|
+236|C.P. TOLUENO|C.P. TOLUENO|44|
+237|PTA. LINEA TOL.|PTA. LINEA TOL.|49|
+270|FILTRO SAL MUERA|FILTRO SAL MUERA|56|
+271|PIL. TRAT. DE SAL MUERA|PIL. TRAT. DE SAL MUERA|56|
+276|SOL.ACTIVADOR|SOL.ACTIVADOR|5|
+277|SOL.SHORSTOP|SOL.SHORSTOP|5|
+278|ANTIOX. MEZCLA|ANTIOX. MEZCLA|5|
+281|POTASA DIL.|POTASA DIL.|4|
+282|TK. BTD|TK. BTD|6|
+286|REACT. ARNIPOL|REACT. ARNIPOL|6|
+287|TORRE DESPOJ. NBR|TORRE DESPOJ. NBR|6|
+293|SOL.DE ACTIVADOR|SOL.DE ACTIVADOR|6|
+294|SOL.DE SHORSTOP|SOL.DE SHORSTOP|6|
+299|CIMA PREFRACC.|CIMA PREFRACC.|41|
+300|CIMA SPLITTER 0|CIMA SPLITTER 0|41|
+301|CIMA DESBUTA.REFORMA|CIMA DESBUTA.REFORMA|41|
+302|CIMA DESETA|CIMA DESETA|41|
+303|CIMA TORRE ESTABIL.|CIMA TORRE ESTABIL.|41|
+304|REFINADO|REFINADO|42|
+305|EXTRACTO|EXTRACTO|42|
+306|CIMA DESPOJ.SOLVENTE|CIMA DESPOJ.SOLVENTE|42|
+307|TORRE BZ|TORRE BZ|43|
+308|CIMA T. TOLUENO|CIMA T. TOLUENO|43|
+309|CARGA HDA|CARGA HDA|43|
+310|FDO.ESTABIL. A 300|FDO.ESTABIL. A 300|43|
+311|CIMA TOL-XIL|CIMA TOL-XIL|43|
+312|FDO.TOL-XIL|FDO.TOL-XIL|43|
+313|CIMA DILUYENTE|CIMA DILUYENTE|43|
+314|TOL. IMP.|TOL. IMP.|43|
+315|FDO.DILUYENTE|FDO.DILUYENTE|43|
+316|CIMA HIGH FLASH|CIMA HIGH FLASH|43|
+320|HIGH FLASH|HIGH FLASH|44|
+321|PTA. LINEA HIGH FLASH|PTA. LINEA HIGH FLASH|49|
+326|NAFTA COMUN|NAFTA COMUN|44|
+327|BASE OCTANICA|BASE OCTANICA|44|
+328|CORTE AROM.|CORTE AROM.|44|
+336|CIMA ETILBENCENO|CIMA ETILBENCENO|19|
+337|SEPARADOR D13-212|SEPARADOR D13-212|20|
+338|AGUA CALDERA D13-215|AGUA CALDERA D13-215|20|
+339|CIMA TORRE DESPROPA|CIMA TORRE DESPROPA|17|
+340|FDO. TORRE DESPROPA|FDO. TORRE DESPROPA|17|
+341|TETRALENE CAMION|TETRALENE CAMION|49|
+342|TAMBOR MEZCLA|TAMBOR MEZCLA|21|
+343|CARGA T. BENTOL|CARGA T. BENTOL|20|
+345|CIMA TORRE BENTOL|CIMA TORRE BENTOL|20|
+346|AGUA TAMB. T. BENTOL|AGUA TAMB. T. BENTOL|20|
+348|STY MEZCLA|STY MEZCLA|7|
+349|TK BTD|TK BTD|15|
+350|TK PROPEL. LOTE|TK PROPEL. LOTE|15|
+351|TK PROPEL. C.P.|TK PROPEL. C.P.|15|
+352|TAMB. STY DIARIO|TAMB. STY DIARIO|20|
+353|TK HEXANO C.P|TK HEXANO C.P|15|
+354|TK HEXANO LOTE|TK HEXANO LOTE|15|
+356|COLUMNAS STY|COLUMNAS STY|4|
+357|TK LATEX SBR|TK LATEX SBR|8|
+358|TK JABON KR|TK JABON KR|5|
+359|TK JABON DIL.|TK JABON DIL.|5|
+360|TK EMULS.ANTIOX.|TK EMULS.ANTIOX.|5|
+361|TK ACN DIL.|TK ACN DIL.|6|
+362|TK POTASA|TK POTASA|5|
+363|TK NAFTA DE CARGA|TK NAFTA DE CARGA|44|
+364|TK SOLV. PARAF.|TK SOLV. PARAF.|44|
+365|TK NAFTA PARAFINICA|TK NAFTA PARAFINICA|44|
+366|TK NAFTA VIRGEN INICIAL|TK NAFTA VIRGEN INICIAL|44|
+370|CIMA TORRE RECICLO|CIMA TORRE RECICLO|20|
+371|FDO. TORRE RECICLO|FDO. TORRE RECICLO|20|
+372|CIMA TORRE STY|CIMA TORRE STY|20|
+373|FDO T. FLASH|FDO T. FLASH|20|
+374|PIL. API 400|PIL. API 400|22|
+375|TORRE17D14-208|TORRE17D14-208|22|
+376|ETILENO DE CARGA|ETILENO DE CARGA|19|
+377|ALIMENT. TRANSALQ.(TM15)|ALIMENT. TRANSALQ.(TM15)|19|
+378|EFLUENTE TRANSALQUILADOR|EFLUENTE TRANSALQUILADOR|19|
+379|CIMA ALQUIL.(TM 7)|CIMA ALQUIL.(TM 7)|19|
+380|EFLUENTE TERMINADOR ( TM 9)|EFLUENTE TERMINADOR ( TM 9)|19|
+381|ALIMENT. BZ(BBA. 153)|ALIMENT. BZ(BBA. 153)|19|
+382|BZ FREZCO DE REFORMA|BZ FREZCO DE REFORMA|19|
+383|REFLUJO MEDIO (TM 4)|REFLUJO MEDIO (TM 4)|19|
+384|FDO. ALQUIL.(TM 2)|FDO. ALQUIL.(TM 2)|19|
+385|CIMA TORRE BZ (TM 17)|CIMA TORRE BZ (TM 17)|19|
+386|FDO. TORRE BZ(TM 16)|FDO. TORRE BZ(TM 16)|19|
+387|FDO. TORRE ETILBZ(TM 18)|FDO. TORRE ETILBZ(TM 18)|19|
+388|CIMA ETILBENCENO (TM 19)|CIMA ETILBENCENO (TM 19)|19|
+389|FDO. T. PEB (TM 25)|FDO. T. PEB (TM 25)|19|
+390|CIMA T. PEB|CIMA T. PEB|19|
+391|LECHOS CATALIZADOR (TM 3)|LECHOS CATALIZADOR (TM 3)|19|
+392|PUR.AGUA CONDENS.VENTEO|PUR.AGUA CONDENS.VENTEO|19|
+393|GAS VENTEO (TM 13)|GAS VENTEO (TM 13)|19|
+394|17D2-151 LADO CARCAZA|17D2-151 LADO CARCAZA|19|
+395|17D2-155 LADO CARCAZA|17D2-155 LADO CARCAZA|19|
+396|CARGA HORNOS 16D1-101|CARGA HORNOS 16D1-101|17|
+403|CIMA DESMETA|CIMA DESMETA|17|
+404|TORRE ETILENO|TORRE ETILENO|17|
+405|TK PROPANO|TK PROPANO|17|
+414|CARGA UHA|CARGA UHA|17|
+415|FDO. DESETA ETILENO|FDO. DESETA ETILENO|17|
+416|UHA SDA. 1RIO.|UHA SDA. 1RIO.|17|
+419|UHA SDA. 2RIO.|UHA SDA. 2RIO.|17|
+422|HIDROG. CARGA UHA|HIDROG. CARGA UHA|17|
+425|LAVADOR CAUST.NORTE|LAVADOR CAUST.NORTE|17|
+426|TK LATEX ACN|TK LATEX ACN|8|
+427|CIMA DESBUTA|CIMA DESBUTA|14|
+428|CARGA DESBUTA|CARGA DESBUTA|14|
+429|SDA. LAVADOR LPG|SDA. LAVADOR LPG|12|
+430|PROP.INICIAL DE CAMION|PROP.INICIAL DE CAMION|49|
+431|PROP. FINAL CAMION|PROP. FINAL CAMION|49|
+432|SALIDA UHR|SALIDA UHR|13|
+433|CIMA DESTIL. DE HEXANO|CIMA DESTIL. DE HEXANO|13|
+434|C.POSTFRACCIONADORA|C.POSTFRACCIONADORA|13|
+435|LPG (D9610)|LPG (D9610)|15|
+436|GAS INERTE|GAS INERTE|11|
+437|CIMA RERUM|CIMA RERUM|11|
+438|CIMA DEOILER|CIMA DEOILER|12|
+439|FDO. DEOILER|FDO. DEOILER|12|
+440|LPG PTA. LINEA.|LPG PTA. LINEA.|49|
+441|LAVADOR CAUST.D13431)|LAVADOR CAUST.D13431)|12|
+442|TK CAUST.426|TK CAUST.426|12|
+443|BUTADIENO DE REPROCESO|BUTADIENO DE REPROCESO|15|
+447|TK BTD MEZCLA|TK BTD MEZCLA|7|
+448|TK STY MEZCLA|TK STY MEZCLA|7|
+449|TK STY LOTE|TK STY LOTE|21|
+450|PTA. LINEA PROP.(PLANTA)|PTA. LINEA PROP.(PLANTA)|15|
+451|PTA.LINEA PROP.(CARG.)|PTA.LINEA PROP.(CARG.)|49|
+452|AGUA POT. PLANTAS|AGUA POT. PLANTAS|48|
+453|PTA .LINEA BZ|PTA .LINEA BZ|50|
+455|PTA. LINEA BTD|PTA. LINEA BTD|50|
+456|PTA. LINEA ETILBZ|PTA. LINEA ETILBZ|50|
+457|PTA. LINEA STY|PTA. LINEA STY|50|
+458|PTA. LINEA CORTE AROMAT. YPF|PTA. LINEA CORTE AROMAT. YPF|50|
+459|PTA. LINEA NAFTA PARAF.|PTA. LINEA NAFTA PARAF.|50|
+460|CAMION BARRIDO BZ|CAMION BARRIDO BZ|50|
+461|CAMION BARRIDO ETILBENCENO|CAMION BARRIDO ETILBENCENO|50|
+462|HOMOGENIZADOR|HOMOGENIZADOR|51|
+463|EFLUENTE P.T.EFLUENTES|EFLUENTE P.T.EFLUENTES|51|
+464|REACTOR  A|REACTOR  A|51|
+468|API USINA|API USINA|51|
+525|FDO. TORRE DESPOJ.REF|FDO. TORRE DESPOJ.REF|41|
+526|PARSHALL|PARSHALL|51|
+527|PIL. INFILCO ARPOL|PIL. INFILCO ARPOL|9|
+528|MH 3|MH 3|46|
+529|TANQUE 104|TANQUE 104|51|
+530|CAMION DE ACRN|CAMION DE ACRN|6|
+531|BUQUE DE BZ|BUQUE DE BZ|50|
+532|CISTERNA BUQUE BTD|CISTERNA BUQUE BTD|50|
+533|BUQUE ETILBENCENO|BUQUE ETILBENCENO|50|
+534|CAMION ACEITE EXTENDEDOR|CAMION ACEITE EXTENDEDOR|8|
+535|TAMB. AC. DE RESINA|TAMB. AC. DE RESINA|2|
+536|CAMION ACIDO GRASO|CAMION ACIDO GRASO|2|
+537|ESFERA 334 INTERFASE N.VIRGEN|ESFERA 334 INTERFASE N.VIRGEN|44|
+538|PORTAFEED AG.SECUEST.|PORTAFEED AG.SECUEST.|2|
+539|TAMB.AGENTE SECUEST.|TAMB.AGENTE SECUEST.|2|
+540|TAMB.ANTIOXIDANTE|TAMB.ANTIOXIDANTE|2|
+541|TAMB. ANTIOX. IRGANOX 1520|TAMB. ANTIOX. IRGANOX 1520|2|
+542|AGUA COMP.11-D3-140|AGUA COMP.11-D3-140|41|
+543|CAJA DE ANTIOZONANTE A|CAJA DE ANTIOZONANTE A|2|
+544|BOLSA DE ANTIOZONANTE B|BOLSA DE ANTIOZONANTE B|2|
+545|BOLSA ARCILLA DIATOMEA|BOLSA ARCILLA DIATOMEA|2|
+546|TAMB. D.E.H.A|TAMB. D.E.H.A|2|
+547|LOTE F|LOTE F|57|
+548|LOTE CH|LOTE CH|57|
+549|LOTE E|LOTE E|57|
+550|LOTE DA|LOTE DA|57|
+551|LOTE G|LOTE G|57|
+552|LOTE VL|LOTE VL|57|
+553|LOTE D|LOTE D|57|
+554|LOTE C SUPERF.|LOTE C SUPERF.|57|
+555|LOTE H|LOTE H|57|
+556|LOTE CV|LOTE CV|57|
+557|LOTE B SUPERF.|LOTE B SUPERF.|57|
+558|LOTE A SUPERF.|LOTE A SUPERF.|57|
+559|BZ CORRIENTE LATERAL|BZ CORRIENTE LATERAL|42|
+560|PORTAFEED DE PDD|PORTAFEED DE PDD|2|
+561|TAMB. PDD|TAMB. PDD|2|
+562|TAMB. I 77|TAMB. I 77|2|
+563|TAMB. MODIFICADOR|TAMB. MODIFICADOR|2|
+564|TAMB. PMHP|TAMB. PMHP|2|
+565|CAMION DE POTASA CAUSTICA|CAMION DE POTASA CAUSTICA|8|
+566|PORTAFEED DE SDD|PORTAFEED DE SDD|2|
+567|TAMBOR DE SDD|TAMBOR DE SDD|2|
+568|TAMBOR DE SFS|TAMBOR DE SFS|2|
+569|BOLSA DE SULFATO FERROSO|BOLSA DE SULFATO FERROSO|2|
+570|TAMBOR DE TBC|TAMBOR DE TBC|2|
+571|CAMION DE TETRALENE|CAMION DE TETRALENE|49|
+572|TAMB. AC. OLEICO|TAMB. AC. OLEICO|2|
+573|CAMION AC.SULFURICO BTD|CAMION AC.SULFURICO BTD|15|
+574|TAMB.AGUA OXIGEN.|TAMB.AGUA OXIGEN.|2|
+575|TAMB.pHILMPLUS|TAMB.pHILMPLUS|2|
+576|TAMB.AMINA FILMICA N9RF-780|TAMB.AMINA FILMICA N9RF-780|2|
+577|TAMB.AMINA NEUTRAL.|TAMB.AMINA NEUTRAL.|2|
+578|TAMB.AMINA NEUTRAL. N5136|TAMB.AMINA NEUTRAL. N5136|2|
+579|PORTAFEED ANTIADH.|PORTAFEED ANTIADH.|2|
+580|TAMB.ANTIADHERENTE|TAMB.ANTIADHERENTE|2|
+581|TAMB.ANTIADHERENTE NBR|TAMB.ANTIADHERENTE NBR|2|
+582|TAMB.ANTIESPUM. NBR|TAMB.ANTIESPUM. NBR|2|
+583|PORTAFEED ANTIESP. SBR|PORTAFEED ANTIESP. SBR|2|
+584|TAMB.ANTIESPUM. SBR|TAMB.ANTIESPUM. SBR|2|
+585|BOLSA DE CAL HIDRATADA|BOLSA DE CAL HIDRATADA|2|
+586|BOLSA DE CARBONATO DE SODIO|BOLSA DE CARBONATO DE SODIO|2|
+587|CILINDRO DE CLORO LIQ.|CILINDRO DE CLORO LIQ.|2|
+588|BOLSA DE CLORURO DE POTASIO|BOLSA DE CLORURO DE POTASIO|2|
+589|CAMION DE CLORURO DE SODIO|CAMION DE CLORURO DE SODIO|56|
+590|TAMB.COAGULANTE|TAMB.COAGULANTE|2|
+591|TAMB.COAGULANTE B|TAMB.COAGULANTE B|2|
+592|TAMB.P/DISPERSANTE NBR|TAMB.P/DISPERSANTE NBR|2|
+593|TAMB.EMULS. SECUNDARIO|TAMB.EMULS. SECUNDARIO|2|
+594|TAMB.FLOCUL.NALCO 7128|TAMB.FLOCUL.NALCO 7128|2|
+595|TAMB. INHIBI.CORROSION H-233|TAMB. INHIBI.CORROSION H-233|2|
+596|TAMB.INHIBIDOR DE POPCORN|TAMB.INHIBIDOR DE POPCORN|2|
+597|CAMION DE KEROSENE|CAMION DE KEROSENE|2|
+598|BOLSA DE METABISULFITO DE SODIO|BOLSA DE METABISULFITO DE SODIO|2|
+599|TAMB. METANOL|TAMB. METANOL|2|
+600|TAMB.MONOETANOLAMINA|TAMB.MONOETANOLAMINA|2|
+601|BOLSA DE NITRITO DE SODIO|BOLSA DE NITRITO DE SODIO|2|
+602|BIDON POLIELEC./EFLUENTES|BIDON POLIELEC./EFLUENTES|2|
+603|CAMION SODA CAUST.USINA|CAMION SODA CAUST.USINA|48|
+604|TAMB.HIPOCLORITO DE SODIO|TAMB.HIPOCLORITO DE SODIO|2|
+605|TAMB. SULF.DE CARBONO|TAMB. SULF.DE CARBONO|2|
+606|TAMB.TETRAETILENGLICOL|TAMB.TETRAETILENGLICOL|2|
+607|TAMBOR DE TPP|TAMBOR DE TPP|2|
+608|TAMB.TRICLOROETILENO|TAMB.TRICLOROETILENO|2|
+609|TK ESPESADOR|TK ESPESADOR|51|
+610|BOMB.CARGA A REF.|BOMB.CARGA A REF.|41|
+611|GAS RECICLO|GAS RECICLO|41|
+612|REACTOR 1 STY|REACTOR 1 STY|20|
+617|GASES REACT.STY|GASES REACT.STY|20|
+618|AIRE AREA 100 REF.|AIRE AREA 100 REF.|107|
+619|AIRE AREA 200 REF.|AIRE AREA 200 REF.|107|
+620|AIRE AREA 300 REF.|AIRE AREA 300 REF.|107|
+622|AIRE AREA TKS REF.|AIRE AREA TKS REF.|107|
+623|AIRE AREA 200 ARPOL|AIRE AREA 200 ARPOL|104|
+624|AIRE AREA 300 ARPOL|AIRE AREA 300 ARPOL|104|
+625|AIRE AREA COAG.ARPOL|AIRE AREA COAG.ARPOL|104|
+626|AIRE GALPON ARPOL|AIRE GALPON ARPOL|104|
+627|AIRE AREA TURBOS USINA|AIRE AREA TURBOS USINA|108|
+628|AIRE API USINA|AIRE API USINA|108|
+629|AIRE AREA STY|AIRE AREA STY|106|
+630|AIRE AREA ETILENO|AIRE AREA ETILENO|106|
+631|AIRE AREA 11-500 ETILENO|AIRE AREA 11-500 ETILENO|106|
+632|AIRE AREA 200 BTD.|AIRE AREA 200 BTD.|105|
+633|AIRE AREA 300 BTD|AIRE AREA 300 BTD|105|
+634|AIRE AREA 400 BTD.|AIRE AREA 400 BTD.|112|
+635|AIRE AREA 600 BTD.|AIRE AREA 600 BTD.|105|
+636|AIRE LADO SUR EXT. LAB.|AIRE LADO SUR EXT. LAB.|113|
+637|AIRE PLANTA PILOTO|AIRE PLANTA PILOTO|113|
+638|AIRE ZONA ARENADO|AIRE ZONA ARENADO|112|
+640|AIRE LOTE E L.FARMING|AIRE LOTE E L.FARMING|111|
+641|AIRE PERIM. pto1|AIRE PERIM. pto1|112|
+642|AIRE LIMITE S.O|AIRE LIMITE S.O|112|
+643|AIRE LIMITE S.E|AIRE LIMITE S.E|112|
+644|AIRE PLANTA EEE P. NEUTRAL.|AIRE PLANTA EEE P. NEUTRAL.|106|
+645|AIRE AREA TK  AGUA USI|AIRE AREA TK  AGUA USI|108|
+646|AIRE HORNOS REF.|AIRE HORNOS REF.|107|
+647|AIRE HORNOS STY|AIRE HORNOS STY|106|
+648|AIRE SECAD.CAUCHO SUR|AIRE SECAD.CAUCHO SUR|104|
+649|AIRE SECAD.CAUCHO NORTE|AIRE SECAD.CAUCHO NORTE|104|
+650|AIRE PIL.ESTABIL. SUR|AIRE PIL.ESTABIL. SUR|108|
+651|AIRE TK B10 P.EFLUENTES|AIRE TK B10 P.EFLUENTES|108|
+652|AIRE PLANTA EEE 17-100 N|AIRE PLANTA EEE 17-100 N|106|
+653|AIRE LABORATORIO|AIRE LABORATORIO|113|
+654|AIRE AREA 600 ARPOL|AIRE AREA 600 ARPOL|104|
+655|AIRE NBR DESP.|AIRE NBR DESP.|104|
+656|AIRE NBR REACT.|AIRE NBR REACT.|104|
+657|AIRE NBR AREA TANQUES|AIRE NBR AREA TANQUES|104|
+658|AIRE BTD. ZONA RERUM|AIRE BTD. ZONA RERUM|105|
+659|AIRE EEE AREA 17-200|AIRE EEE AREA 17-200|106|
+660|AIRE CARG. CAMIONES|AIRE CARG. CAMIONES|108|
+661|AIRE LIMITES DE BATERIA|AIRE LIMITES DE BATERIA|112|
+662|F1:AIRE 14D19-201|F1:AIRE 14D19-201|104|
+663|F5:AIRE 14D19-202|F5:AIRE 14D19-202|104|
+664|F9:AIRE 14D19-203|F9:AIRE 14D19-203|104|
+665|AIRE 12D19-601(FREON 22)|AIRE 12D19-601(FREON 22)|105|
+666|AIRE 17D19-401(FREON 22)|AIRE 17D19-401(FREON 22)|106|
+667|AIRE 17D19-402(FREON 22)|AIRE 17D19-402(FREON 22)|106|
+668|TUBOS DE NITROGENO|TUBOS DE NITROGENO|2|
+669|LOTE F PROF.|LOTE F PROF.|57|
+670|LOTE CH PROF.|LOTE CH PROF.|57|
+671|LOTE E PROF.|LOTE E PROF.|57|
+672|LOTE DA PROF.|LOTE DA PROF.|57|
+673|LOTE G PROF.|LOTE G PROF.|57|
+674|LOTE VL PROF.|LOTE VL PROF.|57|
+675|LOTE D PROF.|LOTE D PROF.|57|
+676|LOTE C PROF.|LOTE C PROF.|57|
+677|LOTE H PROF.|LOTE H PROF.|57|
+678|LOTE CV PROF.|LOTE CV PROF.|57|
+679|LOTE B PROF.|LOTE B PROF.|57|
+680|LOTE A  PROF.|LOTE A  PROF.|57|
+681|PIEZOMETROS P/ MONITOREO NAPAS|PIEZOMETROS P/ MONITOREO NAPAS|102|
+1001|TK BZ DIARIO|TK BZ DIARIO|44|
+1002|TK 101-JABON CARGA|TK 101-JABON CARGA|4|
+1003|PROP. INICIAL CAMION(BTD)|PROP. INICIAL CAMION(BTD)|15|
+1004|PROP. FINAL CAMION(BTD)|PROP. FINAL CAMION(BTD)|15|
+1007|MH 12|MH 12|16|
+1163|FDO. DESP.SOLV.|FDO. DESP.SOLV.|42|
+1165|FDO. DESBUTA.REFORMA|FDO. DESBUTA.REFORMA|41|
+1166|FDO. ESTABIL. A 100|FDO. ESTABIL. A 100|41|
+1167|FDO. TORRE SOLV.|FDO. TORRE SOLV.|42|
+1888|AGUA CIMA PREFRACC.|AGUA CIMA PREFRACC.|41|
+1943|U1  : carga torre|U1  : carga torre|60|
+1944|U2  : by pass carga torre|U2  : by pass carga torre|60|
+1945|U3  : FRC 316  reflujo|U3  : FRC 316  reflujo|60|
+1946|U7  : inferior rehervidor|U7  : inferior rehervidor|60|
+1947|U8  : superior rehervidor|U8  : superior rehervidor|60|
+1948|U9  : bloqueo psv torre|U9  : bloqueo psv torre|60|
+1949|U10  : entrada condensador|U10  : entrada condensador|60|
+1950|U11  : salida condensador|U11  : salida condensador|60|
+1951|U12  : succion D3 318|U12  : succion D3 318|60|
+1952|U13  : succion D3 317|U13  : succion D3 317|60|
+1953|U14  : descarga D3 318|U14  : descarga D3 318|60|
+1954|U15  : descarga D3 317|U15  : descarga D3 317|60|
+1955|U16  : bloqueo FRC 316|U16  : bloqueo FRC 316|60|
+1956|U17  : bloqueo FRC 316|U17  : bloqueo FRC 316|60|
+1957|U18  : succion D3 621|U18  : succion D3 621|60|
+1958|U19  : succion D3 622|U19  : succion D3 622|60|
+1959|U20  : descarga D3 621|U20  : descarga D3 621|60|
+1960|U21  : descarga D3 622|U21  : descarga D3 622|60|
+1961|U22  : bloqueo linea muelle|U22  : bloqueo linea muelle|60|
+1962|U23  : desvio BTD a muelle|U23  : desvio BTD a muelle|60|
+1963|U24  : desvio BTD a muelle|U24  : desvio BTD a muelle|60|
+1964|U25  : succion D3 627|U25  : succion D3 627|60|
+1965|U26  : succion D3 627 Tk 615|U26  : succion D3 627 Tk 615|60|
+1966|U27  : succion D3 627 Tk  BTD|U27  : succion D3 627 Tk  BTD|60|
+1967|U28  : succion D3 601 Tks BTD|U28  : succion D3 601 Tks BTD|60|
+1968|U29  : succion D3 601 Tks BTD|U29  : succion D3 601 Tks BTD|60|
+1969|U30  : succion D3 601 Tk 615|U30  : succion D3 601 Tk 615|60|
+1970|U31  : descarga D3 601 a arpol|U31  : descarga D3 601 a arpol|60|
+1971|U32  : descarga D3 601|U32  : descarga D3 601|60|
+1972|U33  : succion D3 602 Tks BTD|U33  : succion D3 602 Tks BTD|60|
+1973|U34  : succion D3 602 Tks BTD|U34  : succion D3 602 Tks BTD|60|
+1974|U35  : succion D3 602 Tk 615|U35  : succion D3 602 Tk 615|60|
+1975|U36  : descarga D3 602 a arpol|U36  : descarga D3 602 a arpol|60|
+1976|U37  : succion D3 614 de Tk 615|U37  : succion D3 614 de Tk 615|60|
+1977|U38 : Descarga D3-621/622|U38 : Descarga D3-621/622|60|
+1978|U41  : entrada tanque|U41  : entrada tanque|60|
+1979|U42  : salida tanque|U42  : salida tanque|60|
+1980|U43  : entrada|U43  : entrada|60|
+1981|U44  : succion D3 601/602|U44  : succion D3 601/602|60|
+1982|U45  : succion D3 601/602|U45  : succion D3 601/602|60|
+1983|U46  : succion D3 621/622|U46  : succion D3 621/622|60|
+1984|U48  : descarga D3 621/622|U48  : descarga D3 621/622|60|
+1985|U52  : salida general|U52  : salida general|60|
+1986|U53  : entrada general|U53  : entrada general|60|
+1987|U54  : succion D3 601/602|U54  : succion D3 601/602|60|
+1988|U55  : succion D3 601/602|U55  : succion D3 601/602|60|
+1989|U56  : succion D3 621/622|U56  : succion D3 621/622|60|
+1990|U59  : entrada general|U59  : entrada general|60|
+1991|U60  : salida general|U60  : salida general|60|
+1992|U63  : salida general|U63  : salida general|60|
+1993|U64  : salida|U64  : salida|60|
+1994|U65  : salida|U65  : salida|60|
+1995|U68  : descarga D3 621/622|U68  : descarga D3 621/622|60|
+1996|U69  : descarga D3 621/622|U69  : descarga D3 621/622|60|
+1997|U70 : descarga D3 621/622|U70 : descarga D3 621/622|60|
+1998|U71 : entrada general|U71 : entrada general|60|
+1999|U72  : salida general|U72  : salida general|60|
+2000|U73  : salida|U73  : salida|60|
+2001|U74 : salida|U74 : salida|60|
+2002|U75 : salida Tk 605/611|U75 : salida Tk 605/611|60|
+2003|U78  : entrada general|U78  : entrada general|60|
+2004|U79  : entrada|U79  : entrada|60|
+2005|U80  : salida general|U80  : salida general|60|
+2006|U81  : succion D3 619/620|U81  : succion D3 619/620|60|
+2007|U82  : salida|U82  : salida|60|
+2008|U86  : entrada general|U86  : entrada general|60|
+2009|U87  : salida general|U87  : salida general|60|
+2010|U88  : salida|U88  : salida|60|
+2011|U89  : salida succion D3 614|U89  : salida succion D3 614|60|
+2012|U90  : entrada|U90  : entrada|60|
+2013|U91  : entrada (arpol)|U91  : entrada (arpol)|60|
+2014|U92  : D3 317 reflujo torre|U92  : D3 317 reflujo torre|60|
+2015|U93  : D3 318 reflujo torre|U93  : D3 318 reflujo torre|60|
+2016|U94  : D3 319 fondo torre|U94  : D3 319 fondo torre|60|
+2017|U95  : D3 320 fondo torre|U95  : D3 320 fondo torre|60|
+2018|U96  : D3 601 BTD a arpol|U96  : D3 601 BTD a arpol|60|
+2019|U97  : D3 602 BTD a arpol|U97  : D3 602 BTD a arpol|60|
+2020|U98  : D3 614 carga a torre|U98  : D3 614 carga a torre|60|
+2021|U99  : D3 621 refrigeracion Tk|U99  : D3 621 refrigeracion Tk|60|
+2022|U100  : D3 622 refrigeracion Tk|U100  : D3 622 refrigeracion Tk|60|
+2023|U101 : D3 627 Butadieno a dow|U101 : D3 627 Butadieno a dow|60|
+2024|E1 : valvula bloqueo carga|E1 : valvula bloqueo carga|60|
+2025|E2 : valvula bloqueo precalent.|E2 : valvula bloqueo precalent.|60|
+2026|E3 : valvula bloqueo FRC 220|E3 : valvula bloqueo FRC 220|60|
+2027|E4 : by pass FRC 220|E4 : by pass FRC 220|60|
+2028|E5 : valvula bloqueo FRC 220|E5 : valvula bloqueo FRC 220|60|
+2029|E6 : FRC 220|E6 : FRC 220|60|
+2030|E7 : salida condensador|E7 : salida condensador|60|
+2031|E8 : succion D3 227|E8 : succion D3 227|60|
+2032|E9 : succion D3 228|E9 : succion D3 228|60|
+2033|E10 : descarga D3 227|E10 : descarga D3 227|60|
+2034|E11 : descarga D3 228|E11 : descarga D3 228|60|
+2035|E12 : bomba  D3 227|E12 : bomba  D3 227|60|
+2036|E13 : bomba  D3 228|E13 : bomba  D3 228|60|
+2037|A1 : 14 D3-913 Bomba de puro|A1 : 14 D3-913 Bomba de puro|62|
+2038|A2 : 14 D3-914 Bomba Transferenc|A2 : 14 D3-914 Bomba Transferenc|62|
+2039|A3 : 14 D3-923 Bomba de Recibido|A3 : 14 D3-923 Bomba de Recibido|62|
+2040|A4 : FV-902|A4 : FV-902|62|
+2041|A5 : FV-902 Entrada|A5 : FV-902 Entrada|62|
+2042|A6 : FV-902  Bloqueo a reactor|A6 : FV-902  Bloqueo a reactor|62|
+2043|A7 : FV-914|A7 : FV-914|62|
+2044|A8 : FV-914  Bloqueo|A8 : FV-914  Bloqueo|62|
+2045|A9 : FV-914 'Bloqueo de l¡nea de|A9 : FV-914 'Bloqueo de l¡nea de|62|
+2046|A10 : FV-914  Bloqueo a pesador|A10 : FV-914  Bloqueo a pesador|62|
+2047|A11 : FV-914  Bloqueo a Reactor|A11 : FV-914  Bloqueo a Reactor|62|
+2048|A12 : FV-914 Bay-pass de salida|A12 : FV-914 Bay-pass de salida|62|
+2049|A13 : FV-914 Entrada a Reactor|A13 : FV-914 Entrada a Reactor|62|
+2050|A14 : 14 D3-923      Succi¢n|A14 : 14 D3-923      Succi¢n|62|
+2051|A15 : 14 D13-908    Salida|A15 : 14 D13-908    Salida|62|
+2052|A16 : 14 D3-914    Salida a Reac|A16 : 14 D3-914    Salida a Reac|62|
+2053|A17 : 14 D3-914       Salida de|A17 : 14 D3-914       Salida de|62|
+2054|A18 : 14 D3-914        Entrada a|A18 : 14 D3-914        Entrada a|62|
+2055|A19 : 14 D3-914        Drenaje|A19 : 14 D3-914        Drenaje|62|
+2056|A20 : 14 D9-910      Entrada de|A20 : 14 D9-910      Entrada de|62|
+2057|A21 : 14 D9-910     Salida a car|A21 : 14 D9-910     Salida a car|62|
+2058|A22 : 14 D9-910       Salida a c|A22 : 14 D9-910       Salida a c|62|
+2059|A23 : 14 D9-911      Entrada de|A23 : 14 D9-911      Entrada de|62|
+2060|A24 : 14 D9-911     Salida a car|A24 : 14 D9-911     Salida a car|62|
+2061|A25 : 14 D9-911       Salida a c|A25 : 14 D9-911       Salida a c|62|
+2062|A26 : 14 D9-902      Salida a ca|A26 : 14 D9-902      Salida a ca|62|
+2063|A27 : 14 D9-902      Salida pie|A27 : 14 D9-902      Salida pie|62|
+2064|A28 : 14 D3-913      Succi¢n de|A28 : 14 D3-913      Succi¢n de|62|
+2065|A29 : 14 D3-913      Succi¢n de|A29 : 14 D3-913      Succi¢n de|62|
+2066|U1 : 14 D9-704     Evacuadora|U1 : 14 D9-704     Evacuadora|62|
+2067|U2 : 14 D9-704     Entrada de fr|U2 : 14 D9-704     Entrada de fr|62|
+2068|U3 : 14 D9-704     Entrada de fr|U3 : 14 D9-704     Entrada de fr|62|
+2069|U4 : 14 D9-704      Entrada de f|U4 : 14 D9-704      Entrada de f|62|
+2070|U5 : 14 D9-704      Salida de ro|U5 : 14 D9-704      Salida de ro|62|
+2071|U6 : 14 D9-704     Drenaje super|U6 : 14 D9-704     Drenaje super|62|
+2072|U7 : 14 D9-704     Drenaje infer|U7 : 14 D9-704     Drenaje infer|62|
+2073|U8 : 14 D9-704     Entrada de ro|U8 : 14 D9-704     Entrada de ro|62|
+2074|U9 : 14 D9-704      Salida de ca|U9 : 14 D9-704      Salida de ca|62|
+2075|U10 : 14 D9-704      Salida de c|U10 : 14 D9-704      Salida de c|62|
+2076|U11 : 14 D9-704      Salida de c|U11 : 14 D9-704      Salida de c|62|
+2077|U12 : 14 D9-705     Evacuadora|U12 : 14 D9-705     Evacuadora|62|
+2078|U13 : 14 D9-705     Entrada de f|U13 : 14 D9-705     Entrada de f|62|
+2079|U14 : 14 D9-705      Entrada de|U14 : 14 D9-705      Entrada de|62|
+2080|U15 : 14 D9-705      Entrada de|U15 : 14 D9-705      Entrada de|62|
+2081|U16 : 14 D9-705      Salida de r|U16 : 14 D9-705      Salida de r|62|
+2082|U17 : 14 D9-705      Drenaje sup|U17 : 14 D9-705      Drenaje sup|62|
+2083|U18 : 14 D9-705      Drenaje inf|U18 : 14 D9-705      Drenaje inf|62|
+2084|U19 : 14 D9-705       Entrada de|U19 : 14 D9-705       Entrada de|62|
+2085|U20 : 14 D9-705     Salida de ca|U20 : 14 D9-705     Salida de ca|62|
+2086|U21 : 14 D9-705      Salida de c|U21 : 14 D9-705      Salida de c|62|
+2087|U22 : 14 D9-705      Salida de c|U22 : 14 D9-705      Salida de c|62|
+2088|U23 : 14 D9-706     Evacuadora|U23 : 14 D9-706     Evacuadora|62|
+2089|U24 : 14 D9-706     Entrada de f|U24 : 14 D9-706     Entrada de f|62|
+2090|U25 : 14 D9-706      Salida rola|U25 : 14 D9-706      Salida rola|62|
+2091|U26 : 14 D9-706     Salida rolad|U26 : 14 D9-706     Salida rolad|62|
+2092|U27 : 14 D9-706      Salida rola|U27 : 14 D9-706      Salida rola|62|
+2093|U28 : 14 D9-706     Drenaje supe|U28 : 14 D9-706     Drenaje supe|62|
+2094|U29 : 14 D9-706     Drenaje infe|U29 : 14 D9-706     Drenaje infe|62|
+2095|U30 : 14 D9-706     Entrada de r|U30 : 14 D9-706     Entrada de r|62|
+2096|U31 : 14 D9-706     Salida de ca|U31 : 14 D9-706     Salida de ca|62|
+2097|U32 : 14 D13-703   Evacuadora|U32 : 14 D13-703   Evacuadora|62|
+2098|U33 : 14 D13-703    Salida de ca|U33 : 14 D13-703    Salida de ca|62|
+2099|U34 : 14 D3-705     Aspiraci¢n|U34 : 14 D3-705     Aspiraci¢n|62|
+2100|U35 : 14 D3-705     Descarga|U35 : 14 D3-705     Descarga|62|
+2101|U36 : 14 D3-706    Aspiraci¢n|U36 : 14 D3-706    Aspiraci¢n|62|
+2102|U37 : 14 D3-706     Descarga|U37 : 14 D3-706     Descarga|62|
+2103|U38 : 14 D3-707    Aspiraci¢n|U38 : 14 D3-707    Aspiraci¢n|62|
+2104|U39 : 14 D3-708    Aspiraci¢n|U39 : 14 D3-708    Aspiraci¢n|62|
+2105|U40 : Parral (Cactus de Rolado y|U40 : Parral (Cactus de Rolado y|62|
+2106|U41 : Parral (Cactus de Rolado y|U41 : Parral (Cactus de Rolado y|62|
+2107|U42 : Parral (Cactus de Rolado y|U42 : Parral (Cactus de Rolado y|62|
+2108|U43 : Parral (Cactus de Rolado y|U43 : Parral (Cactus de Rolado y|62|
+2109|U44 : Parral (Cactus de Rolado y|U44 : Parral (Cactus de Rolado y|62|
+2110|U45 : 14 D4-701  Aspiraci¢n|U45 : 14 D4-701  Aspiraci¢n|62|
+2111|U46 : 14 D13-702  Aspiraci¢n|U46 : 14 D13-702  Aspiraci¢n|62|
+2112|U47 : 14 D13-702  Succi¢n desde|U47 : 14 D13-702  Succi¢n desde|62|
+2113|U48 : 14 D13-702 Succi¢n desde B|U48 : 14 D13-702 Succi¢n desde B|62|
+2114|U49 : 14 D13-702 Igualizadora|U49 : 14 D13-702 Igualizadora|62|
+2115|U50 : 14 D3-705 Bomba de Rolado|U50 : 14 D3-705 Bomba de Rolado|62|
+2116|U51 : 14 D3-706  Bomba de Rolado|U51 : 14 D3-706  Bomba de Rolado|62|
+2117|U52 : 14 D3-707 Bomba de carga d|U52 : 14 D3-707 Bomba de carga d|62|
+2118|U53 : 14 D3-708 Bomba de carga d|U53 : 14 D3-708 Bomba de carga d|62|
+2119|U54 : 14 D4-701 Compresor de But|U54 : 14 D4-701 Compresor de But|62|
+2120|U55 : 14 D13-102   Evacuadora|U55 : 14 D13-102   Evacuadora|62|
+2121|U56 : 14 D13-103   Evacuadora|U56 : 14 D13-103   Evacuadora|62|
+2122|U57 : 14 D3-102    Bomba caustic|U57 : 14 D3-102    Bomba caustic|62|
+2123|U58 : 14 D3-105    Bomba agua de|U58 : 14 D3-105    Bomba agua de|62|
+2124|U59 : 14 D3-106    Bomba agua de|U59 : 14 D3-106    Bomba agua de|62|
+2125|U60  : 14 D2-104    Entrada|U60  : 14 D2-104    Entrada|62|
+2126|U61 : 14 D2-104    Salida|U61 : 14 D2-104    Salida|62|
+2127|U62 : 14 D2-104    By-pass|U62 : 14 D2-104    By-pass|62|
+2128|U63 : 14 D3-117   Bomba Homogene|U63 : 14 D3-117   Bomba Homogene|62|
+2129|U64 : 14 D3-117   Aspiraci¢n|U64 : 14 D3-117   Aspiraci¢n|62|
+2130|U65 : 14 D3-117     Descarga|U65 : 14 D3-117     Descarga|62|
+2131|U66 : 14 D3-117     By-pass|U66 : 14 D3-117     By-pass|62|
+2132|U67 : 14 D4-201    Compresor de|U67 : 14 D4-201    Compresor de|62|
+2133|U68 : 14 D4-201    Aspiraci¢n|U68 : 14 D4-201    Aspiraci¢n|62|
+2134|U69 : 14 D4-201      Descarga|U69 : 14 D4-201      Descarga|62|
+2135|U70 : 14 D4-202    Compresor de|U70 : 14 D4-202    Compresor de|62|
+2136|U71 : 14 D4-202    Aspiraci¢n|U71 : 14 D4-202    Aspiraci¢n|62|
+2137|U72 : 14 D4-202      Descarga|U72 : 14 D4-202      Descarga|62|
+2138|U73 : 14 D4-203    Compresor de|U73 : 14 D4-203    Compresor de|62|
+2139|U74 : 14 D4-203     Aspiraci¢n|U74 : 14 D4-203     Aspiraci¢n|62|
+2140|U75 : 14 D4-203    Descarga|U75 : 14 D4-203    Descarga|62|
+2141|U76 : 14 D4-207    Compresor de|U76 : 14 D4-207    Compresor de|62|
+2142|U77 : 14 D4-207     Aspiraci¢n|U77 : 14 D4-207     Aspiraci¢n|62|
+2143|U78 : 14 D4-207     Descarga|U78 : 14 D4-207     Descarga|62|
+2144|U79 : 14 D13-207  Aspiraci¢n|U79 : 14 D13-207  Aspiraci¢n|62|
+2145|U80 : 14 D13 208  Aspiraci¢n|U80 : 14 D13 208  Aspiraci¢n|62|
+2146|U81 : 14 D13-209  Aspiraci¢n|U81 : 14 D13-209  Aspiraci¢n|62|
+2147|U82 : 14 D13-210  Aspiraci¢n|U82 : 14 D13-210  Aspiraci¢n|62|
+2148|U83 : 14 D4-205   Bomba de Vac¡o|U83 : 14 D4-205   Bomba de Vac¡o|62|
+2149|U84 : 14 D4-205   Aspiraci¢n|U84 : 14 D4-205   Aspiraci¢n|62|
+2150|U85 : 14 D4-205    Descarga atmo|U85 : 14 D4-205    Descarga atmo|62|
+2151|U86 : 14 D4-205   Descarga siste|U86 : 14 D4-205   Descarga siste|62|
+2152|U87 : 14 D4-206   Bomba de Vac¡o|U87 : 14 D4-206   Bomba de Vac¡o|62|
+2153|U88 : 14 D4-206  Aspiraci¢n|U88 : 14 D4-206  Aspiraci¢n|62|
+2154|U89 : 14 D4-206  Descarga atmosf|U89 : 14 D4-206  Descarga atmosf|62|
+2155|U90 : 14 D4-206   Descarga siste|U90 : 14 D4-206   Descarga siste|62|
+2156|U91 : 14 D4-204   Bomba de Vac¡o|U91 : 14 D4-204   Bomba de Vac¡o|62|
+2157|U92 : 14 D4-204   Aspiraci¢n|U92 : 14 D4-204   Aspiraci¢n|62|
+2158|U93 : 14 D4-208   Bomba de Vac¡o|U93 : 14 D4-208   Bomba de Vac¡o|62|
+2159|U94 : 14 D4-208   Aspiraci¢n|U94 : 14 D4-208   Aspiraci¢n|62|
+2160|U95 : 14 D4-208     Descarga|U95 : 14 D4-208     Descarga|62|
+2161|U96 : 14 D13-211    Aspiraci¢n|U96 : 14 D13-211    Aspiraci¢n|62|
+2162|U97 : 14 D13-211    Aspiraci¢n d|U97 : 14 D13-211    Aspiraci¢n d|62|
+2163|U98 : 14 D13-211    Aspiraci¢n e|U98 : 14 D13-211    Aspiraci¢n e|62|
+2164|U99 : 14 D13-212    Aspiraci¢n|U99 : 14 D13-212    Aspiraci¢n|62|
+2165|U100 : 14 D13-212      Aspiraci¢|U100 : 14 D13-212      Aspiraci¢|62|
+2166|U101 : 14 D13-212       Aspiraci|U101 : 14 D13-212       Aspiraci|62|
+2167|U102 : 14 D13-213  Aspiracion|U102 : 14 D13-213  Aspiracion|62|
+2168|U103 : 14 D13-214   Aspiracion|U103 : 14 D13-214   Aspiracion|62|
+2169|U104 : 14 D2-222     Descarga|U104 : 14 D2-222     Descarga|62|
+2170|U105 : 14 D2-222    Desde bomba|U105 : 14 D2-222    Desde bomba|62|
+2171|U106 : 14 D2-222    Desde Flash|U106 : 14 D2-222    Desde Flash|62|
+2172|U107 : 14 D2-223     Descarga|U107 : 14 D2-223     Descarga|62|
+2173|U108 : 14 D2-223     Desde bomba|U108 : 14 D2-223     Desde bomba|62|
+2174|U109 : 14 D2-223     Desde Flash|U109 : 14 D2-223     Desde Flash|62|
+2175|U110 : 14 D2-224     Descarga|U110 : 14 D2-224     Descarga|62|
+2176|U111 : 14 D2-224     Desde bomba|U111 : 14 D2-224     Desde bomba|62|
+2177|U112 : 14 D2-224   Desde Flash|U112 : 14 D2-224   Desde Flash|62|
+2178|U113 : 14 D13-201    PSV|U113 : 14 D13-201    PSV|62|
+2179|U114 : 14 D13-201      Evacuador|U114 : 14 D13-201      Evacuador|62|
+2180|U115 : 14 D13-201    Desde NBR|U115 : 14 D13-201    Desde NBR|62|
+2181|U116 : 14 D13-201   Recuperaci¢n|U116 : 14 D13-201   Recuperaci¢n|62|
+2182|U117 : 14 D13-202    PSV|U117 : 14 D13-202    PSV|62|
+2183|U118 : 14 D13-202    Evacuadora|U118 : 14 D13-202    Evacuadora|62|
+2184|U119 : 14 D13-202      Desde NBR|U119 : 14 D13-202      Desde NBR|62|
+2185|U120 : 14 D13-202      Vac¡o a t|U120 : 14 D13-202      Vac¡o a t|62|
+2186|U121 : 14 D13-202    Recuperaci¢|U121 : 14 D13-202    Recuperaci¢|62|
+2187|U122 : 14 D13-203    PSV|U122 : 14 D13-203    PSV|62|
+2188|U123 : 14 D13-203     Evacuadora|U123 : 14 D13-203     Evacuadora|62|
+2189|U124 : 14 D13-203       Vac¡o a|U124 : 14 D13-203       Vac¡o a|62|
+2190|U125 : Desde esferas a Blowdown|U125 : Desde esferas a Blowdown|62|
+2191|U126 : 14 D14-201     Cima de Sp|U126 : 14 D14-201     Cima de Sp|62|
+2192|U127 : 14 D14-201   By-pass de c|U127 : 14 D14-201   By-pass de c|62|
+2193|U128 : 14 D14-201    Entrada a s|U128 : 14 D14-201    Entrada a s|62|
+2194|U129 : 14 D14-201      Entrada a|U129 : 14 D14-201      Entrada a|62|
+2195|U130 : 14 D14-201    L¡nea separ|U130 : 14 D14-201    L¡nea separ|62|
+2196|U131 : 14 D3-225|U131 : 14 D3-225|62|
+2197|U132 : 14 D3-226|U132 : 14 D3-226|62|
+2198|U133 : 14 D3-227|U133 : 14 D3-227|62|
+2199|U134 : 14 D2-202     Entrada al|U134 : 14 D2-202     Entrada al|62|
+2200|U135 : 14 D2-225     Entrada al|U135 : 14 D2-225     Entrada al|62|
+2201|U136 : 14 D2-203     Entrada al|U136 : 14 D2-203     Entrada al|62|
+2202|U137 : 14 D3-901     Bomba de Ca|U137 : 14 D3-901     Bomba de Ca|62|
+2203|U138 : 14 D3-907     Bomba de La|U138 : 14 D3-907     Bomba de La|62|
+2204|U139 : 14 D3-904     Bomba de Pe|U139 : 14 D3-904     Bomba de Pe|62|
+2205|U140 : 14 D4-901     Bomba de Va|U140 : 14 D4-901     Bomba de Va|62|
+2206|U141 : 14 D9-901     Salida de c|U141 : 14 D9-901     Salida de c|62|
+2207|U142 : 14 D9-901   Salida de rol|U142 : 14 D9-901   Salida de rol|62|
+2208|U143 : 14 D9-901    Salida de re|U143 : 14 D9-901    Salida de re|62|
+2209|U144 : 14 D3-901     Aspiraci¢n|U144 : 14 D3-901     Aspiraci¢n|62|
+2210|U145 : 14 D3-901      Aspiraci¢n|U145 : 14 D3-901      Aspiraci¢n|62|
+2211|U146 : 14 D3-901   Descarga|U146 : 14 D3-901   Descarga|62|
+2212|U147 : 14 D3-901      Carga a pe|U147 : 14 D3-901      Carga a pe|62|
+2213|U148 : 14 D3-901     Salida a ro|U148 : 14 D3-901     Salida a ro|62|
+2214|U149 : 14 D3-904     Aspiraci¢n|U149 : 14 D3-904     Aspiraci¢n|62|
+2215|U150 : 14 D9-918     Salida de p|U150 : 14 D9-918     Salida de p|62|
+2216|U151 : 14 D4-901     Descarga a|U151 : 14 D4-901     Descarga a|62|
+2217|U152 : 14 D4-901   Descarga a an|U152 : 14 D4-901   Descarga a an|62|
+2218|U153 : 14 D4-901      Aspiraci¢n|U153 : 14 D4-901      Aspiraci¢n|62|
+2219|U154 : 14 D4-901     Aspiraci¢n|U154 : 14 D4-901     Aspiraci¢n|62|
+2220|U155 : 14 D13-904   Aspiraci¢n l|U155 : 14 D13-904   Aspiraci¢n l|62|
+2221|U156 : 14 D13-904  Aspiraci¢n de|U156 : 14 D13-904  Aspiraci¢n de|62|
+2222|U157 : 14 D13-904   Salida a ant|U157 : 14 D13-904   Salida a ant|62|
+2223|U158 : 14 D13-904   Salida a atm|U158 : 14 D13-904   Salida a atm|62|
+2224|E-1 : Succi¢n D3-317 (refl.Bz)|E-1 : Succi¢n D3-317 (refl.Bz)|64|
+2225|E-2 : Succi¢n D3-316|E-2 : Succi¢n D3-316|64|
+2226|E-3 : Descarga D3-316|E-3 : Descarga D3-316|64|
+2227|E-4 : Descarga D3-317 (refl. Bz)|E-4 : Descarga D3-317 (refl. Bz)|64|
+2228|E-5 : Bloqueo L.C. 306 (L. sur)|E-5 : Bloqueo L.C. 306 (L. sur)|64|
+2229|E-6 : Bloqueo L.C. 306 (L. Norte|E-6 : Bloqueo L.C. 306 (L. Norte|64|
+2230|E-7 : Succi¢n D3-318|E-7 : Succi¢n D3-318|64|
+2231|E-8 : Succi¢n D3-317 (Cte.Latera|E-8 : Succi¢n D3-317 (Cte.Latera|64|
+2232|E-9 : Entrada D2-313 A (L.este)|E-9 : Entrada D2-313 A (L.este)|64|
+2233|E-10 : Entrada D2-313 A (L.oeste|E-10 : Entrada D2-313 A (L.oeste|64|
+2234|E-11 : Salida D2-313 A (L. este)|E-11 : Salida D2-313 A (L. este)|64|
+2235|E-12 : Salida D2-313 A (L.oeste)|E-12 : Salida D2-313 A (L.oeste)|64|
+2236|E-13 : Entrada caj¢n chico D2-31|E-13 : Entrada caj¢n chico D2-31|64|
+2237|E-14 : Salida caj¢n chico D2-313|E-14 : Salida caj¢n chico D2-313|64|
+2238|E-15 : By-Pass caj¢n grande D2-3|E-15 : By-Pass caj¢n grande D2-3|64|
+2239|E-16 : Entrada D2-313 B|E-16 : Entrada D2-313 B|64|
+2240|E-17 : Salida D2-313 B|E-17 : Salida D2-313 B|64|
+2241|E-18 : By-Pass D2-313 B|E-18 : By-Pass D2-313 B|64|
+2242|E-19 : Descarga D3-318|E-19 : Descarga D3-318|64|
+2243|E-20 : Descarga D3-317 (Cte. Lat|E-20 : Descarga D3-317 (Cte. Lat|64|
+2244|E-21 : Refl. Bz a Slop|E-21 : Refl. Bz a Slop|64|
+2245|E-22 : Bloqueo superior D2-208|E-22 : Bloqueo superior D2-208|64|
+2246|E-23 : Bloqueo inferior D2-208|E-23 : Bloqueo inferior D2-208|64|
+2247|E-24 : By-Pass D2-208|E-24 : By-Pass D2-208|64|
+2248|E-25 : Bloqueo D2-314 B (L.Este)|E-25 : Bloqueo D2-314 B (L.Este)|64|
+2249|E-26 : Bloqueo D2-314 B (L.Oeste|E-26 : Bloqueo D2-314 B (L.Oeste|64|
+2250|E-27 : By-Pass D2-314 B|E-27 : By-Pass D2-314 B|64|
+2251|E-28 : Salida D2-314|E-28 : Salida D2-314|64|
+2252|E-29 : Bloqueo TRC-310 (Bz a Tk)|E-29 : Bloqueo TRC-310 (Bz a Tk)|64|
+2253|E-30 : Bloqueo TRC-310 (Bz a Tk)|E-30 : Bloqueo TRC-310 (Bz a Tk)|64|
+2254|E-31 : By-Pass TRC-310 ( Bz a Tk|E-31 : By-Pass TRC-310 ( Bz a Tk|64|
+2255|E-32 : Salida de Bz a Tk.|E-32 : Salida de Bz a Tk.|64|
+2256|E-33 : Producci¢n de Bz a slop|E-33 : Producci¢n de Bz a slop|64|
+2257|E-34 : Cambio de producc. tks 53|E-34 : Cambio de producc. tks 53|64|
+2258|E-35 : Producci¢n Tk 532 (L. oes|E-35 : Producci¢n Tk 532 (L. oes|64|
+2259|E-36 : Producci¢n Tk 532 (L. est|E-36 : Producci¢n Tk 532 (L. est|64|
+2260|E-37 : Producci¢n Tk 539 (L. sur|E-37 : Producci¢n Tk 539 (L. sur|64|
+2261|E-38 : Producci¢n Tk 539 (L. nor|E-38 : Producci¢n Tk 539 (L. nor|64|
+2262|E-39 : Aspiraci¢n normal Tk 539|E-39 : Aspiraci¢n normal Tk 539|64|
+2263|E-40 : Aspiraci¢n de la olla Tk|E-40 : Aspiraci¢n de la olla Tk|64|
+2264|E-41 : Aspiraci¢n com£n Tk 539|E-41 : Aspiraci¢n com£n Tk 539|64|
+2265|E-42 : Aspiraci¢n normal Tk 532|E-42 : Aspiraci¢n normal Tk 532|64|
+2266|E-43 : Aspiraci¢n de la olla Tk|E-43 : Aspiraci¢n de la olla Tk|64|
+2267|E-44 : Aspiraci¢n com£n Tk 532|E-44 : Aspiraci¢n com£n Tk 532|64|
+2268|E-45 : Cambio aspiraci¢n Tks 532|E-45 : Cambio aspiraci¢n Tks 532|64|
+2269|E-46 : Aspiraci¢n D3-506|E-46 : Aspiraci¢n D3-506|64|
+2270|E-47 : Salida D3-506 (sobre D3-5|E-47 : Salida D3-506 (sobre D3-5|64|
+2271|E-48 : Bloqueo l¡nea Bz (frente|E-48 : Bloqueo l¡nea Bz (frente|64|
+2272|E-49 : L¡nea auxiliar Bz (Tks pr|E-49 : L¡nea auxiliar Bz (Tks pr|64|
+2273|E-50 : Bloqueo l¡nea Bz (Tks pro|E-50 : Bloqueo l¡nea Bz (Tks pro|64|
+2274|E-51 : Producci¢n Tk 529 (L.sur)|E-51 : Producci¢n Tk 529 (L.sur)|64|
+2275|E-52 : Aspiraci¢n Tk 529 para E.|E-52 : Aspiraci¢n Tk 529 para E.|64|
+2276|E-53 : Carga directa a E.E.E.|E-53 : Carga directa a E.E.E.|64|
+2277|E-54 : Carga directa a E.E.E.|E-54 : Carga directa a E.E.E.|64|
+2278|E-55 : L¡nea nueva|E-55 : L¡nea nueva|64|
+2279|E-56 : L¡nea nueva|E-56 : L¡nea nueva|64|
+2280|E-57 : By-Pass L.C.306|E-57 : By-Pass L.C.306|64|
+2281|E-58 : Drenaje D13-302|E-58 : Drenaje D13-302|64|
+2282|E-59 : Bloqueo Fdo. D13-302|E-59 : Bloqueo Fdo. D13-302|64|
+2283|E-60 : Bloqueo de LC-305 (L. nor|E-60 : Bloqueo de LC-305 (L. nor|64|
+2284|E-61 : Bloqueo de LC-305 (L. sur|E-61 : Bloqueo de LC-305 (L. sur|64|
+2285|E-62 : By- Pass de LC-305|E-62 : By- Pass de LC-305|64|
+2286|E-63 : Aspiraci¢n D3-311|E-63 : Aspiraci¢n D3-311|64|
+2287|E-64 : Aspiraci¢n D3-312|E-64 : Aspiraci¢n D3-312|64|
+2288|E-65 : Entrada D14-304 (inferior|E-65 : Entrada D14-304 (inferior|64|
+2289|E-66 : Entrada D14-304 (superor)|E-66 : Entrada D14-304 (superor)|64|
+2290|E-67 : Aspiraci¢n D3-327|E-67 : Aspiraci¢n D3-327|64|
+2291|E-68 : Aspiraci¢n D3-323|E-68 : Aspiraci¢n D3-323|64|
+2292|E-69 : Aspiraci¢n D3-219|E-69 : Aspiraci¢n D3-219|64|
+2293|E-70 : Aspiraci¢n D3-220|E-70 : Aspiraci¢n D3-220|64|
+2294|E-71 : Aspiraci¢n D3-221|E-71 : Aspiraci¢n D3-221|64|
+2295|E-72 : Descarga D3-221|E-72 : Descarga D3-221|64|
+2296|E-73 : Descarga D3-220|E-73 : Descarga D3-220|64|
+2297|E-74 : Descarga D3-219|E-74 : Descarga D3-219|64|
+2298|E-75 : Bloqueo FRC-211 (L.este)|E-75 : Bloqueo FRC-211 (L.este)|64|
+2299|E-76 : By-Pass FRC-211|E-76 : By-Pass FRC-211|64|
+2300|E-77 : Bloqueo FRC-211 (L.oeste)|E-77 : Bloqueo FRC-211 (L.oeste)|64|
+2301|E-78 : By-Pass serp.sup.D1 301(s|E-78 : By-Pass serp.sup.D1 301(s|64|
+2302|E-79 : Bloqueo serp.sup.D1 301(s|E-79 : Bloqueo serp.sup.D1 301(s|64|
+2303|E-80 : Bloqueo retorno serp.sup.|E-80 : Bloqueo retorno serp.sup.|64|
+2304|E-81 : Entrada serp.sup. D1-301|E-81 : Entrada serp.sup. D1-301|64|
+2305|E-82 : Salida serp. sup. D1-301|E-82 : Salida serp. sup. D1-301|64|
+2306|E-83 : Bloqueo Fdo. estabil. a D|E-83 : Bloqueo Fdo. estabil. a D|64|
+2307|E-84 : Resirculac. carga purif.|E-84 : Resirculac. carga purif.|64|
+2308|E-85 : Entrada D2-216|E-85 : Entrada D2-216|64|
+2309|E-86 : Salida D2-216|E-86 : Salida D2-216|64|
+2310|E-87 : By-Pass carga D14-207/8 (|E-87 : By-Pass carga D14-207/8 (|64|
+2311|E-88 : Fdo. Estabiliz. a D14-207|E-88 : Fdo. Estabiliz. a D14-207|64|
+2312|E-89 : By-Pass D2-216|E-89 : By-Pass D2-216|64|
+2313|E-90 : Entrada D14-207|E-90 : Entrada D14-207|64|
+2314|E-91 : Entrada p/vapor D14-207|E-91 : Entrada p/vapor D14-207|64|
+2315|E-92 : Entrada p/vapor D14-208|E-92 : Entrada p/vapor D14-208|64|
+2316|E-93 : Entrada D14-208 (valvula|E-93 : Entrada D14-208 (valvula|64|
+2317|E-94 : Entrada D14-208 (valvula|E-94 : Entrada D14-208 (valvula|64|
+2318|E-95 : Salida D14-207 a PRC-306|E-95 : Salida D14-207 a PRC-306|64|
+2319|E-96 : Salida D14-207 a D13-803|E-96 : Salida D14-207 a D13-803|64|
+2320|E-97 : Salida D14-208 a D13-803|E-97 : Salida D14-208 a D13-803|64|
+2321|E-98 : Salida D14-208 a PRC-306|E-98 : Salida D14-208 a PRC-306|64|
+2322|E-99 : Bloqueo PRC-306 (L.sur)|E-99 : Bloqueo PRC-306 (L.sur)|64|
+2323|E-100 : By-Pass PRC-306|E-100 : By-Pass PRC-306|64|
+2324|E-101 : Bloqueo PRC-306 (L.norte|E-101 : Bloqueo PRC-306 (L.norte|64|
+2325|E-102 : Entada D14-305 (superior|E-102 : Entada D14-305 (superior|64|
+2326|E-103 : Entada D14-305 (centro)|E-103 : Entada D14-305 (centro)|64|
+2327|E-104 : Entada D14-305 (inferior|E-104 : Entada D14-305 (inferior|64|
+2328|E-105 : Salida Cte. Lat D14 202|E-105 : Salida Cte. Lat D14 202|64|
+2329|E-106 : Salida Cte. Lat D14 202|E-106 : Salida Cte. Lat D14 202|64|
+2330|E-107 : Bloqueo valv. mariposa (|E-107 : Bloqueo valv. mariposa (|64|
+2331|E-108 : Bloqueo valv. mariposa (|E-108 : Bloqueo valv. mariposa (|64|
+2332|E-109 : By-Pass valv. mariposa|E-109 : By-Pass valv. mariposa|64|
+2333|E-110 : Bloqueo D2-206 B|E-110 : Bloqueo D2-206 B|64|
+2334|E-111 : Bloqueo salida 206 A|E-111 : Bloqueo salida 206 A|64|
+2335|E-112 : Bloqueo salida 206 B|E-112 : Bloqueo salida 206 B|64|
+2336|E-113 : Aspiraci¢n D3-215|E-113 : Aspiraci¢n D3-215|64|
+2337|E-114 : Aspiraci¢n D3-214|E-114 : Aspiraci¢n D3-214|64|
+2338|E-115 : Descarga D3-214|E-115 : Descarga D3-214|64|
+2339|E-116 : Descarga D3-215|E-116 : Descarga D3-215|64|
+2340|E-117 : Entrada D14-205|E-117 : Entrada D14-205|64|
+2341|E-118 : Bloqueo LC-206 (lado oes|E-118 : Bloqueo LC-206 (lado oes|64|
+2342|E-119 : Bloqueo LC-206 (lado est|E-119 : Bloqueo LC-206 (lado est|64|
+2343|E-120 : By-Pass LC-206|E-120 : By-Pass LC-206|64|
+2344|E-121 : Extracto a Tk 513 (sobre|E-121 : Extracto a Tk 513 (sobre|64|
+2345|E-122 : Entrada Tk 513|E-122 : Entrada Tk 513|64|
+2346|E-123 : Aspiraci¢n olla Tk 513|E-123 : Aspiraci¢n olla Tk 513|64|
+2347|E-124 : Aspiraci¢n normal Tk 513|E-124 : Aspiraci¢n normal Tk 513|64|
+2348|E-125 : Aspirac¢n agua Tk 513|E-125 : Aspirac¢n agua Tk 513|64|
+2349|E-126 : Reguladora LC-306|E-126 : Reguladora LC-306|64|
+2350|E-127 : Reguladora PRC-306|E-127 : Reguladora PRC-306|64|
+2351|M-24 : PC-105|M-24 : PC-105|63|
+2352|M-25 : Bloqueo PC-105|M-25 : Bloqueo PC-105|63|
+2353|M-26 : Bloqueo PC-105|M-26 : Bloqueo PC-105|63|
+2354|M-27 : By-pass PC-105|M-27 : By-pass PC-105|63|
+2355|M-28 : By-pass entr gas proceso|M-28 : By-pass entr gas proceso|63|
+2356|M-29 : Entrada de gas de proceso|M-29 : Entrada de gas de proceso|63|
+2357|M-30 : Drenaje autom de l¡quidos|M-30 : Drenaje autom de l¡quidos|63|
+2358|M-31 : Aislad Dren autom liquido|M-31 : Aislad Dren autom liquido|63|
+2359|M-32 : Aislad Dren autom liquido|M-32 : Aislad Dren autom liquido|63|
+2360|M-33 : By-pass Dren aut liquido|M-33 : By-pass Dren aut liquido|63|
+2361|M-34 : Dren liq cegada corr arri|M-34 : Dren liq cegada corr arri|63|
+2362|M-35 : Bloq PSV Tamb GasMezc|M-35 : Bloq PSV Tamb GasMezc|63|
+2363|M-36 : Vent antor PSVTamb Gas|M-36 : Vent antor PSVTamb Gas|63|
+2364|M-37 : Entrada al Demister|M-37 : Entrada al Demister|63|
+2365|M-38 : B-passTamb Gas Mez a PC
+|M-38 : B-passTamb Gas Mez a PC
+|63|
+2366|M-39 : By-pass de Gas Natural al|M-39 : By-pass de Gas Natural al|63|
+2367|M-40 : Bloqueo PSV Demister|M-40 : Bloqueo PSV Demister|63|
+2368|M-41 : Bloq PSV Demister vente|M-41 : Bloq PSV Demister vente|63|
+2369|M-42 : Vent antorch sist dren de|M-42 : Vent antorch sist dren de|63|
+2370|M-43 : Bloq control nivel Demist|M-43 : Bloq control nivel Demist|63|
+2371|M-44 : Bloq de controlador de ni|M-44 : Bloq de controlador de ni|63|
+2372|M-45 : Dren autom de l¡quidos|M-45 : Dren autom de l¡quidos|63|
+2373|M-46 : Aisl de Drenaje autom de
+|M-46 : Aisl de Drenaje autom de
+|63|
+2374|M-47 : Aisladora de Dren. automa|M-47 : Aisladora de Dren. automa|63|
+2375|M-48 : By-pas Dren autom liqu|M-48 : By-pas Dren autom liqu|63|
+2376|M-49 : Bloq antorcha sist dren d|M-49 : Bloq antorcha sist dren d|63|
+2377|M-50 : Bloq antorch sist dren li|M-50 : Bloq antorch sist dren li|63|
+2378|M-51 : Bloq a antorchas del sist|M-51 : Bloq a antorchas del sist|63|
+2379|M-52 : PC-104|M-52 : PC-104|63|
+2380|M-53 : Bloqueo de PC-104|M-53 : Bloqueo de PC-104|63|
+2381|M-54 : Bloqueo de PC-104|M-54 : Bloqueo de PC-104|63|
+2382|M-55 : By-pass de PC-104|M-55 : By-pass de PC-104|63|
+2383|M-56 : Salida a plantas|M-56 : Salida a plantas|63|
+2384|M-57 : Salida a antorchas|M-57 : Salida a antorchas|63|
+2385|M-58 : Bloqueo de Caldera Nø1|M-58 : Bloqueo de Caldera Nø1|63|
+2386|M-59 : FRC-105|M-59 : FRC-105|63|
+2387|M-60 : Bloqueo de FRC-105|M-60 : Bloqueo de FRC-105|63|
+2388|M-61 : Bloqueo de FRC-105|M-61 : Bloqueo de FRC-105|63|
+2389|M-62 : By-pass de FRC-105|M-62 : By-pass de FRC-105|63|
+2390|M-63 : FFSD  Caldera Nø1|M-63 : FFSD  Caldera Nø1|63|
+2391|M-64 : Corte de quemador Nø1|M-64 : Corte de quemador Nø1|63|
+2392|M-65 : Corte de quemador Nø2|M-65 : Corte de quemador Nø2|63|
+2393|M-66 : Corte de quemador Nø3|M-66 : Corte de quemador Nø3|63|
+2394|M-67 : Corte de quemador Nø4|M-67 : Corte de quemador Nø4|63|
+2395|M-68 : Corte de quemador Nø5|M-68 : Corte de quemador Nø5|63|
+2396|M-69 : Corte de quemador Nø6|M-69 : Corte de quemador Nø6|63|
+2397|M-70 : Grifo de quemador Nø1|M-70 : Grifo de quemador Nø1|63|
+2398|M-71 : Grifo de quemador Nø2|M-71 : Grifo de quemador Nø2|63|
+2399|M-72 : Grifo de quemador Nø3|M-72 : Grifo de quemador Nø3|63|
+2400|M-73 : Grifo de quemador Nø4|M-73 : Grifo de quemador Nø4|63|
+2401|M-74 : Grifo de quemador Nø5|M-74 : Grifo de quemador Nø5|63|
+2402|M-75 : Grifo de quemador Nø6|M-75 : Grifo de quemador Nø6|63|
+2403|M-76 : Bloqueo de Caldera Nø2|M-76 : Bloqueo de Caldera Nø2|63|
+2404|M-77 : FRC-107|M-77 : FRC-107|63|
+2405|M-78 : Bloqueo de FRC-107|M-78 : Bloqueo de FRC-107|63|
+2406|M-79 : Bloqueo de FRC-107|M-79 : Bloqueo de FRC-107|63|
+2407|M-80 : By-pass de FRC-107|M-80 : By-pass de FRC-107|63|
+2408|M-81 : FFSD  Caldera Nø2|M-81 : FFSD  Caldera Nø2|63|
+2409|M-82 : Corte de quemador Nø1|M-82 : Corte de quemador Nø1|63|
+2410|M-83 : Corte de quemador Nø2|M-83 : Corte de quemador Nø2|63|
+2411|M-84 : Corte de quemador Nø3|M-84 : Corte de quemador Nø3|63|
+2412|M-85 : Corte de quemador Nø4|M-85 : Corte de quemador Nø4|63|
+2413|M-86 : Corte de quemador Nø5|M-86 : Corte de quemador Nø5|63|
+2414|M-87 : Corte de quemador Nø6|M-87 : Corte de quemador Nø6|63|
+2415|M-88 : Grifo de quemador Nø1|M-88 : Grifo de quemador Nø1|63|
+2416|M-89 : Grifo de quemador Nø2|M-89 : Grifo de quemador Nø2|63|
+2417|M-90 : Grifo de quemador Nø3|M-90 : Grifo de quemador Nø3|63|
+2418|M-91 : Grifo de quemador Nø4|M-91 : Grifo de quemador Nø4|63|
+2419|M-92 : Grifo de quemador Nø5|M-92 : Grifo de quemador Nø5|63|
+2420|M-93 : Grifo de quemador Nø6|M-93 : Grifo de quemador Nø6|63|
+2421|M-94 : Bloqueo de Caldera Nø3|M-94 : Bloqueo de Caldera Nø3|63|
+2422|M-95 : FRC-109|M-95 : FRC-109|63|
+2423|M-96 : Bloqueo de FRC-109|M-96 : Bloqueo de FRC-109|63|
+2424|M-97 : Bloqueo de FRC-109|M-97 : Bloqueo de FRC-109|63|
+2425|M-98 : By-pass de FRC-109|M-98 : By-pass de FRC-109|63|
+2426|M-99 : FFSD  Caldera Nø3|M-99 : FFSD  Caldera Nø3|63|
+2427|M-100 : Corte de quemador Nø1|M-100 : Corte de quemador Nø1|63|
+2428|M-101 : Corte de quemador Nø2|M-101 : Corte de quemador Nø2|63|
+2429|M-102 : Corte de quemador Nø3|M-102 : Corte de quemador Nø3|63|
+2430|M-103 : Corte de quemador Nø4|M-103 : Corte de quemador Nø4|63|
+2431|M-104 : Corte de quemador Nø5|M-104 : Corte de quemador Nø5|63|
+2432|M-105 : Corte de quemador Nø6|M-105 : Corte de quemador Nø6|63|
+2433|M-106 : -Grifo de quemador Nø1|M-106 : -Grifo de quemador Nø1|63|
+2434|M-107 : -Grifo de quemador Nø2|M-107 : -Grifo de quemador Nø2|63|
+2435|M-108 : -Grifo de quemador Nø3|M-108 : -Grifo de quemador Nø3|63|
+2436|M-109 : -Grifo de quemador Nø4|M-109 : -Grifo de quemador Nø4|63|
+2437|M-110 : -Grifo de quemador Nø5|M-110 : -Grifo de quemador Nø5|63|
+2438|M-111 : -Grifo de quemador Nø6|M-111 : -Grifo de quemador Nø6|63|
+2439|M-112 : L¡nea a plantas|M-112 : L¡nea a plantas|63|
+2440|M-113 : PC-103|M-113 : PC-103|63|
+2441|M-114 : Bloqueo PC-103|M-114 : Bloqueo PC-103|63|
+2442|M-115 : Bloqueo PC-103|M-115 : Bloqueo PC-103|63|
+2443|M-116 : By-pass PC-103|M-116 : By-pass PC-103|63|
+2444|M-117 : Bloqueo a Turbo1 y a Gas|M-117 : Bloqueo a Turbo1 y a Gas|63|
+2445|M-118 : Entrada a Turbo Nø1|M-118 : Entrada a Turbo Nø1|63|
+2446|M-119 : Entrada a Turbo Nø1|M-119 : Entrada a Turbo Nø1|63|
+2447|M-120 : Entrada a Turbo Nø2|M-120 : Entrada a Turbo Nø2|63|
+2448|M-121 : Entrada a Turbo Nø2|M-121 : Entrada a Turbo Nø2|63|
+2449|M-122 : Entrada a Turbo Nø3|M-122 : Entrada a Turbo Nø3|63|
+2450|M-123 : Entrada a Turbo Nø3|M-123 : Entrada a Turbo Nø3|63|
+2451|M-124 : Ent. a Gas de Pilotos de|M-124 : Ent. a Gas de Pilotos de|63|
+2452|M-125 : BloqgasNataplantas|M-125 : BloqgasNataplantas|63|
+2453|M-126 : Gas Nat (tapa ciega|M-126 : Gas Nat (tapa ciega|63|
+2454|M-128 : Bloq de Gas Nat a Caucho|M-128 : Bloq de Gas Nat a Caucho|63|
+2455|M-129 : Bloqueo de Gas Mezcla a
+|M-129 : Bloqueo de Gas Mezcla a
+|63|
+2456|M-130 : Bloq de Gas Mezcla a
+ Re|M-130 : Bloq de Gas Mezcla a
+ Re|63|
+2457|M-131 : Off-Gas de Etileno|M-131 : Off-Gas de Etileno|63|
+2458|M-132 : Bloq de Gas Nat a Butadi|M-132 : Bloq de Gas Nat a Butadi|63|
+2459|M-133 : Off-GasdeButadieno|M-133 : Off-GasdeButadieno|63|
+2460|E-1 : Bloq.punta de manguera|E-1 : Bloq.punta de manguera|63|
+2465|E-6 : L¡nea de barrido|E-6 : L¡nea de barrido|63|
+2466|E-7 : L¡nea de barrido|E-7 : L¡nea de barrido|63|
+2467|E-8 : Bomba de barrido|E-8 : Bomba de barrido|63|
+2468|E-11 : Bloq. bajada al muelle|E-11 : Bloq. bajada al muelle|63|
+2469|E-12 : Entrada al cargadero (ben|E-12 : Entrada al cargadero (ben|63|
+2470|E-13 : Talud de tanques|E-13 : Talud de tanques|63|
+2471|E-14 : Bloq. amortiguador|E-14 : Bloq. amortiguador|63|
+2472|E-15 : Bloq. amortiguador|E-15 : Bloq. amortiguador|63|
+2473|E-16 : BLOQUE DE MANGUERA DE DES|E-16 : BLOQUE DE MANGUERA DE DES|135|
+2474|E-17 : Desc. dripolene (camiones|E-17 : Desc. dripolene (camiones|135|
+2475|E-18 : Bloq.dripolene a benceno|E-18 : Bloq.dripolene a benceno|63|
+2476|E-19 : Bloq. bomba 32-D3-514|E-19 : Bloq. bomba 32-D3-514|63|
+2477|E-20 : Bloq. bomba 32-D3-514|E-20 : Bloq. bomba 32-D3-514|135|
+2478|E-21 :  Bomba 32-D3-514|E-21 :  Bomba 32-D3-514|63|
+2479|E-22 : Lanza de carga|E-22 : Lanza de carga|63|
+2480|E-23 : Lanza de carga|E-23 : Lanza de carga|63|
+2481|E-24 : Lanza de carga|E-24 : Lanza de carga|63|
+2482|E-25 : Entrada dripolene ( plant|E-25 : Entrada dripolene ( plant|63|
+2483|E-26 : Entrada dripolene ( plant|E-26 : Entrada dripolene ( plant|63|
+2484|E-27 : Entrada dripolene ( plant|E-27 : Entrada dripolene ( plant|63|
+2485|E-28 : Entrada dripolene ( plant|E-28 : Entrada dripolene ( plant|63|
+2486|E-29 : Entrada dripolene ( plant|E-29 : Entrada dripolene ( plant|63|
+2487|E-30 : Entrada dripolene (cami¢n|E-30 : Entrada dripolene (cami¢n|63|
+2488|E-31 : Asp. bomba 32-D3-512|E-31 : Asp. bomba 32-D3-512|63|
+2489|E-32 : Asp. bomba 32-D3-512|E-32 : Asp. bomba 32-D3-512|63|
+2490|E-33 : Drenaje de agua|E-33 : Drenaje de agua|63|
+2491|E-34 : Recirc.bomba 32-D3-512|E-34 : Recirc.bomba 32-D3-512|63|
+2492|E-35 : Recirc.bomba 32-D3-512|E-35 : Recirc.bomba 32-D3-512|63|
+2493|E-36 : Desc.benceno (camiones )|E-36 : Desc.benceno (camiones )|63|
+2494|E-37 : Desc.32-D3-626 al 32-D9-5|E-37 : Desc.32-D3-626 al 32-D9-5|63|
+2495|E-38 : Bloq. filtro|E-38 : Bloq. filtro|63|
+2496|E-39 : Barrido con vapor|E-39 : Barrido con vapor|63|
+2497|E-40 : Bypass recirculacion/ ent|E-40 : Bypass recirculacion/ ent|63|
+2498|E-41 : Bloq. filtro|E-41 : Bloq. filtro|63|
+2499|E-42 : Bloq. filtro|E-42 : Bloq. filtro|63|
+2500|E-43 : Recirc.bomba 32-D3-512|E-43 : Recirc.bomba 32-D3-512|63|
+2501|E-44 : Entrada desc. de camiones|E-44 : Entrada desc. de camiones|63|
+2502|E-45 : By-pass de l¡neas|E-45 : By-pass de l¡neas|63|
+2503|E-46 : By-pass de l¡neas|E-46 : By-pass de l¡neas|63|
+2504|E-47 : By-pass de l¡neas|E-47 : By-pass de l¡neas|63|
+2505|E-48 : Asp. bomba desde cami¢n|E-48 : Asp. bomba desde cami¢n|63|
+2506|E-49 : Bloq. recirc.bomba|E-49 : Bloq. recirc.bomba|63|
+2507|E-50 : Bloq. desc. bomba|E-50 : Bloq. desc. bomba|63|
+2508|E-51 : Purga|E-51 : Purga|63|
+2509|E-52 : By-pass de l¡neas|E-52 : By-pass de l¡neas|63|
+2510|E-53 : By-pass de l¡neas|E-53 : By-pass de l¡neas|63|
+2511|E-54 : By-pass de l¡neas|E-54 : By-pass de l¡neas|63|
+2512|E-55 : Bomba 32-D3-512|E-55 : Bomba 32-D3-512|63|
+2513|E-56 : Bomba 32-D3-626|E-56 : Bomba 32-D3-626|63|
+2514|E-57 : Entrada al tanque 32-D9-6|E-57 : Entrada al tanque 32-D9-6|63|
+2515|E-58 : Bomba desc. de benceno|E-58 : Bomba desc. de benceno|63|
+2516|E-59 : Entrada 32-D9-620|E-59 : Entrada 32-D9-620|63|
+2517|E-60 : Entrada 32-D9-620|E-60 : Entrada 32-D9-620|63|
+2518|E-61 : Entrada 32-D9-538|E-61 : Entrada 32-D9-538|63|
+2519|E-62 : Bloqueo de filtro|E-62 : Bloqueo de filtro|63|
+2520|E-63 : Bloqueo bomba de benceno|E-63 : Bloqueo bomba de benceno|63|
+2521|E-64 : Decs. bomba de benceno|E-64 : Decs. bomba de benceno|63|
+2522|U-1 : Bloq.punta de manguera|U-1 : Bloq.punta de manguera|63|
+2523|U-2 : Bloq.punta de l¡nea muelle|U-2 : Bloq.punta de l¡nea muelle|63|
+2524|U-3 : Manifold de lavado|U-3 : Manifold de lavado|63|
+2525|U-4 : Val. corte r pido|U-4 : Val. corte r pido|63|
+2526|U-5 : Conexi¢n agua filtrada|U-5 : Conexi¢n agua filtrada|63|
+2527|U-6 : L¡nea de barrido|U-6 : L¡nea de barrido|63|
+2528|E-2 : Bloq.punta de l¡nea muelle|E-2 : Bloq.punta de l¡nea muelle|63|
+2529|E-3 : Manifold de lavado|E-3 : Manifold de lavado|63|
+2530|E-4 : Val. corte r pido|E-4 : Val. corte r pido|63|
+2531|E-5 : Conexi¢n agua filtrada|E-5 : Conexi¢n agua filtrada|63|
+2532|M1 : D3-105|M1 : D3-105|61|
+2533|M2 : D3-106|M2 : D3-106|61|
+2534|M3 : VAL. DE BLOQ.CIMA DESMETA.|M3 : VAL. DE BLOQ.CIMA DESMETA.|61|
+2535|M4 : V.BLOQ.CIMA DESMETA.COLEC.G|M4 : V.BLOQ.CIMA DESMETA.COLEC.G|61|
+2536|M5 : VAL. DE BLOQ. EN ENTRADA A|M5 : VAL. DE BLOQ. EN ENTRADA A|61|
+2537|M6 : VAL. DE BLOQ. EN SALIDA DE|M6 : VAL. DE BLOQ. EN SALIDA DE|61|
+2538|M7 : VAL. EN SALIDA DE PC-103.|M7 : VAL. EN SALIDA DE PC-103.|61|
+2539|E1 : LV-107|E1 : LV-107|61|
+2540|E2 : VAL. BLOQ. ANTES  LV-107|E2 : VAL. BLOQ. ANTES  LV-107|61|
+2541|E3 : VAL. BLOQ. DESP.  LV-107|E3 : VAL. BLOQ. DESP.  LV-107|61|
+2542|E4 : BY-PASS LV-107|E4 : BY-PASS LV-107|61|
+2543|E5 : LV-108|E5 : LV-108|61|
+2544|E6 : VAL. BLOQ. ANTES  LV-108|E6 : VAL. BLOQ. ANTES  LV-108|61|
+2545|E7 : VAL. BLOQ. DESP.  LV-108|E7 : VAL. BLOQ. DESP.  LV-108|61|
+2546|E8 : BY-PASS LV-108|E8 : BY-PASS LV-108|61|
+2547|E9 : BLOQ. AGUAS ARRIBA LV-108|E9 : BLOQ. AGUAS ARRIBA LV-108|61|
+2548|E10 : BLOQ.TRAMO MUERTO DESP.VAL|E10 : BLOQ.TRAMO MUERTO DESP.VAL|61|
+2549|E11 : BLOQ.TRAMO MUERTO DESP. LV|E11 : BLOQ.TRAMO MUERTO DESP. LV|61|
+2550|E12 : VAL. BLOQ. D13-165|E12 : VAL. BLOQ. D13-165|61|
+2551|E13 : D3-206|E13 : D3-206|61|
+2552|E14 : D3-229|E14 : D3-229|61|
+2553|E15 : BLOQ. DESCARGA D3-206|E15 : BLOQ. DESCARGA D3-206|61|
+2554|E16 : BLOQ. SUCCIàN     D3-206|E16 : BLOQ. SUCCIàN     D3-206|61|
+2555|E17 : BLOQ. DESCARGA D3-229|E17 : BLOQ. DESCARGA D3-229|61|
+2556|E18 : BLOQ. SUCCIàN     D3-229|E18 : BLOQ. SUCCIàN     D3-229|61|
+2557|E19 : FV-205|E19 : FV-205|61|
+2558|E20 : BLOQ. ANTES DE FV-205|E20 : BLOQ. ANTES DE FV-205|61|
+2559|E21 : BLOQ. DESP.     FV-205|E21 : BLOQ. DESP.     FV-205|61|
+2560|E22 : BY-PASS FV-205|E22 : BY-PASS FV-205|61|
+2561|E27 : D3-272|E27 : D3-272|61|
+2562|E28 : BLOQ. SUCCIàN D3-272|E28 : BLOQ. SUCCIàN D3-272|61|
+2563|E29 : BLOQ. DESCARGAD3-272|E29 : BLOQ. DESCARGAD3-272|61|
+2564|E31 : BLOQ. RECIRCULACIàN DE D3-|E31 : BLOQ. RECIRCULACIàN DE D3-|61|
+2565|E32 : BLOQ. DESCARGA D3-271 A SA|E32 : BLOQ. DESCARGA D3-271 A SA|61|
+2566|E33 : LV-282|E33 : LV-282|61|
+2567|E34 : BLOQ. ANTES DE LV-282|E34 : BLOQ. ANTES DE LV-282|61|
+2568|E35 : BLOQ. DESP. DE LV-282|E35 : BLOQ. DESP. DE LV-282|61|
+2569|E36 : BY-PASS LV-282|E36 : BY-PASS LV-282|61|
+2570|E37 : BLOQ. DRIPOLENE A USINA DE|E37 : BLOQ. DRIPOLENE A USINA DE|61|
+2571|E39 : VAL. CIMA BENCENO A SLOP|E39 : VAL. CIMA BENCENO A SLOP|61|
+2572|E40 : SUCCIàN D3-160/1|E40 : SUCCIàN D3-160/1|61|
+2573|E41 : DESCARGA D3-161/1|E41 : DESCARGA D3-161/1|61|
+2574|E42 : SUCCION D3-161/2|E42 : SUCCION D3-161/2|61|
+2575|E43 : DESCARGA D3-161/2|E43 : DESCARGA D3-161/2|61|
+2576|E44 : SUCCION D3-170|E44 : SUCCION D3-170|61|
+2577|E45 : D3-170|E45 : D3-170|61|
+2578|E46 : DRENAJE A UNDERGROUND DE S|E46 : DRENAJE A UNDERGROUND DE S|61|
+2579|E47 : FV-195|E47 : FV-195|61|
+2580|E48 : BLOQ. ANTES FV-195|E48 : BLOQ. ANTES FV-195|61|
+2581|E49 : BLOQ. DESPUES DE FV-195|E49 : BLOQ. DESPUES DE FV-195|61|
+2582|E50 : BY-PASS FV-195|E50 : BY-PASS FV-195|61|
+2583|E51 : BLOQ. AGUAS ARRIBA FV-195|E51 : BLOQ. AGUAS ARRIBA FV-195|61|
+2584|E52 : BLOQ. AGUAS ARRIBA FV-195|E52 : BLOQ. AGUAS ARRIBA FV-195|61|
+2585|E53 : D3-165/1|E53 : D3-165/1|61|
+2586|E54 : SUCCION D3-165/1|E54 : SUCCION D3-165/1|61|
+2587|E55 : DESCARGA D3-165/1|E55 : DESCARGA D3-165/1|61|
+2588|E56 : D3-165/2|E56 : D3-165/2|61|
+2589|E57 : SUCCION D3-165/2|E57 : SUCCION D3-165/2|61|
+2590|E58 : DESCARGA D3-165/2|E58 : DESCARGA D3-165/2|61|
+2591|E59 : FV-191|E59 : FV-191|61|
+2592|E60 : BLOQ. ANTES FV-191|E60 : BLOQ. ANTES FV-191|61|
+2593|E61 : BLOQ. DESPUES FV-191|E61 : BLOQ. DESPUES FV-191|61|
+2594|E62 : BY-PASS FV-191|E62 : BY-PASS FV-191|61|
+2595|E63 : FV-168|E63 : FV-168|61|
+2596|E64 : BLOQ. ANTES FV-168|E64 : BLOQ. ANTES FV-168|61|
+2597|E65 : BLOQ. DESPUES FV-168|E65 : BLOQ. DESPUES FV-168|61|
+2598|E66 : BY-PASS FV-168|E66 : BY-PASS FV-168|61|
+2599|E67 : LV-153|E67 : LV-153|61|
+2600|E68 : BLOQ. ANTES DE LV-153|E68 : BLOQ. ANTES DE LV-153|61|
+2601|E69 : BLOQ. DESPUES DE LV-153|E69 : BLOQ. DESPUES DE LV-153|61|
+2602|E70 : BY-PASS LV-153|E70 : BY-PASS LV-153|61|
+2603|E71 : BLOQ. LINEA DE BZ A REFLUJ|E71 : BLOQ. LINEA DE BZ A REFLUJ|61|
+2604|E72 : BLOQ. LINEA DE BENCENO A S|E72 : BLOQ. LINEA DE BENCENO A S|61|
+2605|E73 : D3-153/1|E73 : D3-153/1|61|
+2606|E74 : SUCCION D3-153/1|E74 : SUCCION D3-153/1|61|
+2607|E75 : DESCARGA D3-153/1|E75 : DESCARGA D3-153/1|61|
+2608|E76 : D3-153/2|E76 : D3-153/2|61|
+2609|E77 : SUCCION D3-153/2|E77 : SUCCION D3-153/2|61|
+2610|E78 : DESCARGA D3-153/2|E78 : DESCARGA D3-153/2|61|
+2611|E79 : FV-189|E79 : FV-189|61|
+2612|E80 : BLOQ. ANTES FV-189|E80 : BLOQ. ANTES FV-189|61|
+2613|E81 : BLOQ. DESPUES FV-189|E81 : BLOQ. DESPUES FV-189|61|
+2614|E82 : BY-PASS FV-189|E82 : BY-PASS FV-189|61|
+2615|E83 : D3-152/1|E83 : D3-152/1|61|
+2616|E84 : SUCCION D3-152/1|E84 : SUCCION D3-152/1|61|
+2617|E85 : DESCARGA D3-152/1|E85 : DESCARGA D3-152/1|61|
+2618|E86 : D3-152/2|E86 : D3-152/2|61|
+2619|E87 : SUCCION D3-152/2|E87 : SUCCION D3-152/2|61|
+2620|E88 : DESCARGA D3-152/2|E88 : DESCARGA D3-152/2|61|
+2621|E89 : FV-159|E89 : FV-159|61|
+2622|E90 : BLOQ. ANTES FV-159|E90 : BLOQ. ANTES FV-159|61|
+2623|E91 : BLOQ. DESPUES FV-159|E91 : BLOQ. DESPUES FV-159|61|
+2624|E92 : BY-PASS FV-159|E92 : BY-PASS FV-159|61|
+2625|E93 : XV-160|E93 : XV-160|61|
+2626|E94 : BY-PASS TRANSAL.|E94 : BY-PASS TRANSAL.|61|
+2627|E95 : CARGA BENCENO A FUERA DE E|E95 : CARGA BENCENO A FUERA DE E|61|
+2628|E96 : CARGA TRANSAL. A SLOP|E96 : CARGA TRANSAL. A SLOP|61|
+2629|E97 : CARGA TRANSAL. A PURGA|E97 : CARGA TRANSAL. A PURGA|61|
+2630|E98 : CARGA TRANSAL A UNDERGROUN|E98 : CARGA TRANSAL A UNDERGROUN|61|
+2631|E99 : CARGA TRANSAL A UNDERGROUN|E99 : CARGA TRANSAL A UNDERGROUN|61|
+2632|E100 : DRENAJE DE SUCCION D3-152|E100 : DRENAJE DE SUCCION D3-152|61|
+2633|E101 : DRENAJE DE SUCCION D3-152|E101 : DRENAJE DE SUCCION D3-152|61|
+2634|E102 : DRENAJE FONDO ALQUILADOR|E102 : DRENAJE FONDO ALQUILADOR|61|
+2635|E103 : DRENAJE FONDO ALQUILADOR|E103 : DRENAJE FONDO ALQUILADOR|61|
+2636|E104 : DRENAJE LINEA FONDO ALQUI|E104 : DRENAJE LINEA FONDO ALQUI|61|
+2637|E105 : DRENAJE LINEA FONDO ALQUI|E105 : DRENAJE LINEA FONDO ALQUI|61|
+2638|E106 : FV-156|E106 : FV-156|61|
+2639|E107 : BLOQ. ANTES FV-156|E107 : BLOQ. ANTES FV-156|61|
+2640|E108 : BLOQ. DESPUES FV-156|E108 : BLOQ. DESPUES FV-156|61|
+2641|E109 : BY-PASS FV-156|E109 : BY-PASS FV-156|61|
+2642|E110 : FV-157|E110 : FV-157|61|
+2643|E111 : BLOQ. ANTES FV-157|E111 : BLOQ. ANTES FV-157|61|
+2644|E112 : BLOQ. DESPUES FV-157|E112 : BLOQ. DESPUES FV-157|61|
+2645|E113 : BY-PASS FV-157|E113 : BY-PASS FV-157|61|
+2646|E114 : FV-160|E114 : FV-160|61|
+2647|E115 : BLOQ. ANTES FV-160|E115 : BLOQ. ANTES FV-160|61|
+2648|E116 : BLOQ. DESPUES FV-160|E116 : BLOQ. DESPUES FV-160|61|
+2649|E117 : BY-PASS FV-160|E117 : BY-PASS FV-160|61|
+2650|E118 : BY-PASS D2-152|E118 : BY-PASS D2-152|61|
+2651|E119 : BY-PASS D2-152|E119 : BY-PASS D2-152|61|
+2652|E120 : SALIDA D2-153|E120 : SALIDA D2-153|61|
+2653|E121 : BLOQ. PSV SALIDA D2-153|E121 : BLOQ. PSV SALIDA D2-153|61|
+2654|E122 : DRENAJE FONDO SEPARADOR A|E122 : DRENAJE FONDO SEPARADOR A|61|
+2655|E123 : DRENAJE FONDO SEPARADOR A|E123 : DRENAJE FONDO SEPARADOR A|61|
+2656|E124 : LV-172|E124 : LV-172|61|
+2657|E125 : BLOQ. ANTES LV-172|E125 : BLOQ. ANTES LV-172|61|
+2658|E126 : BLOQ. DESPUES LV-172|E126 : BLOQ. DESPUES LV-172|61|
+2659|E127 : BY-PASS LV-172|E127 : BY-PASS LV-172|61|
+2660|E128 : TV-151|E128 : TV-151|61|
+2661|E129 : BLOQ. ANTES TV-151|E129 : BLOQ. ANTES TV-151|61|
+2662|E130 : BLOQ. DESPUES TV-151|E130 : BLOQ. DESPUES TV-151|61|
+2663|E131 : BY-PASS TV-151|E131 : BY-PASS TV-151|61|
+2664|E132 : SUCCIàN D3-110|E132 : SUCCIàN D3-110|61|
+2665|E133 : DESCARGA  D3-110|E133 : DESCARGA  D3-110|61|
+2666|E134 : D3-110|E134 : D3-110|61|
+2667|E135 : SUCCION D3-124|E135 : SUCCION D3-124|61|
+2668|E136 : DESCARGA D3-124|E136 : DESCARGA D3-124|61|
+2669|E137 : D3-124|E137 : D3-124|61|
+2670|E138 : VALVULA ENTRADA A SUCCIàN|E138 : VALVULA ENTRADA A SUCCIàN|61|
+2671|1 : PIEZOMETROS / NAPAS FREATICA|1 : PIEZOMETROS / NAPAS FREATICA|57|
+2672|2 : PIEZOMETROS / NAPAS FREATICA|2 : PIEZOMETROS / NAPAS FREATICA|57|
+2673|3 : PIEZOMETROS / NAPAS FREATICA|3 : PIEZOMETROS / NAPAS FREATICA|57|
+2674|4 : PIEZOMETROS / NAPAS FREATICA|4 : PIEZOMETROS / NAPAS FREATICA|57|
+2675|5 : PIEZOMETROS / NAPAS FREATICA|5 : PIEZOMETROS / NAPAS FREATICA|57|
+2676|6 : PIEZOMETROS / NAPAS FREATICA|6 : PIEZOMETROS / NAPAS FREATICA|57|
+2677|7 : PIEZOMETROS / NAPAS FREATICA|7 : PIEZOMETROS / NAPAS FREATICA|57|
+2678|8 : PIEZOMETROS / NAPAS FREATICA|8 : PIEZOMETROS / NAPAS FREATICA|57|
+2679|9 : PIEZOMETROS / NAPAS FREATICA|9 : PIEZOMETROS / NAPAS FREATICA|57|
+2680|10 : PIEZOMETROS / NAPAS FREATIC|10 : PIEZOMETROS / NAPAS FREATIC|57|
+2681|11 : PIEZOMETROS / NAPAS FREATIC|11 : PIEZOMETROS / NAPAS FREATIC|57|
+2682|13 : PIEZOMETROS / NAPAS FREATIC|13 : PIEZOMETROS / NAPAS FREATIC|57|
+2683|14 : PIEZOMETROS / NAPAS FREATIC|14 : PIEZOMETROS / NAPAS FREATIC|57|
+2684|15 : PIEZOMETROS / NAPAS FREATIC|15 : PIEZOMETROS / NAPAS FREATIC|57|
+2685|16 : PIEZOMETROS / NAPAS FREATIC|16 : PIEZOMETROS / NAPAS FREATIC|57|
+2686|17 : PIEZOMETROS / NAPAS FREATIC|17 : PIEZOMETROS / NAPAS FREATIC|57|
+2687|18 : PIEZOMETROS / NAPAS FREATIC|18 : PIEZOMETROS / NAPAS FREATIC|57|
+2688|19 : PIEZOMETROS / NAPAS FREATIC|19 : PIEZOMETROS / NAPAS FREATIC|57|
+2689|20 : PIEZOMETROS / NAPAS FREATIC|20 : PIEZOMETROS / NAPAS FREATIC|57|
+2690|21 : PIEZOMETROS / NAPAS FREATIC|21 : PIEZOMETROS / NAPAS FREATIC|57|
+2691|22 : PIEZOMETROS / NAPAS FREATIC|22 : PIEZOMETROS / NAPAS FREATIC|57|
+2692|23 : PIEZOMETROS / NAPAS FREATIC|23 : PIEZOMETROS / NAPAS FREATIC|57|
+2693|24 : PIEZOMETROS / NAPAS FREATIC|24 : PIEZOMETROS / NAPAS FREATIC|57|
+2694|25 : PIEZOMETROS / NAPAS FREATIC|25 : PIEZOMETROS / NAPAS FREATIC|57|
+2695|26 : PIEZOMETROS / NAPAS FREATIC|26 : PIEZOMETROS / NAPAS FREATIC|57|
+2696|27 : PIEZOMETROS / NAPAS FREATIC|27 : PIEZOMETROS / NAPAS FREATIC|57|
+2697|28 : PIEZOMETROS / NAPAS FREATIC|28 : PIEZOMETROS / NAPAS FREATIC|57|
+2698|29 : PIEZOMETROS / NAPAS FREATIC|29 : PIEZOMETROS / NAPAS FREATIC|57|
+2699|30 : PIEZOMETROS / NAPAS FREATIC|30 : PIEZOMETROS / NAPAS FREATIC|57|
+2700|31 : PIEZOMETROS / NAPAS FREATIC|31 : PIEZOMETROS / NAPAS FREATIC|57|
+2701|32 : PIEZOMETROS / NAPAS FREATIC|32 : PIEZOMETROS / NAPAS FREATIC|57|
+2702|33 : PIEZOMETROS / NAPAS FREATIC|33 : PIEZOMETROS / NAPAS FREATIC|57|
+2703|34 : PIEZOMETROS / NAPAS FREATIC|34 : PIEZOMETROS / NAPAS FREATIC|57|
+2704|35 : PIEZOMETROS / NAPAS FREATIC|35 : PIEZOMETROS / NAPAS FREATIC|57|
+2705|36 : PIEZOMETROS / NAPAS FREATIC|36 : PIEZOMETROS / NAPAS FREATIC|57|
+2706|37 : PIEZOMETROS / NAPAS FREATIC|37 : PIEZOMETROS / NAPAS FREATIC|57|
+2707|38 : PIEZOMETROS / NAPAS FREATIC|38 : PIEZOMETROS / NAPAS FREATIC|57|
+2708|LE1 : PIEZOMETROS / NAPAS FREATI|LE1 : PIEZOMETROS / NAPAS FREATI|57|
+2709|LE2 : PIEZOMETROS / NAPAS FREATI|LE2 : PIEZOMETROS / NAPAS FREATI|57|
+2710|LE3 : PIEZOMETROS / NAPAS FREATI|LE3 : PIEZOMETROS / NAPAS FREATI|57|
+2711|LE4 : PIEZOMETROS / NAPAS FREATI|LE4 : PIEZOMETROS / NAPAS FREATI|57|
+2991|AGUA CIMA DESBUTA|AGUA CIMA DESBUTA|41|
+2992|REACTOR  B|REACTOR  B|51|
+2993|REACTOR  C|REACTOR  C|51|
+3342|MH 10|MH 10|16|
+3652|AGUA CIMA T.DESP.SOLV.|AGUA CIMA T.DESP.SOLV.|42|
+3653|AGUA DESP.SOLV.(CTE.LAT)|AGUA DESP.SOLV.(CTE.LAT)|42|
+3654|AGUA T.BZ(CTE.LAT.)|AGUA T.BZ(CTE.LAT.)|43|
+3713|FDO.T.TOLUENO|FDO.T.TOLUENO|43|
+4932|PTO.M.ARPOL SBR 1913|PTO.M.ARPOL SBR 1913|53|
+4933|PTO.M.ARNIPOL NBR OZO|PTO.M.ARNIPOL NBR OZO|53|
+4934|PTO.M.EMPASTE 1606|PTO.M.EMPASTE 1606|53|
+4935|PTO.M.EMPASTE 1808|PTO.M.EMPASTE 1808|53|
+4936|PTO.M.EMPASTE 1620|PTO.M.EMPASTE 1620|53|
+4943|N/A|N/A|1|
+5180|CIMA POSTFRACC.|CIMA POSTFRACC.|12|
+7791|DOSIMETRIAS VAPORES ORG.|DOSIMETRIAS VAPORES ORG.|47|
+7847|H.O.P.O. CAMION|H.O.P.O. CAMION|49|
+7848|PROPANO POLIDUCTO|PROPANO POLIDUCTO|17|
+9244|Abastecimientos|Abastecimientos|1|
+9245|Almacenaje de sal|Almacenaje de sal|56|
+9246|Almacenes Administracion|Almacenes Administracion|3|
+9247|Almacenes Recepcion|Almacenes Recepcion|2|
+9248|Area Torres despojadoras|Area Torres despojadoras|58|
+9249|Arnipol Polimerizacion|Arnipol Polimerizacion|6|
+9250|Arpol Polimerizacion|Arpol Polimerizacion|4|
+9251|Arpol/Arnipol - Emisiones Fugi|Arpol/Arnipol - Emisiones Fugi|62|
+9253|Arpol/Arnipol Area Efluentes|Arpol/Arnipol Area Efluentes|9|
+9255|Arplo/Arnipol Terminado|Arplo/Arnipol Terminado|5|
+9256|Arplo/Arnipol Tks Latex|Arplo/Arnipol Tks Latex|8|
+9257|Arplo/Arnipol Tks Monomeros|Arplo/Arnipol Tks Monomeros|7|
+9258|Aseguramiento de la Calidad|Aseguramiento de la Calidad|10|
+9260|Butadieno - Emisiones Fugitiva|Butadieno - Emisiones Fugitiva|60|
+9261|Butadieno Area Efluentes|Butadieno Area Efluentes|16|
+9262|Butadieno Area Tanques|Butadieno Area Tanques|15|
+9263|Butadieno Gas Inerte|Butadieno Gas Inerte|11|
+9264|Butadieno Hexano|Butadieno Hexano|13|
+9265|Butadieno LPG|Butadieno LPG|12|
+9266|Butadieno Propelente|Butadieno Propelente|14|
+9267|C. Cal. Interna|C. Cal. Interna|31|
+9268|C. Cal. IMaterias Primas e IQ|C. Cal. IMaterias Primas e IQ|29|
+9270|C. Cal. Medio Ambiente e Higie|C. Cal. Medio Ambiente e Higie|30|
+9271|C. Cal. Procesos Arpol/Arnipol|C. Cal. Procesos Arpol/Arnipol|25|
+9272|C. Cal. Procesos Hidrocarburos|C. Cal. Procesos Hidrocarburos|26|
+9273|C. Cal. Producto Terminado Arp|C. Cal. Producto Terminado Arp|27|
+9274|C. Cal. Producto Terminado Hid|C. Cal. Producto Terminado Hid|28|
+9275|Complejo Area Medio Ambiente|Complejo Area Medio Ambiente|52|
+9276|Desarrolos de Metodos y Estudi|Desarrolos de Metodos y Estudi|32|
+9277|Desconocido|Desconocido|-1|
+9278|Despachos Arpol/Arnipol|Despachos Arpol/Arnipol|23|
+9279|Despachos Hidrocarburos|Despachos Hidrocarburos|24|
+9280|EEE- Emisiones Fugitivas|EEE- Emisiones Fugitivas|61|
+9281|EEE- Area Efluentes|EEE- Area Efluentes|22|
+9282|Estireno|Estireno|20|
+9283|Estireno Area Tanques|Estireno Area Tanques|21|
+9284|Etilbenceno|Etilbenceno|19|
+9285|Etileno|Etileno|17|
+9286|Etileno Area de Tanques|Etileno Area de Tanques|18|
+9287|G.Comercial Elastomeros|G.Comercial Elastomeros|53|
+9288|G.Comercial Hidrocarburos|G.Comercial Hidrocarburos|101|
+9289|G.Planta|G.Planta|55|
+9290|Laboratorio de Asistencia Tecn|Laboratorio de Asistencia Tecn|33|
+9291|Mantenimiento Asistencia a Man|Mantenimiento Asistencia a Man|34|
+9292|Mantenimiento Electrico|Mantenimiento Electrico|35|
+9293|Mantenimiento Instrumentos|Mantenimiento Instrumentos|36|
+9294|Mantenimiento Mecanico|Mantenimiento Mecanico|37|
+9295|PASA - PGSM|PASA - PGSM|57|
+9296|Procesos Arpol/Arnipol|Procesos Arpol/Arnipol|38|
+9297|Procesos Hidrocarburos|Procesos Hidrocarburos|39|
+9298|Procesos Medio Ambiente|Procesos Medio Ambiente|40|
+9299|Reforma - Emisiones Fugitivas|Reforma - Emisiones Fugitivas|64|
+9300|Reforma A 100|Reforma A 100|41|
+9301|Reforma A 200|Reforma A 200|42|
+9302|Reforma A 300|Reforma A 300|43|
+9303|Reforma A 500|Reforma A 500|44|
+9304|Reforma A 700|Reforma A 700|45|
+9305|Reforma Area Efluentes|Reforma Area Efluentes|46|
+9306|Sala de control Arpol Arnipol|Sala de control Arpol Arnipol|59|
+9307|Seguridad e Higiene Industrial|Seguridad e Higiene Industrial|47|
+9308|Sistemas|Sistemas|54|
+9309|Usina - Emisiones Fugitivas|Usina - Emisiones Fugitivas|63|
+9311|Usina Area Efluentes|Usina Area Efluentes|51|
+9312|Usina P.L. Despacho de Camione|Usina P.L. Despacho de Camione|49|
+9313|Usina P.L. Exp/Imp de Muelle|Usina P.L. Exp/Imp de Muelle|50|
+9314|Usina Servicios Auxiliares|Usina Servicios Auxiliares|48|
+9821|AIRE API EEE|AIRE API EEE|106|
+10362|LINEA BOMBEO  ICI|LINEA BOMBEO  ICI|44|
+11204|SALIDA HORNO A|SALIDA HORNO A|17|
+11305|TK526|TK526|18|
+12073|CAMION SODA CAUST.ETILENO|CAMION SODA CAUST.ETILENO|17|
+12074|CAMION SODA CAUST.BTD|CAMION SODA CAUST.BTD|12|
+12075|CAMION AC.SULFURICO USINA|CAMION AC.SULFURICO USINA|48|
+12076|BUQUE TOLUENO|BUQUE TOLUENO|50|
+12077|BUQUE HIGHT FLASH|BUQUE HIGHT FLASH|50|
+12078|BUQUE STY|BUQUE STY|50|
+12079|BUQUE NAFTA PARAF.|BUQUE NAFTA PARAF.|50|
+12080|BUQUE SOLV. PARAF.|BUQUE SOLV. PARAF.|50|
+12081|BUQUE SOLV. PARAF.HIDROG.|BUQUE SOLV. PARAF.HIDROG.|50|
+12084|PTA LINEA STY|PTA LINEA STY|49|
+12085|PTA LINEA BZ|PTA LINEA BZ|49|
+13521|PTA. LINEA SOLV. PARAFINICO|PTA. LINEA SOLV. PARAFINICO|49|
+13524|PTA. LINEA HEXANO|PTA. LINEA HEXANO|49|
+13525|CAMION DE STY|CAMION DE STY|49|
+13526|CAMION DE TOL|CAMION DE TOL|49|
+13527|CAMION DE SOLV. PARAFINICO|CAMION DE SOLV. PARAFINICO|49|
+13528|CAMION DE CORTE AROMAT.YPF|CAMION DE CORTE AROMAT.YPF|49|
+13529|CAMION DE HIGH FLASH|CAMION DE HIGH FLASH|49|
+13530|CAMION DE HEXANO|CAMION DE HEXANO|49|
+13533|CAMION DE BENCENO|CAMION DE BENCENO|49|
+13544|CAMION DE XIL|CAMION DE XIL|49|
+13806|CAMION SOLV. PARAF. HIDROG|CAMION SOLV. PARAF. HIDROG|49|
+13853|CAMION DE ACIDO GRASO|CAMION DE ACIDO GRASO|2|
+13907|CAMION AC.SULFURICO ARPOL|CAMION AC.SULFURICO ARPOL|8|
+14449|SALIDA HORNO B|SALIDA HORNO B|17|
+14450|SALIDA HORNO C|SALIDA HORNO C|17|
+14451|SALIDA HORNO D|SALIDA HORNO D|17|
+14452|SALIDA HORNO E|SALIDA HORNO E|17|
+14453|SALIDA HORNO F|SALIDA HORNO F|17|
+14480|PTA. LINEA CORTE AROMAT.|PTA. LINEA CORTE AROMAT.|49|
+15700|CAMION POTASA CAUST. SOL.|CAMION POTASA CAUST. SOL.|4|
+15718|TAMB. ANTIESPUM. EC9061A|TAMB. ANTIESPUM. EC9061A|2|
+15719|TAMB. ANTIESPUM.|TAMB. ANTIESPUM.|2|
+16050|LAVADOR CAUST.SUR|LAVADOR CAUST.SUR|17|
+16691|PORTAFEED COAGULANTE B|PORTAFEED COAGULANTE B|2|
+17580|AGUA SEPARADOR D13-212|AGUA SEPARADOR D13-212|20|
+17607|MOTOGASOLINA TK 502|MOTOGASOLINA TK 502|44|
+17916|SOL.POTSA.TK924|SOL.POTSA.TK924|6|
+17919|SOL.POTASA.TK101|SOL.POTASA.TK101|4|
+18601|SOLV.PARAF.HIDROG.|SOLV.PARAF.HIDROG.|44|
+18602|SOLV.PARAF.TK505|SOLV.PARAF.TK505|44|
+18610|TOLUENO, TK 533|TOLUENO, TK 533|44|
+18940|TK NAFTA PARAF. MEZCLA|TK NAFTA PARAF. MEZCLA|44|
+18949|PTA. LINEA TOL|PTA. LINEA TOL|50|
+18950|PTA. LINEA H.FLASH MUELLE|PTA. LINEA H.FLASH MUELLE|50|
+18951|PTA. LINEA SOLV.PARAF.|PTA. LINEA SOLV.PARAF.|50|
+18954|PTA. LINEA SOLV.PARAF.HIDROG|PTA. LINEA SOLV.PARAF.HIDROG|50|
+19039|CAMION PROPELENTE|CAMION PROPELENTE|49|
+19040|CAMION LPG|CAMION LPG|49|
+23235|E-1: Bomba D3-317|E-1: Bomba D3-317|64|
+23236|E-2: Bomba D3-316|E-2: Bomba D3-316|64|
+23237|E-3: Bomba D3-318|E-3: Bomba D3-318|64|
+23238|E-4: Bomba D3-506|E-4: Bomba D3-506|64|
+23239|E-5: Bomba D3-323|E-5: Bomba D3-323|64|
+23240|E-6: Bomba D3-327|E-6: Bomba D3-327|64|
+23241|E-7: Bomba D3-219|E-7: Bomba D3-219|64|
+23242|E-8: Bomba D3-220|E-8: Bomba D3-220|64|
+23243|E-9: Bomba D3-221|E-9: Bomba D3-221|64|
+23244|E-10: Bomba D3-214|E-10: Bomba D3-214|64|
+23245|E-11: Bomba D3-215|E-11: Bomba D3-215|64|
+27672|ABSORVEDOR|ABSORVEDOR|6|
+29178|Agua de Proceso|Agua de Proceso|51|
+29179|Camara de Recirculacion|Camara de Recirculacion|51|
+29180|Purga de Agua|Purga de Agua|51|
+29181|Relleno del Biofiltro|Relleno del Biofiltro|51|
+29182|Entrada de gas|Entrada de gas|51|
+29183|Salida de Gas|Salida de Gas|51|
+30217|PTA. CORTE AROMATICO|PTA. CORTE AROMATICO|50|
+32115|CAMION SODA CAUST. ARPOL|CAMION SODA CAUST. ARPOL|8|
+35594|Entrada al Reactor|Entrada al Reactor|118|
+35595|Salida del Reactor|Salida del Reactor|118|
+35596|5 Pies|5 Pies|118|
+35597|Env.Bombas 205-206-207|Env.Bombas 205-206-207|118|
+35598|Env.Bomba 30-D3 122|Env.Bomba 30-D3 122|118|
+35601|Retorno a la Torre|Retorno a la Torre|118|
+35602|Retorno a la Torre.Ref.|Retorno a la Torre.Ref.|115|
+35603|Salida del Pulidor|Salida del Pulidor|118|
+35604|Entrada a los desareadores|Entrada a los desareadores|118|
+35605|Sal. de los desareadores|Sal. de los desareadores|118|
+35606|Ret.TK30-D9 120.Usina|Ret.TK30-D9 120.Usina|118|
+35607|Ret.TK30-D9 120.EEE|Ret.TK30-D9 120.EEE|116|
+35608|Ret.TK30-D9 120.Ref.|Ret.TK30-D9 120.Ref.|115|
+35609|Ret.TK 30-D9 120.BTD|Ret.TK 30-D9 120.BTD|117|
+35610|Salida del Colector|Salida del Colector|118|
+35611|Purga cont.Superf.Cal.1|Purga cont.Superf.Cal.1|118|
+35612|Purga cont.Superf.Cal.2|Purga cont.Superf.Cal.2|118|
+35613|Purga cont.Superf.Cal.3|Purga cont.Superf.Cal.3|118|
+35614|Purga cont.Superf.STY|Purga cont.Superf.STY|116|
+35615|Purga cont.Sup.C 155|Purga cont.Sup.C 155|116|
+35616|Purga cont.Sup.C151N|Purga cont.Sup.C151N|116|
+35620|Purga cont.Sup.C151S|Purga cont.Sup.C151S|116|
+35691|Purga cont.Sup.BTD|Purga cont.Sup.BTD|117|
+35927|M-1: BLOQ. FILTRO|M-1: BLOQ. FILTRO|63|
+35928|M-2: BLOQ. FILTRO|M-2: BLOQ. FILTRO|63|
+35929|M-3: BY PASS FILT. ENT.|M-3: BY PASS FILT. ENT.|63|
+35930|M-4: DRENAJE FILT.|M-4: DRENAJE FILT.|63|
+35931|M-5: DRENAJE FILT.|M-5: DRENAJE FILT.|63|
+35932|M-6: REG. GAS ESTE|M-6: REG. GAS ESTE|63|
+35933|M-7: BLOQ.REG. GAS E.|M-7: BLOQ.REG. GAS E.|63|
+35934|M-8: BLOQ.REG. GAS E.|M-8: BLOQ.REG. GAS E.|63|
+35935|M-9: REG.GAS OESTE|M-9: REG.GAS OESTE|63|
+35936|M-10: BLOQ.REG.GAS.O|M-10: BLOQ.REG.GAS.O|63|
+35937|M-11: BLOQ.REG.GAS.O|M-11: BLOQ.REG.GAS.O|63|
+35938|M-12: BY PASS REG.|M-12: BY PASS REG.|63|
+35939|M-13: AISL.INSTR.E|M-13: AISL.INSTR.E|63|
+35940|M-14: AISL.INSTR.E|M-14: AISL.INSTR.E|63|
+35941|M-15: AISL.INSTR.O|M-15: AISL.INSTR.O|63|
+35942|M-16: AISL.INSTR.O|M-16: AISL.INSTR.O|63|
+35943|M-17: BLOQ.PSV|M-17: BLOQ.PSV|63|
+35944|M-18: ENTR.GAS NAT.|M-18: ENTR.GAS NAT.|63|
+35945|M-19: SDA.GAS NAT.|M-19: SDA.GAS NAT.|63|
+35946|M-20: DREN.AUT.LIQ.|M-20: DREN.AUT.LIQ.|63|
+35947|M-21: BLOQ.AUT.DREN.LIQ.|M-21: BLOQ.AUT.DREN.LIQ.|63|
+35948|M-22: BLOQ.AUT.DREN.LIQ.|M-22: BLOQ.AUT.DREN.LIQ.|63|
+35949|M-23: BY PASS TAMBOR|M-23: BY PASS TAMBOR|63|
+36411|Arpol/Arnipol Calid. Aire|Arpol/Arnipol Calid. Aire|104|
+36412|Butadieno cald.Aire|Butadieno cald.Aire|105|
+36413|Reforma Calid.Aire|Reforma Calid.Aire|107|
+36414|EEE calid. Aire|EEE calid. Aire|106|
+36415|Usina Cald. Aire|Usina Cald. Aire|108|
+40700|Land Farming|Land Farming|57|
+55620|F2:AIRE 14D19-201|F2:AIRE 14D19-201|104|
+55621|F3:AIRE 14D19-201|F3:AIRE 14D19-201|104|
+55623|F4:AIRE 14D19-201|F4:AIRE 14D19-201|104|
+55630|F6:AIRE 14D19-202|F6:AIRE 14D19-202|104|
+55632|F7:AIRE 14D19-202|F7:AIRE 14D19-202|104|
+55633|F8:AIRE 14D19-202|F8:AIRE 14D19-202|104|
+55634|F10:AIRE 14D19-203|F10:AIRE 14D19-203|104|
+55636|F11:AIRE 14D19-203|F11:AIRE 14D19-203|104|
+55637|F12:AIRE 14D19-203|F12:AIRE 14D19-203|104|
+57269|TK 615 (BTD RECICLO)|TK 615 (BTD RECICLO)|15|
+59918|CARGA T.HEXANO|CARGA T.HEXANO|13|
+59919|SALIDA T.HEXANO|SALIDA T.HEXANO|13|
+59920|H2 CARGA BTD.|H2 CARGA BTD.|13|
+59921|H2 SALIDA BTD.|H2 SALIDA BTD.|13|
+59924|CARGA REACT.STY|CARGA REACT.STY|20|
+59926|GASES REACC.STY|GASES REACC.STY|20|
+59927|CARGA REFORMA|CARGA REFORMA|41|
+59929|FDO. ESTABILIZADOR|FDO. ESTABILIZADOR|41|
+59930|CIMA ESTABIL. LIQ.|CIMA ESTABIL. LIQ.|41|
+59931|CIMA ESTABIL. GAS|CIMA ESTABIL. GAS|41|
+59932|CARGA DESULFUR.|CARGA DESULFUR.|41|
+61835|TK 514|TK 514|44|
+64930|PILETA SUR.|PILETA SUR.|51|
+65631|Entrada al secadero|Entrada al secadero|5|
+72296|Fte. tk propano|Fte. tk propano|112|
+72300|AIRE PERIM. pto3|AIRE PERIM. pto3|112|
+73085|Oferta|Oferta|1|
+74088|Arriba pil. S. Usina|Arriba pil. S. Usina|112|
+78809|AIRE BTD. AREA TKs|AIRE BTD. AREA TKs|105|
+78810|AIRE SBR ZONA TOR STY|AIRE SBR ZONA TOR STY|104|
+78811|AIRE 16-100  ZONA LAV. DE SODA|AIRE 16-100  ZONA LAV. DE SODA|106|
+78812|AIRE 16-100 ZONA SEP. COMPRESI|AIRE 16-100 ZONA SEP. COMPRESI|106|
+79534|AIRE HOMOGENEIZADOR|AIRE HOMOGENEIZADOR|108|
+82154|PTA. LINEA DILUYENTE|PTA. LINEA DILUYENTE|49|
+82155|CAMION DE DILUYENTE|CAMION DE DILUYENTE|49|
+84158|TK 540|TK 540|49|
+86953|FDO. RERUM|FDO. RERUM|11|
+91174|FDO. TORRE ETILENO|FDO. TORRE ETILENO|17|
+91175|CIMA TORRE ETILENO|CIMA TORRE ETILENO|17|
+91771|REACT. NBR CONT.|REACT. NBR CONT.|4|
+91780|TORRE DESP.NBR.CONT|TORRE DESP.NBR.CONT|4|
+91998|JABON DIL. NBR CONT|JABON DIL. NBR CONT|5|
+92013|SOL.SULF. ALUMINIO|SOL.SULF. ALUMINIO|5|
+92087|EMULSIONANTE SINT.|EMULSIONANTE SINT.|5|
+101309|TK NAFTA VIRGEN REFINOR|TK NAFTA VIRGEN REFINOR|-1|
+101534|AIRE PERIMETRO|AIRE PERIMETRO|112|
+101542|AIRE PILETAS|AIRE PILETAS|111|
+108072|FDO. POSTFRACC.|FDO. POSTFRACC.|12|
+108314|LE5 : PIEZOMETROS / NAPAS FREA|LE5 : PIEZOMETROS / NAPAS FREA|57|
+108420|12 : PIEZOMETROS/NAPA FREATICA|12 : PIEZOMETROS/NAPA FREATICA|57|
+108422|LE5 : PIEZOMETROS/NAPA TREATIC|LE5 : PIEZOMETROS/NAPA TREATIC|57|
+108781|AIRE AREA 1000 REF.|AIRE AREA 1000 REF.|107|
+108794|AIRE API EEE PC|AIRE API EEE PC|106|
+110754|REACTOR 2 STY|REACTOR 2 STY|20|
+110755|SEPARADOR REACT STY|SEPARADOR REACT STY|20|
+112529|SDA. SECAD. ETILENO|SDA. SECAD. ETILENO|17|
+112530|SDA. GAS SEC. UHA|SDA. GAS SEC. UHA|17|
+117862|BARCO NAFTA CATALITICA|BARCO NAFTA CATALITICA|44|
+126299|F13:COMPRESOR LAB.SUR|F13:COMPRESOR LAB.SUR|113|
+126300|F14:COMPRESOR LAB.SUR|F14:COMPRESOR LAB.SUR|113|
+126301|F15:COMPRESOR LAB.SUR|F15:COMPRESOR LAB.SUR|113|
+126302|F16:COMPRESOR LAB.SUR|F16:COMPRESOR LAB.SUR|113|
+134151|PORTAFEED STYREX 40|PORTAFEED STYREX 40|2|
+134154|Tambor de PETROFLO 20Y15|Tambor de PETROFLO 20Y15|2|
+134155|Porta Feed de PETROFLO  20Y98|Porta Feed de PETROFLO  20Y98|2|
+138702|Efluente final Campana|Efluente final Campana|-1|
+140846|PTA DE LINEA BTD|PTA DE LINEA BTD|15|
+143130|Ret. TK 30 D9120-Arpol|Ret. TK 30 D9120-Arpol|118|
+143429|LAVADORA CIMA DEOILER|LAVADORA CIMA DEOILER|12|
+145854|MOTOGASOLINA|MOTOGASOLINA|44|
+157245|SHORTSTOP IPHA|SHORTSTOP IPHA|5|
+159317|Camion Propano-propilenoCamion P|Camion Propano-propilenoCamion P|49|
+164855|Reflujo torre desbuta|Reflujo torre desbuta|14|
+164856|Salida tamices moleculares|Salida tamices moleculares|14|
+165527|Pileta N›5  ARPOL|Pileta N›5  ARPOL|9|
+165529|Carga Splitter|Carga Splitter|4|
+165530|Fdo Splitter|Fdo Splitter|4|
+165531|Cima Splitter|Cima Splitter|4|
+165532|Fdo Recib Btde|Fdo Recib Btde|4|
+165533|Cima Recib Btde|Cima Recib Btde|4|
+165534|Fdo BFD|Fdo BFD|4|
+165536|Cima BFD|Cima BFD|4|
+165538|KST: Venteo|KST: Venteo|4|
+165539|KST: Zona 1/2|KST: Zona 1/2|4|
+167512|TAMB. EMULSIONANTE LAB|TAMB. EMULSIONANTE LAB|2|
+167513|BOLSA SULF. ALUMINIO|BOLSA SULF. ALUMINIO|2|
+167514|BOLSA BHT|BOLSA BHT|2|
+174408|Porta Feed Petroflo 20y98|Porta Feed Petroflo 20y98|3|
+176652|Pileta 2 sup|Pileta 2 sup|57|
+176653|Pileta 4 sup|Pileta 4 sup|57|
+176654|Pileta 2 Prof|Pileta 2 Prof|57|
+176655|Pileta 4 Prof|Pileta 4 Prof|57|
+178954|Portafeed de STYREX 310|Portafeed de STYREX 310|2|
+185823|Tk Estireno Impuro|Tk Estireno Impuro|21|
+186465|Tambor de IPHA|Tambor de IPHA|2|
+195969|Fdo. Deseta|Fdo. Deseta|41|
+206126|B10|B10|51|
+206140|Tk 30-D13-108|Tk 30-D13-108|48|
+228317|LOTE E NORTE SUPERFICIE|LOTE E NORTE SUPERFICIE|57|
+228404|U61: Vÿlvula bloqueo PSV 608 A|U61: Vÿlvula bloqueo PSV 608 A|60|
+228405|U62: Vÿlvula bloqueo PSV 608 B|U62: Vÿlvula bloqueo PSV 608 B|60|
+228406|U66: Vÿlvula bloqueo PSV 609 A|U66: Vÿlvula bloqueo PSV 609 A|60|
+228407|U67: Vÿlvula bloqueo PSV 609 B|U67: Vÿlvula bloqueo PSV 609 B|60|
+228411|U62a: 14-D2-104 Valv. 4" Entr.|U62a: 14-D2-104 Valv. 4" Entr.|62|
+228413|U63a: 14-D3-118  Bomba Homo.|U63a: 14-D3-118  Bomba Homo.|62|
+228414|U64a: 14-D3-118  Asp valv. 4"|U64a: 14-D3-118  Asp valv. 4"|62|
+228415|U65a: 14-D3-118  Desc valv. 4"|U65a: 14-D3-118  Desc valv. 4"|62|
+228416|U159: Entr. mezc est.oeste|U159: Entr. mezc est.oeste|62|
+228417|U160: Sal. mezc est.oeste|U160: Sal. mezc est.oeste|62|
+228419|U161: Sal. Entr. est. este|U161: Sal. Entr. est. este|62|
+228420|U162: Sal. mezc est. este|U162: Sal. mezc est. este|62|
+230570|U60a : 14 D2 104 Entrada|U60a : 14 D2 104 Entrada|62|
+233499|Tanque 405|Tanque 405|12|
+236658|AIRE AREA 100 ARPOL|AIRE AREA 100 ARPOL|104|
+236667|Reforma Medio Ambiente|Reforma Medio Ambiente|52|
+236676|Usina Medio Ambiente|Usina Medio Ambiente|52|
+236677|EEE Medio Ambiente|EEE Medio Ambiente|52|
+236678|ARPOL/ ARNIPOL Medio Ambiente|ARPOL/ ARNIPOL Medio Ambiente|52|
+236750|Butadieno Medio Ambiente|Butadieno Medio Ambiente|52|
+238216|FDO T. BENTOL|FDO T. BENTOL|20|
+238217|FDO. T STY|FDO. T STY|20|
+238306|Salida gases biolavadora|Salida gases biolavadora|51|
+239328|Tolueno TK 528|Tolueno TK 528|44|
+241163|Compound de Bombeos|Compound de Bombeos|44|
+249446|AIRE PILETA INFILCO|AIRE PILETA INFILCO|104|
+249447|AIRE PILETA A900|AIRE PILETA A900|104|
+249448|AIRE PILETA  A300|AIRE PILETA  A300|104|
+249449|AIRE PILETA  A700|AIRE PILETA  A700|104|
+251659|Cancha 1 Superficie|Cancha 1 Superficie|123|
+251660|Cancha 2 Superficie|Cancha 2 Superficie|123|
+251661|Cancha 3 Superficie|Cancha 3 Superficie|123|
+251662|Cancha 5 Superficie|Cancha 5 Superficie|123|
+251961|Cancha 4 Superficie|Cancha 4 Superficie|123|
+251980|TORRE ENFRIAMIENTO|TORRE ENFRIAMIENTO|120|
+252050|Salida Lagunado|Salida Lagunado|120|
+254403|PLANTA FLUVIAL|PLANTA FLUVIAL|120|
+258899|14-D9-341 tk lavado Sur|14-D9-341 tk lavado Sur|5|
+258900|14-D9-342 TK LAVADO NORTE|14-D9-342 TK LAVADO NORTE|5|
+258903|14-D9-347 TK COAG SUR|14-D9-347 TK COAG SUR|5|
+258904|14-D9-348 TK COAG NORTE|14-D9-348 TK COAG NORTE|5|
+265746|R1|R1|120|
+265747|R2|R2|120|
+265748|R3|R3|120|
+265749|R4|R4|120|
+265750|R5|R5|120|
+265751|PF1|PF1|120|
+265752|PF2|PF2|120|
+265753|PF3|PF3|120|
+266910|Portafeed petroflo 20y98L|Portafeed petroflo 20y98L|2|
+271457|1-PURGAS TK20/21|1-PURGAS TK20/21|120|
+271458|2- PURGAS TK7/8|2- PURGAS TK7/8|120|
+271459|3- PURGAS TK 22/23/24|3- PURGAS TK 22/23/24|120|
+271460|4- PURGA TK 154|4- PURGA TK 154|120|
+271461|5- PURGA TK 157|5- PURGA TK 157|120|
+271462|6- PURGA TK 153|6- PURGA TK 153|120|
+271463|7-INTERF. ACUM. AV-702|7-INTERF. ACUM. AV-702|120|
+271464|8-PURGA BOMBA BA-702/S|8-PURGA BOMBA BA-702/S|120|
+271465|9-MANIFOLD DE LIV.|9-MANIFOLD DE LIV.|120|
+271467|10-TOPPING 1|10-TOPPING 1|120|
+271468|11-TOPPING 2|11-TOPPING 2|120|
+271469|12-TOPPING 3|12-TOPPING 3|120|
+275237|TK 528|TK 528|44|
+277438|13 - Pileta de recup  N›1|13 - Pileta de recup  N›1|120|
+277439|14 - Pileta de aquietamiento|14 - Pileta de aquietamiento|120|
+277440|15 - PIleta API - Pta Fluvial|15 - PIleta API - Pta Fluvial|120|
+277441|16 - Sala de bombas principal|16 - Sala de bombas principal|120|
+277443|17 - Land Farming|17 - Land Farming|120|
+280961|TK 502|TK 502|44|
+283019|TAMB. PROCHEM 4H3|TAMB. PROCHEM 4H3|2|
+284434|Pileta 5 SL|Pileta 5 SL|120|
+284449|TK NAFTA VIRGEN FINAL|TK NAFTA VIRGEN FINAL|44|
+292768|POZO N› HF 5|POZO N› HF 5|120|
+292769|POZO N› HF 1|POZO N› HF 1|120|
+292770|POZO N› HF 2|POZO N› HF 2|120|
+292771|POZO N› HF 3|POZO N› HF 3|120|
+292772|POZO N› HF 6|POZO N› HF 6|120|
+292773|POZO N› HF 8|POZO N› HF 8|120|
+292774|POZO N› HF 9|POZO N› HF 9|120|
+292775|POZO N› HF 10|POZO N› HF 10|120|
+292993|MH 32|MH 32|51|
+294949|POZO N› A|POZO N› A|120|
+294950|POZO N› H1|POZO N› H1|120|
+294951|POZO N› H2|POZO N› H2|120|
+294952|POZO N› H3|POZO N› H3|120|
+294953|POZO N› H4|POZO N› H4|120|
+294954|POZO N› H5|POZO N› H5|120|
+294955|POZO N› H6|POZO N› H6|120|
+294956|POZO N› H7|POZO N› H7|120|
+294957|POZO N› H8|POZO N› H8|120|
+294958|POZO N› H9|POZO N› H9|120|
+294959|POZO N› PR2|POZO N› PR2|120|
+294961|POZO N› PR3|POZO N› PR3|120|
+294962|POZO N› PR4|POZO N› PR4|120|
+294963|POZO N› PR5|POZO N› PR5|120|
+294964|POZO N› PR6|POZO N› PR6|120|
+294965|POZO N› PR7|POZO N› PR7|120|
+294966|POZO N› PR8|POZO N› PR8|120|
+295035|POZO N› BR18|POZO N› BR18|120|
+295036|POZO N› BR16|POZO N› BR16|120|
+295048|Ret.Tk30-D9-120.Etbz|Ret.Tk30-D9-120.Etbz|116|
+295049|Ret.Tk30-D9-120.Etileno|Ret.Tk30-D9-120.Etileno|116|
+295330|Tambor de Petroflo 20Y99|Tambor de Petroflo 20Y99|2|
+296369|POZO N› PF2|POZO N› PF2|120|
+296374|Tambor Petroflo 20y99L|Tambor Petroflo 20y99L|2|
+296455|POZO N› H18|POZO N› H18|120|
+296459|POZO N› H16|POZO N› H16|120|
+296463|POZO N› H10|POZO N› H10|120|
+296749|POZO N›PF7|POZO N›PF7|120|
+300610|Columna 14-D4-202|Columna 14-D4-202|4|
+300611|Columna 14-D4-203|Columna 14-D4-203|4|
+300612|Columna 14-D4-204|Columna 14-D4-204|4|
+300773|TERM. LINEA SUR|TERM. LINEA SUR|5|
+300774|TERM. LINEA NORTE|TERM. LINEA NORTE|5|
+300783|Entrada secadero sur|Entrada secadero sur|5|
+300784|Entrada secadero norte|Entrada secadero norte|5|
+302425|14-FRC113|14-FRC113|4|
+304770|MH 30|MH 30|51|
+310730|R8|R8|120|
+310731|R6|R6|120|
+310732|R15|R15|120|
+310733|PF4|PF4|120|
+310734|PF5|PF5|120|
+312651|Complejo San Lorenzo|Complejo San Lorenzo|120|
+313661|22828663|22828663|121|
+316654|Preocupacional|Preocupacional|121|
+317101|13057370|13057370|121|
+317103|17943428|17943428|121|
+317104|13715101|13715101|121|
+317105|13286732|13286732|121|
+317107|16942261|16942261|121|
+317108|14057202|14057202|121|
+317109|23164749|23164749|121|
+317110|8374548|8374548|121|
+317111|6181397|6181397|121|
+317112|26262991|26262991|121|
+317113|22831176|22831176|121|
+317114|18563165|18563165|121|
+317115|22929618|22929618|121|
+317116|20808239|20808239|121|
+317118|6603216|6603216|121|
+317119|5522306|5522306|121|
+317120|11857861|11857861|121|
+317121|10410982|10410982|121|
+318883|14737148|14737148|121|
+318884|21635163|21635163|121|
+318885|12948956|12948956|121|
+318886|18520161|18520161|121|
+318887|18459360|18459360|121|
+318888|25971228|25971228|121|
+318889|6033906|6033906|121|
+318890|8244469|8244469|121|
+318891|10899966|10899966|121|
+318892|23164968|23164968|121|
+318893|22329393|22329393|121|
+318894|25616608|25616608|121|
+318895|24252478|24252478|121|
+318896|12398231|12398231|121|
+318898|6182581|6182581|121|
+318899|8599549|8599549|121|
+318900|5077305|5077305|121|
+318901|6045350|6045350|121|
+318902|6032807|6032807|121|
+318903|23978353|23978353|121|
+318904|7624966|7624966|121|
+318905|22698066|22698066|121|
+318906|13868834|13868834|121|
+318907|16942194|16942194|121|
+318908|10594228|10594228|121|
+318909|6075158|6075158|121|
+318910|25531384|25531384|121|
+318911|6063526|6063526|121|
+318912|16249685|16249685|121|
+318913|5078297|5078297|121|
+318914|12115106|12115106|121|
+318915|16306296|16306296|121|
+318919|16982460|16982460|121|
+318920|24980757|24980757|121|
+318921|6258033|6258033|121|
+318922|6064956|6064956|121|
+318923|11445678|11445678|121|
+318924|20594363|20594363|121|
+318925|6022362|6022362|121|
+318926|6068079|6068079|121|
+318930|16486229|16486229|121|
+318931|26603358|26603358|121|
+318932|93583684|93583684|121|
+318933|22797048|22797048|121|
+318936|6054283|6054283|121|
+318937|6052295|6052295|121|
+318938|21417837|21417837|121|
+318939|6054004|6054004|121|
+318940|14180479|14180479|121|
+318941|7624546|7624546|121|
+318942|26005232|26005232|121|
+318943|22438819|22438819|121|
+318944|93315610|93315610|121|
+318945|17098918|17098918|121|
+318946|25007246|25007246|121|
+318947|6048242|6048242|121|
+318948|10188346|10188346|121|
+318949|13600743|13600743|121|
+318951|16249788|16249788|121|
+318952|11949276|11949276|121|
+318953|5410330|5410330|121|
+318954|7215719|7215719|121|
+318955|12748516|12748516|121|
+318956|6048900|6048900|121|
+318957|12292313|12292313|121|
+318958|16604662|16604662|121|
+318959|24774671|24774671|121|
+318960|13560731|13560731|121|
+318961|18480135|18480135|121|
+318962|8284768|8284768|121|
+318963|10187994|10187994|121|
+318964|6038964|6038964|121|
+318965|13715336|13715336|121|
+318966|12858789|12858789|121|
+318967|13752360|13752360|121|
+318968|14444068|14444068|121|
+318969|11673936|11673936|121|
+318970|20598817|20598817|121|
+318971|6038580|6038580|121|
+318972|20402953|20402953|121|
+318973|13245378|13245378|121|
+318974|13091934|13091934|121|
+318975|16387733|16387733|121|
+318976|18244643|18244643|121|
+318977|12577038|12577038|121|
+318978|22438865|22438865|121|
+318979|17444072|17444072|121|
+318980|6048703|6048703|121|
+318981|23229248|23229248|121|
+318982|10930300|10930300|121|
+318983|16336888|16336888|121|
+318984|12577106|12577106|121|
+318985|5954547|5954547|121|
+318986|12823737|12823737|121|
+318987|6029136|6029136|121|
+318988|20971083|20971083|121|
+318989|5880309|5880309|121|
+318990|6034021|6034021|121|
+318991|21041159|21041159|121|
+318992|6174855|6174855|121|
+318993|21635371|21635371|121|
+318994|6186980|6186980|121|
+318995|14023042|14023042|121|
+318998|22698075|22698075|121|
+318999|7822571|7822571|121|
+319001|11527083|11527083|121|
+319002|13504659|13504659|121|
+319004|22010195|22010195|121|
+319006|17679007|17679007|121|
+319007|6176985|6176985|121|
+319008|6179872|6179872|121|
+319009|17293009|17293009|121|
+319010|6249901|6249901|121|
+319011|7067616|7067616|121|
+319012|8444660|8444660|121|
+319013|10555384|10555384|121|
+319014|13868907|13868907|121|
+319016|18068679|18068679|121|
+319017|17449302|17449302|121|
+319018|17758292|17758292|121|
+319019|17052183|17052183|121|
+319020|6245688|6245688|121|
+319021|13245305|13245305|121|
+319022|16646026|16646026|121|
+319023|6039470|6039470|121|
+319024|6064095|6064095|121|
+319025|20388353|20388353|121|
+319026|5935569|5935569|121|
+319027|16149145|16149145|121|
+319028|16641363|16641363|121|
+319029|6042827|6042827|121|
+319030|12042668|12042668|121|
+319031|13253577|13253577|121|
+319032|11295369|11295369|121|
+319033|6181182|6181182|121|
+319034|16459431|16459431|121|
+319035|14737015|14737015|121|
+319036|16464757|16464757|121|
+319037|10652435|10652435|121|
+319038|14494243|14494243|121|
+319039|20146791|20146791|121|
+319040|6047904|6047904|121|
+319041|24289556|24289556|121|
+319042|21824164|21824164|121|
+319043|7624274|7624274|121|
+319044|23585045|23585045|121|
+319045|11107322|11107322|121|
+319046|17368402|17368402|121|
+319047|6179884|6179884|121|
+319048|24567081|24567081|121|
+319049|6051386|6051386|121|
+319050|23256206|23256206|121|
+319051|6184322|6184322|121|
+319052|5477336|5477336|121|
+319123|23478346|23478346|121|
+319124|14087839|14087839|121|
+319125|16565018|16565018|121|
+319126|23340471|23340471|121|
+319127|23790700|23790700|121|
+320010|TOPPING 1|TOPPING 1|122|
+320011|TOPPING 2|TOPPING 2|122|
+320012|TOPPING 3|TOPPING 3|122|
+320013|VACIO 1|VACIO 1|122|
+320014|VACIO 2|VACIO 2|122|
+320015|SALIDA HH-701 N|SALIDA HH-701 N|122|
+320016|SALIDA HH-701 S|SALIDA HH-701 S|122|
+320017|FONDO TT-701|FONDO TT-701|122|
+320018|AV-102|AV-102|122|
+320019|TT-1001|TT-1001|122|
+320020|SALIDA SALEROS|SALIDA SALEROS|122|
+320021|SALIDA MEROX|SALIDA MEROX|122|
+320024|IE-116|IE-116|122|
+320025|IC-218|IC-218|122|
+320026|IC-317|IC-317|122|
+320027|IC-402|IC-402|129|
+320028|FONDO TT-102|FONDO TT-102|122|
+320029|FONDO TT-202|FONDO TT-202|122|
+320030|FONDO TT-302|FONDO TT-302|122|
+320031|VACIO 1 - BA-801|VACIO 1 - BA-801|122|
+320032|VACIO 2 - BOMBA NEUMATICA|VACIO 2 - BOMBA NEUMATICA|122|
+320033|VACIO 1 - BA-804|VACIO 1 - BA-804|122|
+320034|VACIO 2 - BA-404|VACIO 2 - BA-404|122|
+320035|SALIDA IP-207|SALIDA IP-207|122|
+320036|FONDO TT-401|FONDO TT-401|122|
+320038|CARGA VACIO 2 - BA-401 S|CARGA VACIO 2 - BA-401 S|122|
+320039|CARGA VACIO 2 - BB-401|CARGA VACIO 2 - BB-401|122|
+320040|TOPPING 1 - AV-101|TOPPING 1 - AV-101|122|
+320041|TOPPING 2 - AH-201|TOPPING 2 - AH-201|122|
+320042|TOPPING 3 - AV-301|TOPPING 3 - AV-301|122|
+320043|AV-702|AV-702|122|
+320048|HORNO HH-701|HORNO HH-701|122|
+320054|SALIDA LAGUNADO.|SALIDA LAGUNADO.|123|
+320055|PLANTA FLUVIAL.|PLANTA FLUVIAL.|123|
+321868|16371443|16371443|121|
+321869|18340009|18340009|121|
+321870|18547897|18547897|121|
+321902|6183128|6183128|121|
+321903|14288205|14288205|121|
+321904|7261218|7261218|121|
+321905|16861116|16861116|121|
+321906|6050378|6050378|121|
+321907|21985541|21985541|121|
+321908|16387506|16387506|121|
+321910|8287495|8287495|121|
+321911|12292375|12292375|121|
+321912|14057216|14057216|121|
+321913|20408998|20408998|121|
+321914|10594676|10594676|121|
+322222|5939477|5939477|121|
+322223|6039375|6039375|121|
+322224|22087987|22087987|121|
+322225|11376382|11376382|121|
+322226|13240513|13240513|121|
+322228|11127286|11127286|121|
+322229|16221009|16221009|121|
+322230|18402982|18402982|121|
+322231|11446124|11446124|121|
+322232|6184591|6184591|121|
+322233|17758131|17758131|121|
+322234|6047633|6047633|121|
+322235|11218378|11218378|121|
+322236|6180176|6180176|121|
+322237|18112937|18112937|121|
+322238|24774665|24774665|121|
+322239|6262449|6262449|121|
+322240|6178183|6178183|121|
+322241|6180851|6180851|121|
+322242|16387407|16387407|121|
+322243|8374534|8374534|121|
+322244|13255065|13255065|121|
+322245|16072633|16072633|121|
+322246|6185831|6185831|121|
+322247|11218321|11218321|121|
+322248|20144269|20144269|121|
+322249|11270593|11270593|121|
+322250|25002347|25002347|121|
+322256|6180264|6180264|121|
+322257|20173642|20173642|121|
+322258|6187162|6187162|121|
+322259|6176411|6176411|121|
+322260|6244617|6244617|121|
+322261|16604667|16604667|121|
+322262|11873632|11873632|121|
+322576|4621976|4621976|121|
+322578|6175937|6175937|121|
+322579|6179673|6179673|121|
+322580|14335729|14335729|121|
+322581|13201913|13201913|121|
+322582|14057282|14057282|121|
+322583|26449540|26449540|121|
+322584|21417887|21417887|121|
+322585|6185548|6185548|121|
+322586|6180425|6180425|121|
+322587|17523081|17523081|121|
+322588|13246618|13246618|121|
+322589|24289607|24289607|121|
+322590|6073856|6073856|121|
+322591|6176440|6176440|121|
+322592|13060312|13060312|121|
+322593|6126911|6126911|121|
+322594|6181188|6181188|121|
+322595|13245075|13245075|121|
+322596|6187108|6187108|121|
+322597|12577282|12577282|121|
+322598|13245132|13245132|121|
+322599|8601225|8601225|121|
+322601|10315666|10315666|121|
+322602|12336757|12336757|121|
+322603|5469330|5469330|121|
+322604|20182243|20182243|121|
+322605|13507436|13507436|121|
+322606|12115070|12115070|121|
+322607|6180283|6180283|121|
+322608|17052157|17052157|121|
+322609|13504899|13504899|121|
+322610|14953283|14953283|121|
+322611|20971214|20971214|121|
+322612|6262115|6262115|121|
+322613|14494595|14494595|121|
+322614|7622625|7622625|121|
+322615|6175929|6175929|121|
+322616|21418095|21418095|121|
+322617|6177569|6177569|121|
+322619|25262419|25262419|121|
+322620|6179307|6179307|121|
+322621|10409012|10409012|121|
+322623|14438854|14438854|121|
+322624|12577356|12577356|121|
+322625|7881636|7881636|121|
+322626|6171010|6171010|121|
+322627|14288298|14288298|121|
+322628|6064175|6064175|121|
+322629|23164797|23164797|121|
+322632|5094861|5094861|121|
+322633|14057256|14057256|121|
+322634|6222385|6222385|121|
+322637|11784394|11784394|121|
+322638|11549636|11549636|121|
+322639|20515414|20515414|121|
+322640|6246028|6246028|121|
+322641|4706806|4706806|121|
+322642|16267437|16267437|121|
+322643|22831249|22831249|121|
+322644|11857833|11857833|121|
+322645|6178148|6178148|121|
+322646|20144273|20144273|121|
+322647|10695923|10695923|121|
+322648|17758191|17758191|121|
+322649|6029917|6029917|121|
+322654|16072613|16072613|121|
+322655|20590720|20590720|121|
+322656|10500716|10500716|121|
+322657|25280141|25280141|121|
+322658|4364294|4364294|121|
+322659|21690888|21690888|121|
+322660|6177323|6177323|121|
+322661|16459432|16459432|121|
+322662|20144264|20144264|121|
+322663|10930291|10930291|121|
+322664|12948683|12948683|121|
+322665|6080364|6080364|121|
+322666|6181517|6181517|121|
+322667|17052259|17052259|121|
+322668|16646095|16646095|121|
+322669|10679491|10679491|121|
+326010|Tk 355 Potasa|Tk 355 Potasa|8|
+326011|Tk 902 Acrilo|Tk 902 Acrilo|6|
+326012|Tk 309 Acido|Tk 309 Acido|8|
+326013|Tk 314  Aceite|Tk 314  Aceite|8|
+326019|Tk 30-D9-121 Acido|Tk 30-D9-121 Acido|48|
+326020|Tk 39-D9-201 Acido|Tk 39-D9-201 Acido|51|
+326624|Cancha 1 Profundidad|Cancha 1 Profundidad|123|
+326625|Cancha 2 Profundidad|Cancha 2 Profundidad|123|
+326626|Cancha 3 Profundidad|Cancha 3 Profundidad|123|
+326627|Cancha 4 Profundidad|Cancha 4 Profundidad|123|
+333089|20144075|20144075|121|
+333159|Tk 367 Acido Graso|Tk 367 Acido Graso|4|
+336110|26358605|26358605|121|
+343684|CIMA DESPOJ.LIVIANOS|CIMA DESPOJ.LIVIANOS|13|
+350052|SALIDA DE HORNOS|SALIDA DE HORNOS|17|
+351843|14206502|14206502|121|
+352836|17234875|17234875|121|
+352837|11789005|11789005|121|
+352838|22495827|22495827|121|
+352839|17460604|17460604|121|
+352840|24114866|24114866|121|
+352841|24656164|24656164|121|
+352842|22393023|22393023|121|
+352843|21521271|21521271|121|
+354189|27081964|27081964|121|
+354190|22690273|22690273|121|
+354193|21803948|21803948|121|
+354196|20494621|20494621|121|
+354206|24961837|24961837|121|
+354207|25445630|25445630|121|
+354210|25082474|25082474|121|
+354212|24344384|24344384|121|
+354213|22438755|22438755|121|
+354214|25814624|25814624|121|
+354215|25812376|25812376|121|
+354216|26356676|26356676|121|
+354217|23290991|23290991|121|
+354218|27081009|27081009|121|
+355887|Salta|Salta|121|
+360238|CIMA PYGAS|CIMA PYGAS|12|
+360239|FONDO PYGAS|FONDO PYGAS|12|
+363277|Cancha 6 Superficie|Cancha 6 Superficie|123|
+363278|Cancha 6 Profundidad|Cancha 6 Profundidad|123|
+365394|CAMION|CAMION|19|
+366405|24656151|24656151|121|
+366409|Especial|Especial|121|
+367178|FONDO RERUN|FONDO RERUN|12|
+368991|6068640|6068640|121|
+373158|Pecom  SL|Pecom  SL|121|
+374909|CIMA RERUN|CIMA RERUN|12|
+377796|BASE NAFTA COMUN|BASE NAFTA COMUN|44|
+379167|DOSIMETRIAS VAPORES ORGANICOS|DOSIMETRIAS VAPORES ORGANICOS|128|
+380970|R7|R7|120|
+380971|R9|R9|120|
+380972|R10|R10|120|
+380973|R11|R11|120|
+380974|R12|R12|120|
+380975|R13|R13|120|
+380976|R14|R14|120|
+383849|SURTIDOR|SURTIDOR|133|
+383850|OTRO|OTRO|133|
+385540|PC1|PC1|123|
+385542|CAMION DE HOPO|CAMION DE HOPO|12|
+385808|POZO N› H11|POZO N› H11|120|
+385809|POZO N› H12|POZO N› H12|120|
+385810|POZO N› H13|POZO N› H13|120|
+385811|POZO N› H14|POZO N› H14|120|
+385812|POZO N› H15|POZO N› H15|120|
+385813|POZO N› H17|POZO N› H17|120|
+385814|POZO N› H19|POZO N› H19|120|
+385815|POZO N› H20|POZO N› H20|120|
+385816|POZO N› H21|POZO N› H21|120|
+385817|POZO N› H22|POZO N› H22|120|
+385818|POZO N› H23|POZO N› H23|120|
+385819|POZO N› H24|POZO N› H24|120|
+385820|POZO N PE1|POZO N PE1|120|
+385821|POZO N PE2|POZO N PE2|120|
+385822|POZO N PE3|POZO N PE3|120|
+385823|POZO N P1|POZO N P1|120|
+385824|POZO N P4|POZO N P4|120|
+385825|POZO N P5|POZO N P5|120|
+385826|POZO N P7|POZO N P7|120|
+385827|POZO N PC1|POZO N PC1|120|
+386807|POZO N P7bis|POZO N P7bis|120|
+386808|POZO N H13bis|POZO N H13bis|120|
+387477|Pozo HF4|Pozo HF4|120|
+387478|Pozo HF7|Pozo HF7|120|
+387479|Pozo PF6|Pozo PF6|120|
+388353|ESTACION DE SERVICIO|ESTACION DE SERVICIO|133|
+388603|BALANZA - 8426|BALANZA - 8426|114|INSTRUMENT
+388605|BALANZA- 8427|BALANZA- 8427|114|INSTRUMENT
+388606|BALANZA- 1114173756|BALANZA- 1114173756|114|INSTRUMENT
+388607|BALANZA- 1196|BALANZA- 1196|114|INSTRUMENT
+388608|BALANZA -1114173756|BALANZA -1114173756|114|INSTRUMENT
+388609|BALANZA - 68282|BALANZA - 68282|114|INSTRUMENT
+388610|BALANZA- 152677|BALANZA- 152677|114|INSTRUMENT
+388611|BALANZA - 529250|BALANZA - 529250|114|INSTRUMENT
+388612|BALANZA - 92843|BALANZA - 92843|114|INSTRUMENT
+388613|BALANZA B188008205|BALANZA B188008205|114|INSTRUMENT
+388614|BALANZA -18138|BALANZA -18138|-1|INSTRUMENT
+388615|BLZG - 105572|BLZG - 105572|114|INSTRUMENT
+388617|DINAMOMETRO- 80SICI069|DINAMOMETRO- 80SICI069|114|INSTRUMENT
+389134|CISTERNA BUQUE BUTADIENO|CISTERNA BUQUE BUTADIENO|15|
+389145|PTA DE LINEA BENCENO|PTA DE LINEA BENCENO|44|
+389147|BUQUE DE BENCENO|BUQUE DE BENCENO|44|
+391027|PTA LINEA CTE AROM|PTA LINEA CTE AROM|44|
+391031|TK TIERRA CTE AROM|TK TIERRA CTE AROM|44|
+391091|POZO CR4|POZO CR4|120|
+391092|POZO CR5|POZO CR5|120|
+391093|POZO MO3|POZO MO3|120|
+391094|POZO MO4|POZO MO4|120|
+391095|POZO MO5|POZO MO5|120|
+391096|POZO RM13|POZO RM13|120|
+391252|POZO RM17|POZO RM17|120|
+391257|POZO S9|POZO S9|120|
+391258|POZO BR13|POZO BR13|120|
+391259|POZO CR2|POZO CR2|120|
+391260|POZO BR2|POZO BR2|120|
+391261|POZO BR3|POZO BR3|120|
+391262|POZO BR4|POZO BR4|120|
+391263|POZO BR5|POZO BR5|120|
+391264|POZO BR6|POZO BR6|120|
+391265|POZO BR7|POZO BR7|120|
+391266|POZO BR9|POZO BR9|120|
+391267|POZO BR18|POZO BR18|120|
+391268|POZO BR19|POZO BR19|120|
+391269|POZO CR1|POZO CR1|120|
+391270|POZO P1F|POZO P1F|120|
+391271|POZO P2F|POZO P2F|120|
+391272|POZO P3F|POZO P3F|120|
+391273|POZO P4F|POZO P4F|120|
+391274|POZO RM22|POZO RM22|120|
+391275|POZO Z1.2|POZO Z1.2|120|
+391276|POZO Z1.3|POZO Z1.3|120|
+391277|POZO Z2|POZO Z2|120|
+391278|POZO Z4|POZO Z4|120|
+391279|POZO Z5|POZO Z5|120|
+391280|POZO Z6|POZO Z6|120|
+391281|POZO Z7|POZO Z7|120|
+391282|POZO S2|POZO S2|120|
+392584|ESPECTROFOTOMETRO A1078|ESPECTROFOTOMETRO A1078|114|INSTRUMENT
+392585|BALANZA - 1120181806|BALANZA - 1120181806|114|INSTRUMENT
+392590|ESPECTROFOTOMETRO  23203|ESPECTROFOTOMETRO  23203|114|INSTRUMENT
+392591|ESPECTROFOTOMETRO  A187|ESPECTROFOTOMETRO  A187|114|INSTRUMENT
+393701|TK509|TK509|44|
+393703|Pta Linea Naf.Parf.Mezcla|Pta Linea Naf.Parf.Mezcla|44|
+398200|23363138|23363138|134|
+398201|23363365|23363365|134|
+398202|25355996|25355996|134|
+398203|25382732|25382732|134|
+398204|25382257|25382257|134|
+398205|27100778|27100778|134|
+398206|23500508|23500508|134|
+398207|25355781|25355781|134|
+398208|27070977|27070977|134|
+398209|26365029|26365029|134|
+398210|26921869|26921869|134|
+398211|26906014|26906014|134|
+398212|4744902|4744902|134|
+398213|12956390|12956390|134|
+398214|11139647|11139647|134|
+398215|4740524|4740524|134|
+398216|8189170|8189170|134|
+398217|12981721|12981721|134|
+398218|11725146|11725146|134|
+398219|16601088|16601088|134|
+398220|20904030|20904030|134|
+398221|17193018|17193018|134|
+398222|4748303|4748303|134|
+398223|25943786|25943786|134|
+398224|4748149|4748149|134|
+398225|11738260|11738260|134|
+398226|8514973|8514973|134|
+398227|10588267|10588267|134|
+398228|20585798|20585798|134|
+398229|12981503|12981503|134|
+398230|10392541|10392541|134|
+398231|16265368|16265368|134|
+398232|21563020|21563020|134|
+398233|12348421|12348421|134|
+398234|23871798|23871798|134|
+398426|25688266|25688266|134|
+398427|16265393|16265393|134|
+398428|14559804|14559804|134|
+398429|8488608|8488608|134|
+398430|13388816|13388816|134|
+398431|7656533|7656533|134|
+399202|LAND FARMING SUPERFICIE|LAND FARMING SUPERFICIE|123|
+399207|LANDFARMING PROFUNDIDAD|LANDFARMING PROFUNDIDAD|123|
+401232|Rx.Inter.Batch R85|Rx.Inter.Batch R85|6|
+401233|Rx.final Batch R85|Rx.final Batch R85|6|
+401240|Torres despoj.Interm R85|Torres despoj.Interm R85|6|
+401241|Torres despoj.FINAL R85|Torres despoj.FINAL R85|6|
+401527|PTA DE LINEA LPG|PTA DE LINEA LPG|12|
+401529|FINAL DE CARGA LPG|FINAL DE CARGA LPG|12|
+403674|PTA DE LINEA STY|PTA DE LINEA STY|21|
+403676|BUQUE ESTIRENO|BUQUE ESTIRENO|21|
+405448|22843425|22843425|121|
+405449|30045511|30045511|121|
+405450|24086277|24086277|121|
+405455|27245222|27245222|121|
+405648|18565995|18565995|121|
+405649|6255230|6255230|121|
+405653|28520681|28520681|121|
+405723|26698066|26698066|121|
+405724|8280688|8280688|121|
+405725|6058485|6058485|121|
+405726|16777941|16777941|121|
+405727|22210844|22210844|121|
+405728|24586412|24586412|121|
+405729|22217074|22217074|121|
+405730|22961459|22961459|121|
+405731|6080675|6080675|121|
+405732|23761116|23761116|121|
+405733|14737083|14737083|121|
+405839|fdo torre nn|fdo torre nn|10|
+408928|TK NAFTA VIRGEN|TK NAFTA VIRGEN|44|
+409658|PTA  LINEA  STY  ISLA  OESTE|PTA  LINEA  STY  ISLA  OESTE|21|
+409659|PTA  LINEA  STY  ISLA  ESTE|PTA  LINEA  STY  ISLA  ESTE|21|
+413430|PTA LINEA BASE OCTANICA|PTA LINEA BASE OCTANICA|44|
+413783|Descarga de bombas en TK 207|Descarga de bombas en TK 207|48|
+413786|TK NAFTA VIRGEN INTERMEDIO|TK NAFTA VIRGEN INTERMEDIO|44|
+416184|26537260|26537260|121|
+418285|BOMBEO A ICI|BOMBEO A ICI|44|
+418287|BOMBEO A REFORMA|BOMBEO A REFORMA|44|
+418481|16994546|16994546|121|
+418482|14356434|14356434|121|
+418483|6060149|6060149|121|
+418485|6071627|6071627|121|
+420650|7841655|7841655|121|
+420651|13126273|13126273|121|
+420652|14803631|14803631|121|
+421553|OFF-GAS|OFF-GAS|48|
+424068|E12  Entrada al cargadero (ben|E12  Entrada al cargadero (ben|135|
+424069|E13 Talud de tanques|E13 Talud de tanques|135|
+424070|E18  Bloq.dripolene a benceno|E18  Bloq.dripolene a benceno|135|
+424071|E21  Bomba 32-D3-514|E21  Bomba 32-D3-514|135|
+424266|E25 Entrada dripolene ( plant|E25 Entrada dripolene ( plant|135|
+424267|E26  Entrada dripolene ( plant|E26  Entrada dripolene ( plant|135|
+424268|E27  Entrada dripolene ( plant|E27  Entrada dripolene ( plant|135|
+424269|E28 Entrada dripolene ( plant|E28 Entrada dripolene ( plant|135|
+424270|E29  Entrada dripolene ( plant|E29  Entrada dripolene ( plant|135|
+424272|E30  Entrada dripolene ( plant|E30  Entrada dripolene ( plant|135|
+424274|E32  Asp. bomba 32-D3-512|E32  Asp. bomba 32-D3-512|135|
+424275|E33 Drenaje de agua|E33 Drenaje de agua|135|
+424276|E34  Recirc.bomba 32-D3-512|E34  Recirc.bomba 32-D3-512|135|
+424277|E38  Bloq. filtro|E38  Bloq. filtro|135|
+424278|E41  Bloq. filtro|E41  Bloq. filtro|135|
+424279|E42  Bloq. filtro|E42  Bloq. filtro|135|
+424280|E46  By-pass de lineas|E46  By-pass de lineas|135|
+424281|E47  By-pass de lineas|E47  By-pass de lineas|135|
+424299|E48  Asp. bomba desde camion|E48  Asp. bomba desde camion|135|
+424300|E49  Bloq. recirc.bomba|E49  Bloq. recirc.bomba|135|
+424301|E50  Bloq. desc. bomba|E50  Bloq. desc. bomba|135|
+424302|E52  By-pass de lineas|E52  By-pass de lineas|135|
+424303|E54  By-pass de lineas|E54  By-pass de lineas|135|
+424304|E55  Bomba 32-D3-512|E55  Bomba 32-D3-512|135|
+424305|E56  Bomba 32-D3-626|E56  Bomba 32-D3-626|135|
+424306|E57  Entrada al tanque 32-D9-6|E57  Entrada al tanque 32-D9-6|135|
+424307|E58  Bomba desc. de benceno|E58  Bomba desc. de benceno|135|
+424308|E59 Entrada 32-D9-620|E59 Entrada 32-D9-620|135|
+424309|E60 Entrada 32-D9-620|E60 Entrada 32-D9-620|135|
+424310|E63  Bloqueo bomba de benceno|E63  Bloqueo bomba de benceno|135|
+424784|PTA LINEA STY LOTE|PTA LINEA STY LOTE|21|
+425798|Pie de Cuba Buque Sty|Pie de Cuba Buque Sty|50|
+426807|Envio Bbas de Vacio|Envio Bbas de Vacio|4|
+427768|6185644|6185644|121|
+427769|13488379|13488379|121|
+428197|TOE|TOE|136|
+429705|Externo|Externo|-1|
+434115|12336737|12336737|121|
+434302|MANIFOLD DE LIVIANOS|MANIFOLD DE LIVIANOS|122|
+434303|TK NAFTA VIRGEN SL|TK NAFTA VIRGEN SL|125|
+434304|TK JP1|TK JP1|125|
+434305|TK KEROSENE|TK KEROSENE|125|
+434306|TK AGUARRAS|TK AGUARRAS|125|
+434307|TK GAS OIL|TK GAS OIL|125|
+434308|TK FUEL OIL|TK FUEL OIL|125|
+434309|TK CARGA C. CATALITICO|TK CARGA C. CATALITICO|125|
+434310|TK GAS OIL MARINO|TK GAS OIL MARINO|125|
+434652|CARGA DESALADOR 1|CARGA DESALADOR 1|122|
+434653|ENTRADA DESALADOR 1|ENTRADA DESALADOR 1|122|
+434654|SALIDA DESALADOR 1|SALIDA DESALADOR 1|122|
+434861|CALDERA VAPOR SAT.|CALDERA VAPOR SAT.|136|
+434862|CALDERA VAPOR COND.|CALDERA VAPOR COND.|136|
+436051|INICIAL BOMBEO|INICIAL BOMBEO|-1|
+436052|FINAL BOMBEO|FINAL BOMBEO|-1|
+436923|TK 530|TK 530|44|
+439551|25378916|25378916|121|
+439556|6047931|6047931|121|
+439557|17079322|17079322|121|
+440866|ENTRADA LAVADOR CAUSTICO|ENTRADA LAVADOR CAUSTICO|4|
+440868|SALIDA LAVADOR CAUSTICO|SALIDA LAVADOR CAUSTICO|4|
+441006|SALIDA BOMBA VACIO|SALIDA BOMBA VACIO|4|
+441294|TK532|TK532|44|
+441683|SOLV.PARAFINICO|SOLV.PARAFINICO|44|
+443274|TOPPING|TOPPING|122|
+443282|FONDO TT-702|FONDO TT-702|122|
+443292|TK-GAS OIL|TK-GAS OIL|137|
+443294|TK-GAS OIL MARINO|TK-GAS OIL MARINO|137|
+443295|TK-JP1|TK-JP1|137|
+443296|TK-NAFTA NORMAL|TK-NAFTA NORMAL|137|
+443297|TK-NAFTA SUPER|TK-NAFTA SUPER|137|
+443298|TK-NAFTA MAGNUM|TK-NAFTA MAGNUM|137|
+443299|TK-NAFTA VIRGEN|TK-NAFTA VIRGEN|137|
+443300|TK-CARGA C. CATALITICO|TK-CARGA C. CATALITICO|137|
+443301|TK-IFO 60|TK-IFO 60|137|
+443302|TK-FUEL OIL|TK-FUEL OIL|137|
+443303|TK-IFO 180|TK-IFO 180|137|
+444143|18778549|18778549|121|
+444144|18759863|18759863|121|
+444345|SALIDA API|SALIDA API|123|
+447567|PTA LINEA ETBZ|PTA LINEA ETBZ|19|
+448213|ENTRADA A TK|ENTRADA A TK|122|
+448936|ENTRADA DESALADOR 2|ENTRADA DESALADOR 2|122|
+448937|ENTRADA DESALADOR 3|ENTRADA DESALADOR 3|122|
+448938|CARGA DESALADOR 2|CARGA DESALADOR 2|122|
+448939|CARGA DESALADOR 3|CARGA DESALADOR 3|122|
+449069|SALIDA DESALADOR 2|SALIDA DESALADOR 2|122|
+449070|SALIDA DESALADOR 3|SALIDA DESALADOR 3|122|
+449071|PURGA AGUA DESALADOR 1|PURGA AGUA DESALADOR 1|122|
+449072|CAMION PYGAS|CAMION PYGAS|49|
+449995|Tambor C3 Grande (D13-241)|Tambor C3 Grande (D13-241)|4|
+449996|Fdo Tamb. Grande C3 (D13 241)|Fdo Tamb. Grande C3 (D13 241)|4|
+449997|Cima Tamb. Grande C3 (D13 241)|Cima Tamb. Grande C3 (D13 241)|4|
+450003|Aire R1|Aire R1|123|
+450004|Aire R2|Aire R2|123|
+450005|Aire R3|Aire R3|123|
+450006|Aire R4|Aire R4|123|
+450007|Aire R5|Aire R5|123|
+450008|Aire PF1|Aire PF1|123|
+450009|Aire PF2|Aire PF2|123|
+450010|Aire PF3|Aire PF3|123|
+450749|EFLUENTE EESS CHACO|EFLUENTE EESS CHACO|133|
+451088|NAPA EESS|NAPA EESS|133|
+451099|SUELO EESS|SUELO EESS|133|
+453901|EFLUENTE EESS BS.AS.|EFLUENTE EESS BS.AS.|133|
+453902|EFLUENTE EESS CORDOBA|EFLUENTE EESS CORDOBA|133|
+453903|EFLUENTE EESS SANTA FE|EFLUENTE EESS SANTA FE|133|
+456059|TK-IFO 120|TK-IFO 120|137|
+456061|TK-IFO 30|TK-IFO 30|137|
+456062|TK-IFO 380|TK-IFO 380|137|
+456163|BARCO CRUDO|BARCO CRUDO|137|
+456164|BARCO GAS OIL|BARCO GAS OIL|137|
+456165|BARCO NAFTA NORMAL|BARCO NAFTA NORMAL|137|
+456166|BARCO NAFTA SUPER|BARCO NAFTA SUPER|137|
+456167|TK CRUDO|TK CRUDO|125|
+456168|TK-CRUDO|TK-CRUDO|137|
+456410|TK-KEROSENE|TK-KEROSENE|137|
+456411|TK-REC. PILETA|TK-REC. PILETA|137|
+456412|TK REC. PILETA|TK REC. PILETA|125|
+456413|TK SOLVENTE DR|TK SOLVENTE DR|125|
+456414|TK SOLVENTE DM|TK SOLVENTE DM|125|
+456417|TK ASFALTO|TK ASFALTO|125|
+456419|TK-DILUYENTE|TK-DILUYENTE|137|
+456420|TK DILUYENTE|TK DILUYENTE|125|
+456421|BARCO FUEL OIL|BARCO FUEL OIL|137|
+456422|BARCO ISOMERADO|BARCO ISOMERADO|137|
+456423|TK-ISOMERADO|TK-ISOMERADO|137|
+456426|BARCO-NAFTA CATALITICA|BARCO-NAFTA CATALITICA|137|
+456427|TK-NAFTA CATALITICA|TK-NAFTA CATALITICA|137|
+456429|CAMION MTBE|CAMION MTBE|137|
+456430|TK-MTBE|TK-MTBE|137|
+458405|25979743|25979743|121|
+458406|Cambio de Puesto|Cambio de Puesto|121|
+458871|Espesador de fangos(B08)|Espesador de fangos(B08)|51|
+460236|PTA. LINEA CRUDO|PTA. LINEA CRUDO|137|
+460237|PTA. LINEA GAS OIL|PTA. LINEA GAS OIL|137|
+460238|PTA. LINEA NAFTA NORMAL|PTA. LINEA NAFTA NORMAL|137|
+460239|PTA. LINEA NAFTA SUPER|PTA. LINEA NAFTA SUPER|137|
+460251|26619295|26619295|134|
+460252|23817755|23817755|134|
+460253|22508652|22508652|134|
+460254|4742612|4742612|134|
+460258|AH-1801|AH-1801|122|
+464929|Pileta 1 Sup|Pileta 1 Sup|57|
+464930|Pileta 1 Prof|Pileta 1 Prof|57|
+466394|Reposicion a Batea|Reposicion a Batea|118|
+467046|21723210|21723210|121|
+467372|16645961|16645961|121|
+467373|17679073|17679073|121|
+467374|17052228|17052228|121|
+467375|22602052|22602052|121|
+467376|11021008|11021008|121|
+467377|13286706|13286706|121|
+467378|24254108|24254108|121|
+467380|12990864|12990864|121|
+467381|26745617|26745617|121|
+467382|24086419|24086419|121|
+467383|28023905|28023905|121|
+467384|18068085|18068085|121|
+467385|25113272|25113272|121|
+467386|17827563|17827563|121|
+467387|16645965|16645965|121|
+467388|28520210|28520210|121|
+467389|14444083|14444083|121|
+467390|6179366|6179366|121|
+468264|PURGA AGUA DESALADOR 2|PURGA AGUA DESALADOR 2|122|
+468265|PURGA AGUA DESALADOR 3|PURGA AGUA DESALADOR 3|122|
+468266|R 5|R 5|47|
+468268|Aire R7|Aire R7|123|
+468269|Aire R8|Aire R8|123|
+468270|Aire R9|Aire R9|123|
+468271|Aire R10|Aire R10|123|
+468272|Aire R6|Aire R6|123|
+468273|Aire R11|Aire R11|123|
+468274|Aire R12|Aire R12|123|
+468275|Aire R13|Aire R13|123|
+468280|Aire R14|Aire R14|123|
+468281|Aire PF4|Aire PF4|123|
+468282|Aire PF5|Aire PF5|123|
+468287|U.C. I|U.C. I|122|
+468288|U.C. II|U.C. II|122|
+468289|U.C. III|U.C. III|122|
+468291|G.O.P.|G.O.P.|122|
+468292|IER 801A|IER 801A|122|
+468293|IER 801B|IER 801B|122|
+468294|IER 801C|IER 801C|122|
+468295|IER 801D|IER 801D|122|
+468296|V.II IE-405|V.II IE-405|122|
+468297|V.II IE-406|V.II IE-406|122|
+470418|BARCO NAFTA VIRGEN|BARCO NAFTA VIRGEN|137|
+471300|DESCARGA BOMBA DE VACIO|DESCARGA BOMBA DE VACIO|4|
+471315|LPG (D9 611)|LPG (D9 611)|15|
+471430|25382392|25382392|134|
+471431|23064139|23064139|134|
+471432|22401584|22401584|134|
+471433|23525535|23525535|134|
+471434|20648743|20648743|134|
+471435|16265339|16265339|134|
+471436|22661958|22661958|134|
+471437|4989311|4989311|134|
+471438|14166198|14166198|134|
+471747|COMEDOR|COMEDOR|143|
+472844|Despacho|Despacho|121|
+472845|Caucho|Caucho|121|
+472846|Usina|Usina|121|
+472847|E.E.E.|E.E.E.|121|
+472849|Seg. e Hig. Ind.|Seg. e Hig. Ind.|121|
+472850|Mantenimiento|Mantenimiento|121|
+472851|Deriv. de Reformadora|Deriv. de Reformadora|121|
+472852|Reformadora|Reformadora|121|
+472853|Laboratorio|Laboratorio|121|
+472854|A.T.A.C.|A.T.A.C.|121|
+472857|Med. Amb. y Calid.|Med. Amb. y Calid.|121|
+473244|PH METRO - 10563|PH METRO - 10563|114|INSTRUMENT
+473245|LABORATORIO MAT. PRIM.|LABORATORIO MAT. PRIM.|114|
+475658|28239900|28239900|121|
+475659|23900175|23900175|121|
+475660|28126766|28126766|121|
+476198|TK AGUARRAS PESADO|TK AGUARRAS PESADO|125|
+477324|TK-ASFALTO|TK-ASFALTO|129|
+477325|TK-DILUIDO RAPIDO|TK-DILUIDO RAPIDO|129|
+477326|TK-DILUIDO MEDIO|TK-DILUIDO MEDIO|129|
+479373|Pta de Linea Butanos|Pta de Linea Butanos|50|
+479374|BUTANOS|BUTANOS|50|
+484390|AGUA POTABLE|AGUA POTABLE|136|
+484391|SALIDA PLANTA|SALIDA PLANTA|136|
+492300|PILETA NORTE|PILETA NORTE|57|
+497101|AIRE AREA 400 BTD|AIRE AREA 400 BTD|105|
+503208|DECANTADORES STY|DECANTADORES STY|4|
+504846|12398115|12398115|121|
+504971|H.O.P.O.|H.O.P.O.|12|
+504972|HOPO PESADO|HOPO PESADO|12|
+505085|Aire PF7|Aire PF7|123|
+505086|Aire R15|Aire R15|123|
+505087|Aire R16|Aire R16|123|
+505743|TORRE ENFRIAMIENTO USINA|TORRE ENFRIAMIENTO USINA|143|
+505744|Tk 30-D13-108.|Tk 30-D13-108.|143|
+505893|Salida gas enf. carga|Salida gas enf. carga|4|
+508554|TREN DESMINERALIZADOR A|TREN DESMINERALIZADOR A|118|
+508555|TREN DESMINERALIZADOR B|TREN DESMINERALIZADOR B|118|
+509711|SALIDA BOMBAS 119-120|SALIDA BOMBAS 119-120|143|
+517223|Reposicion a Batea Ref.|Reposicion a Batea Ref.|115|
+521408|Salida Caldera 1|Salida Caldera 1|118|
+521409|Salida Caldera 2|Salida Caldera 2|118|
+521410|Salida Caldera 3|Salida Caldera 3|118|
+526541|TK 503|TK 503|44|
+526551|CAMION HEXANO EXP.|CAMION HEXANO EXP.|24|
+527088|CAMION ESTIRENO|CAMION ESTIRENO|24|
+527659|27073110|27073110|134|
+543797|CAMION DE BUTADIENO|CAMION DE BUTADIENO|15|
+546000|Incidente|Incidente|121|
+550203|20020356|20020356|134|
+550204|13227339|13227339|134|
+551255|EFLUENTE FINAL ZARATE|EFLUENTE FINAL ZARATE|-1|
+561694|26120862|26120862|134|
+565293|TK 14 D9 320|TK 14 D9 320|4|
+565323|Desvio|Desvio|121|
+571127|TAMBOR PHILMPLUS 5K7B|TAMBOR PHILMPLUS 5K7B|2|
+571129|PETROFLO 21Y3600L|PETROFLO 21Y3600L|2|
+578977|TAMBOR PETROFLO 21Y3600L|TAMBOR PETROFLO 21Y3600L|2|
+583220|27.538.535|27.538.535|121|
+583226|29172566|29172566|121|
+583803|17.051.806|17.051.806|121|
+583804|22.592.011|22.592.011|121|
+583805|27.335.640|27.335.640|121|
+586774|26005998|26005998|121|
+586775|27538535|27538535|121|
+587885|EFLUENTE EESS N y P|EFLUENTE EESS N y P|133|
+587886|EFLUENTE PERGAMINO|EFLUENTE PERGAMINO|133|
+587887|EFLUENTE TUCUMAN|EFLUENTE TUCUMAN|133|
+587888|EFLUENTE ALMAFUERTE|EFLUENTE ALMAFUERTE|133|
+587889|EFLUENTE PARANA|EFLUENTE PARANA|133|
+587890|EFLUENTE LA HORQUETA|EFLUENTE LA HORQUETA|133|
+602984|FRC 104 (SALIDA LAV. DE AGUA)|FRC 104 (SALIDA LAV. DE AGUA)|4|
+605033|TAMBOR DE SILICONA|TAMBOR DE SILICONA|5|
+605357|26813568|26813568|121|
+609233|TK AC. EXTENDEDOR PREP.|TK AC. EXTENDEDOR PREP.|5|
+611967|MUESTRAS INTERNAS|MUESTRAS INTERNAS|103|
+634335|Arpol/Arnipol Muestras Propias|Arpol/Arnipol Muestras Propias|139|
+639129|ENTRADA PIL INFILCO|ENTRADA PIL INFILCO|9|
+656882|SL Medio Ambiente|SL Medio Ambiente|123|
+664953|Cancha 1profundidad|Cancha 1profundidad|145|
+664954|Cancha 2profundidad|Cancha 2profundidad|145|
+664955|Cancha 3profundidad|Cancha 3profundidad|145|
+664956|Cancha 4profundidad|Cancha 4profundidad|145|
+664957|Cancha 6profundidad|Cancha 6profundidad|145|
+670379|CAMION ETILBENCENO|CAMION ETILBENCENO|49|
+680931|ART|ART|121|
+691099|SL Medio Ambiente Interno|SL Medio Ambiente Interno|145|
+698899|TK-NAFTA CARGA CATALITICA|TK-NAFTA CARGA CATALITICA|137|
+703053|40 : PIEZOMETROS / NAPAS FREATIC|40 : PIEZOMETROS / NAPAS FREATIC|57|
+710655|29562385|29562385|121|
+710656|27663561|27663561|121|
+718050|TANQUE|TANQUE|19|
+719383|SL Usina|SL Usina|136|
+719385|SL Produccion Combustibles|SL Produccion Combustibles|122|
+729649|TREN DE POLIMERIZACION|TREN DE POLIMERIZACION|4|
+730749|SL Muestras Internas|SL Muestras Internas|146|
+736604|SALIDA CENTRIFUGA|SALIDA CENTRIFUGA|5|
+736605|SALIDA SECADERO ROTATIVO|SALIDA SECADERO ROTATIVO|5|
+736811|27693990|27693990|121|
+741112|25288183|25288183|121|
+747722|Ex- ICI|Ex- ICI|121|
+748082|26066193|26066193|121|
+748083|27501122|27501122|121|
+748084|27081100|27081100|121|
+748085|28314559|28314559|121|
+748086|26889751|26889751|121|
+748087|29662837|29662837|121|
+748088|25524484|25524484|121|
+748089|26750170|26750170|121|
+748090|28059086|28059086|121|
+748092|92269259|92269259|121|
+751267|20176093|20176093|121|
+751268|23667731|23667731|121|
+752844|29662836|29662836|121|
+752845|28100911|28100911|121|
+752846|29046930|29046930|121|
+755399|26877292|26877292|121|
+755400|29725676|29725676|121|
+755404|TK CARGA MINERAL 14-D9-311|TK CARGA MINERAL 14-D9-311|5|
+755937|Etileno - SL|Etileno - SL|121|
+756622|28081976|28081976|121|
+756638|U47: Valvula succ D3 621/622|U47: Valvula succ D3 621/622|60|
+756790|E14: VALVULA ANT BLOQUEO FRC 220|E14: VALVULA ANT BLOQUEO FRC 220|60|
+756791|E15: VALVULA POST BLOQ FRC 220|E15: VALVULA POST BLOQ FRC 220|60|
+756792|E16: BY-PASS FRC 220|E16: BY-PASS FRC 220|60|
+756793|E17: VALV ENT A RERUM DE PYGAS|E17: VALV ENT A RERUM DE PYGAS|60|
+756794|E18: BOMBA D3-323 FDO PYGAS|E18: BOMBA D3-323 FDO PYGAS|60|
+756795|E19: VALV BLOQ SUCC D3-232|E19: VALV BLOQ SUCC D3-232|60|
+756796|E20: VALV BLOQ DESC D3-323|E20: VALV BLOQ DESC D3-323|60|
+756797|E21: BOMBA D3-324 FDO PYGAS|E21: BOMBA D3-324 FDO PYGAS|60|
+756798|E22: VALV BLOQ SUCC D3-324|E22: VALV BLOQ SUCC D3-324|60|
+756799|E23: VALV BLOQ DESC D3-324|E23: VALV BLOQ DESC D3-324|60|
+756800|E24: LIC 312 FDO PYGAS A RERUM|E24: LIC 312 FDO PYGAS A RERUM|60|
+756801|E25: VALV ANT BLOQ LIC 312|E25: VALV ANT BLOQ LIC 312|60|
+756802|E26: VALV POST BLOQ LIC 312|E26: VALV POST BLOQ LIC 312|60|
+766085|28394280|28394280|121|
+766086|28565568|28565568|121|
+767008|41 : PIEZOMETROS / NAPAS FREATIC|41 : PIEZOMETROS / NAPAS FREATIC|57|
+774705|31004443|31004443|121|
+791271|42 : PIEZOMETROS / NAPAS FREATIC|42 : PIEZOMETROS / NAPAS FREATIC|57|
+794122|ICI Medio Ambiente|ICI Medio Ambiente|52|
+798908|25660127|25660127|121|
+799445|16387614|16387614|121|
+799468|23476873|23476873|121|
+799631|27076226|27076226|121|
+807838|29415645|29415645|121|
+809902|SL Servicio Medico|SL Servicio Medico|132|
+824194|24928607|24928607|121|
+824195|26223919|26223919|121|
+824196|28148907|28148907|121|
+824197|29619066|29619066|121|
+824198|30548109|30548109|121|
+824199|31331157|31331157|121|
+828017|Medio Ambiente Muestras Propias|Medio Ambiente Muestras Propias|144|
+832758|Pasantias|Pasantias|121|
+835872|28575028|28575028|121|
+838955|Etileno SL|Etileno SL|147|
+840557|24562197|24562197|121|
+840558|27759965|27759965|121|
+843749|26986310|26986310|121|
+856036|BUQUE REFORMADO LIVIANO|BUQUE REFORMADO LIVIANO|50|
+862018|23674941|23674941|121|
+862021|25206046|25206046|121|
+862022|26373676|26373676|121|
+862023|28520953|28520953|121|
+863070|16220734|16220734|121|
+863072|20590967|20590967|121|
+863076|25403467|25403467|121|
+863077|28520777|28520777|121|
+866842|SALIDA ECUALIZADORA|SALIDA ECUALIZADORA|148|
+866843|ENTRADA ECUALIZADORA|ENTRADA ECUALIZADORA|148|
+866844|SALIDA AL RIO ICI|SALIDA AL RIO ICI|148|
+867350|PTA. LINEA REFORMADO LIV.|PTA. LINEA REFORMADO LIV.|50|
+874354|PLANTA CAMPANA|PLANTA CAMPANA|-1|
+882383|TOE ETILENO SL|TOE ETILENO SL|147|
+891589|27781865|27781865|121|
+891590|28771823|28771823|121|
+891591|29625889|29625889|121|
+891595|24400568|24400568|121|
+903347|29449868|29449868|121|
+910780|SALIDA AL RIO ETILENO SL|SALIDA AL RIO ETILENO SL|148|
+919208|26100711|26100711|121|
+919235|21985540|21985540|121|
+919239|24784713|24784713|121|
+919242|27335640|27335640|121|
+919246|29000057|29000057|121|
+925121|ESTIRENO DECANTADORES|ESTIRENO DECANTADORES|4|
+932426|27935212|27935212|121|
+960681|Etileno SL Area Efluentes|Etileno SL Area Efluentes|148|
+970315|Usina Muestras Propias|Usina Muestras Propias|143|
+989586|26986316|26986316|121|
+995789|23619889|23619889|121|
+998570|Tecnolog­a|Tecnolog­a|121|
+1001726|PAD 1|PAD 1|148|
+1001727|PAD 2|PAD 2|148|
+1001744|PAD 3|PAD 3|148|
+1001851|PAD 4|PAD 4|148|
+1001852|PAD 5|PAD 5|148|
+1001853|PAD 6|PAD 6|148|
+1001854|PAD 8|PAD 8|148|
+1001855|PAD 9|PAD 9|148|
+1001856|PAD 10|PAD 10|148|
+1001857|PAD 11|PAD 11|148|
+1001858|PAD 12|PAD 12|148|
+1003672|26986315|26986315|121|
+1005768|TK NAFTA PETROQUIMICA|TK NAFTA PETROQUIMICA|44|
+1008071|24386585|24386585|121|
+1008075|26160150|26160150|121|
+1008077|26527577|26527577|121|
+1008080|28705993|28705993|121|
+1008082|28771137|28771137|121|
+1008084|29402889|29402889|121|
+1008086|29902356|29902356|121|
+1008089|30291632|30291632|121|
+1008091|30630439|30630439|121|
+1008092|30879419|30879419|121|
+1008093|31681793|31681793|121|
+1008094|32000175|32000175|121|
+1009645|23585177|23585177|121|
+1009647|26877210|26877210|121|
+1009650|29730865|29730865|121|
+1014335|24048310|24048310|121|
+1014338|26356828|26356828|121|
+1014340|28568878|28568878|121|
+1020173|GDP|GDP|121|
+1024982|Reforma Muestras Propias|Reforma Muestras Propias|142|
+1025433|11D2-110|11D2-110|41|
+1025436|11D2-111|11D2-111|41|
+1028104|E-1 CONEXION MANGUERA LINEA|E-1 CONEXION MANGUERA LINEA|151|
+1028105|E-2 BLOQ LINEA UNION MANG|E-2 BLOQ LINEA UNION MANG|151|
+1028108|E-3 BOMBA D3-B23098202A|E-3 BOMBA D3-B23098202A|151|
+1028115|E-4 BLOQ SALIDA D3-B23098202A|E-4 BLOQ SALIDA D3-B23098202A|151|
+1028116|E-5 BLOQ ENTRADA D3-B23098202A|E-5 BLOQ ENTRADA D3-B23098202A|151|
+1028117|E-6 VALVULA BLOQUEO|E-6 VALVULA BLOQUEO|151|
+1028118|E-7 BLOQ SALIDA D3-B23098203A|E-7 BLOQ SALIDA D3-B23098203A|151|
+1028119|E-8 D3-B23098203A|E-8 D3-B23098203A|151|
+1028120|E-9 VALVULA BLOQUEO|E-9 VALVULA BLOQUEO|151|
+1028121|E-10 VALVULA BLOQUEO|E-10 VALVULA BLOQUEO|151|
+1028122|E-11 VALVULA BLOQUEO|E-11 VALVULA BLOQUEO|151|
+1028123|E-12 BLOQ TK 2309-82-01 INFERIOR|E-12 BLOQ TK 2309-82-01 INFERIOR|151|
+1028124|E-13 BLOQ TK 2309-82-01 SUP|E-13 BLOQ TK 2309-82-01 SUP|151|
+1030360|N-1 : ENTR NH3 LICUADOR 45 ESTE|N-1 : ENTR NH3 LICUADOR 45 ESTE|151|
+1030361|N-2 : SALIDA REGULAC LIC 45 ESTE|N-2 : SALIDA REGULAC LIC 45 ESTE|151|
+1030362|N-3 : ENTR REGULAC LIC 45 ESTE|N-3 : ENTR REGULAC LIC 45 ESTE|151|
+1030363|N-4 : ENTR REGULAC LIC 45 OESTE|N-4 : ENTR REGULAC LIC 45 OESTE|151|
+1030364|N-5 : REGULADORA LIC 45 OESTE|N-5 : REGULADORA LIC 45 OESTE|151|
+1030365|N-6 : SALID REGULAC LIC 45 OESTE|N-6 : SALID REGULAC LIC 45 OESTE|151|
+1030366|N-7 : BLOQ LICUADOR DE ETILENO|N-7 : BLOQ LICUADOR DE ETILENO|151|
+1030367|N-8 : BLOQ LICUADOR DE ETILENO|N-8 : BLOQ LICUADOR DE ETILENO|151|
+1030368|N-9 : BLOQ LICUADOR DE ETILENO|N-9 : BLOQ LICUADOR DE ETILENO|151|
+1030369|N-10 : BLOQ LICUADOR DE ETILENO|N-10 : BLOQ LICUADOR DE ETILENO|151|
+1030370|N-11 : BLOQ LICUADOR DE ETILENO|N-11 : BLOQ LICUADOR DE ETILENO|151|
+1030371|N-12 : BLOQ LICUADOR DE ETILENO|N-12 : BLOQ LICUADOR DE ETILENO|151|
+1030372|N-13 : BLOQ SALIDA REGENERADORES|N-13 : BLOQ SALIDA REGENERADORES|151|
+1030373|N-14 : BLOQ SALIDA REGENERADORES|N-14 : BLOQ SALIDA REGENERADORES|151|
+1030374|N-15 : BLOQ MANTENIM PRESION +5|N-15 : BLOQ MANTENIM PRESION +5|151|
+1030375|N-16 : BY PASS MANTENIM PRES +5|N-16 : BY PASS MANTENIM PRES +5|151|
+1030376|N-17 : BY PASS MANTENIM PRES +5|N-17 : BY PASS MANTENIM PRES +5|151|
+1030377|N-18 : REGULADORA MANT PRES +5|N-18 : REGULADORA MANT PRES +5|151|
+1030379|N-19 : BLOQ MANTENIM PRESION +5|N-19 : BLOQ MANTENIM PRESION +5|151|
+1030380|N-20 : ENTRADA REG NIVEL NH3 +5|N-20 : ENTRADA REG NIVEL NH3 +5|151|
+1030381|N-21 : REGULADORA NIVEL NH3 +5|N-21 : REGULADORA NIVEL NH3 +5|151|
+1030382|N-22 : SALIDA REG NIVEL NH3 +5|N-22 : SALIDA REG NIVEL NH3 +5|151|
+1030383|N-23 : BY PASS REG NIVEL NH3 +5|N-23 : BY PASS REG NIVEL NH3 +5|151|
+1030384|N-24 : BY PASS REG NIVEL NH3 +5|N-24 : BY PASS REG NIVEL NH3 +5|151|
+1030385|N-25 : ENTRADA SIST REGULAC +5|N-25 : ENTRADA SIST REGULAC +5|151|
+1030386|N-26 : SALIDA SIST REGULAC +5|N-26 : SALIDA SIST REGULAC +5|151|
+1030387|N-27 : BLOQ 1478 SIST REGULAC +5|N-27 : BLOQ 1478 SIST REGULAC +5|151|
+1030388|N-28 : ENTRADA REGULADORA 1163|N-28 : ENTRADA REGULADORA 1163|151|
+1030389|N-29 : REGULADORA 1163|N-29 : REGULADORA 1163|151|
+1030390|N-30 : SALIDA REGULADORA 1163|N-30 : SALIDA REGULADORA 1163|151|
+1030391|N-31 : BY PASS REGULADORA 1163|N-31 : BY PASS REGULADORA 1163|151|
+1030392|N-32 : BY PASS REGULADORA 1163|N-32 : BY PASS REGULADORA 1163|151|
+1030393|N-33 : ENTRADA PURGA DE ACEITE|N-33 : ENTRADA PURGA DE ACEITE|151|
+1030394|N-34 : SALIDA PURGA DE ACEITE|N-34 : SALIDA PURGA DE ACEITE|151|
+1030395|N-35 : BY PASS PURGA DE ACEITE|N-35 : BY PASS PURGA DE ACEITE|151|
+1030396|N-36 : ENTRADA REGULADORA 1164|N-36 : ENTRADA REGULADORA 1164|151|
+1030397|N-37 : REGULADORA 1164|N-37 : REGULADORA 1164|151|
+1030398|N-38 : SALIDA REGULADORA 1164|N-38 : SALIDA REGULADORA 1164|151|
+1030399|N-39 : BY PASS REGULADORA 1164|N-39 : BY PASS REGULADORA 1164|151|
+1030400|N-40 : BY PASS REGULADORA 1164|N-40 : BY PASS REGULADORA 1164|151|
+1030401|N-41 : ENTRADA REGULADORA 1142|N-41 : ENTRADA REGULADORA 1142|151|
+1030402|N-42 : REGULADORA 1142|N-42 : REGULADORA 1142|151|
+1030403|N-43 : SALIDA REGULADORA 1142|N-43 : SALIDA REGULADORA 1142|151|
+1030404|N-44 : BY PASS REGULADORA 1142|N-44 : BY PASS REGULADORA 1142|151|
+1030405|N-45 : BY PASS REGULADORA 1142|N-45 : BY PASS REGULADORA 1142|151|
+1030406|N-46 : BY PASS REGULADORA 1142|N-46 : BY PASS REGULADORA 1142|151|
+1030407|N-47 : BY PASS REGULADORA 1142|N-47 : BY PASS REGULADORA 1142|151|
+1030408|N-48 : PURGA SUCC TERCERA ETAPA|N-48 : PURGA SUCC TERCERA ETAPA|151|
+1030409|N-49 : ENTRADA REGULADORA 1146|N-49 : ENTRADA REGULADORA 1146|151|
+1030410|N-50 : REGULADORA 1146|N-50 : REGULADORA 1146|151|
+1030411|N-51 : SALIDA REGULADORA 1146|N-51 : SALIDA REGULADORA 1146|151|
+1030412|N-52 : BY PASS REGULADORA 1146|N-52 : BY PASS REGULADORA 1146|151|
+1030413|N-53 : BY PASS REGULADORA 1146|N-53 : BY PASS REGULADORA 1146|151|
+1030416|N-54 : BLOQ PURGA SEGUNDA ETAPA|N-54 : BLOQ PURGA SEGUNDA ETAPA|151|
+1030417|N-55 : BLOQ PURGA SEGUNDA ETAPA|N-55 : BLOQ PURGA SEGUNDA ETAPA|151|
+1030418|N-56 : BLOQ PURGA SEGUNDA ETAPA|N-56 : BLOQ PURGA SEGUNDA ETAPA|151|
+1030421|N-57 : BLOQ COLECTOR NH3|N-57 : BLOQ COLECTOR NH3|151|
+1030422|N-58 : BLOQ COLECTOR NH3|N-58 : BLOQ COLECTOR NH3|151|
+1030423|N-59 : BLOQ COLECTOR NH3|N-59 : BLOQ COLECTOR NH3|151|
+1030424|N-60 : BLOQ COLECTOR NH3|N-60 : BLOQ COLECTOR NH3|151|
+1030425|N-61 : BLOQ COLECTOR NH3|N-61 : BLOQ COLECTOR NH3|151|
+1030426|N-62 : BLOQ COLECTOR NH3|N-62 : BLOQ COLECTOR NH3|151|
+1030427|N-63 : SALIDA COLECTOR NH3|N-63 : SALIDA COLECTOR NH3|151|
+1030428|N-64 : BLOQ COLECTOR NH3|N-64 : BLOQ COLECTOR NH3|151|
+1030429|N-65 : PURGA COLECTOR NH3|N-65 : PURGA COLECTOR NH3|151|
+1030430|N-66 : PURGA COLECTOR NH3|N-66 : PURGA COLECTOR NH3|151|
+1030431|N-67 : ENTRADA COLECTOR OESTE|N-67 : ENTRADA COLECTOR OESTE|151|
+1030432|N-68 : ENTRADA COLECTOR ESTE|N-68 : ENTRADA COLECTOR ESTE|151|
+1030433|N-69 : BLOQ 1454 DISTRIBUID NH3|N-69 : BLOQ 1454 DISTRIBUID NH3|151|
+1030434|N-70 : BLOQ 1464 DISTRIBUID NH3|N-70 : BLOQ 1464 DISTRIBUID NH3|151|
+1030435|N-71 : BLOQ 1463 DISTRIBUID NH3|N-71 : BLOQ 1463 DISTRIBUID NH3|151|
+1030436|N-72 : BLOQ 1453 DISTRIBUID NH3|N-72 : BLOQ 1453 DISTRIBUID NH3|151|
+1030437|N-73 : BLOQ 1457 DISTRIBUID NH3|N-73 : BLOQ 1457 DISTRIBUID NH3|151|
+1030438|N-74 : SALIDA DE COMPRESOR ESTE|N-74 : SALIDA DE COMPRESOR ESTE|151|
+1030439|N-75 : SALIDA DE COMPRESOR ESTE|N-75 : SALIDA DE COMPRESOR ESTE|151|
+1030440|N-76 : SALIDA DE COMPRESOR ESTE|N-76 : SALIDA DE COMPRESOR ESTE|151|
+1030441|N-77 : SALIDA DE COMPRESOR ESTE|N-77 : SALIDA DE COMPRESOR ESTE|151|
+1030442|N-78 : SALIDA DE COMPRESOR ESTE|N-78 : SALIDA DE COMPRESOR ESTE|151|
+1030443|N-79 : SALIDA DE COMPRESOR OESTE|N-79 : SALIDA DE COMPRESOR OESTE|151|
+1030444|N-80 : SALIDA DE COMPRESOR OESTE|N-80 : SALIDA DE COMPRESOR OESTE|151|
+1030445|N-81 : SALIDA DE COMPRESOR OESTE|N-81 : SALIDA DE COMPRESOR OESTE|151|
+1030446|N-82 : SALIDA DE COMPRESOR OESTE|N-82 : SALIDA DE COMPRESOR OESTE|151|
+1030447|N-83 : SALIDA DE COMPRESOR OESTE|N-83 : SALIDA DE COMPRESOR OESTE|151|
+1031869|AIRE ETILENO SL ZONA ANTORCHA|AIRE ETILENO SL ZONA ANTORCHA|150|
+1031870|AIRE ETILENO SL ZONA ABAJO HORNO|AIRE ETILENO SL ZONA ABAJO HORNO|150|
+1031871|AIRE ETILENO SL ZONA OBRADOR|AIRE ETILENO SL ZONA OBRADOR|150|
+1040737|25950244|25950244|121|
+1057416|Examen Periodico|Examen Periodico|152|
+1061006|13488453|13488453|121|
+1061007|14057288|14057288|121|
+1061008|18244585|18244585|121|
+1061009|20461108|20461108|121|
+1061010|22831207|22831207|121|
+1061011|23900071|23900071|121|
+1061012|24720479|24720479|121|
+1061013|24748920|24748920|121|
+1061014|25707628|25707628|121|
+1061015|25751777|25751777|121|
+1061016|26027343|26027343|121|
+1061017|28126586|28126586|121|
+1061018|8599397|8599397|121|
+1061019|14110662|14110662|121|
+1061020|14567162|14567162|121|
+1061021|14803432|14803432|121|
+1061022|16837864|16837864|121|
+1061023|16935160|16935160|121|
+1061024|17826603|17826603|121|
+1061025|20176338|20176338|121|
+1061026|21912522|21912522|121|
+1061027|23501244|23501244|121|
+1061028|26015943|26015943|121|
+1061029|27750354|27750354|121|
+1061030|31119065|31119065|121|
+1066268|26986308|26986308|121|
+1066273|31757671|31757671|121|
+1066275|32295900|32295900|121|
+1073276|14534948|14534948|121|
+1073278|20182399|20182399|121|
+1073279|21418049|21418049|121|
+1073283|31300803|31300803|121|
+1073284|28557491|28557491|121|
+1073286|26414032|26414032|121|
+1075943|CAMION DE EMAGO|CAMION DE EMAGO|21|
+1089431|TK BTD RECICLO CIMA|TK BTD RECICLO CIMA|7|
+1092535|26332382|26332382|121|
+1092536|27290863|27290863|121|
+1094337|27862303|27862303|121|
+1094345|26977360|26977360|121|
+1094352|30550303|30550303|121|
+1100815|27318524|27318524|121|
+1100818|28572611|28572611|121|
+1100821|32674726|32674726|121|
+1101274|EEE Muestras Propias|EEE Muestras Propias|141|
+1115321|GAS RESIDUAL ETILENO SL|GAS RESIDUAL ETILENO SL|147|
+1121369|10538868|10538868|121|
+1121371|18402987|18402987|121|
+1121372|25397689|25397689|121|
+1121374|Especial Contratistas|Especial Contratistas|121|
+1121375|Desvio Docimetrias|Desvio Docimetrias|121|
+1124600|18068888|18068888|121|
+1124601|21548817|21548817|121|
+1124602|21690892|21690892|121|
+1124604|26884811|26884811|121|
+1124605|27244304|27244304|121|
+1124606|29849807|29849807|121|
+1124607|29922267|29922267|121|
+1126350|Contratos Estables|Contratos Estables|121|
+1138529|22831145|22831145|121|
+1138532|28999518|28999518|121|
+1138534|29849896|29849896|121|
+1138537|31119043|31119043|121|
+1138540|31960820|31960820|121|
+1139131|Aire PF6|Aire PF6|123|
+1144762|14980721|14980721|121|
+1144766|27498505|27498505|121|
+1144773|28101137|28101137|121|
+1144776|28795790|28795790|121|
+1144902|31290228|31290228|121|
+1146672|23938937|23938937|121|
+1146674|26358573|26358573|121|
+1146675|30291620|30291620|121|
+1146676|32070154|32070154|121|
+1149981|BARCO|BARCO|44|
+1151399|17716793|17716793|121|
+1151400|24585646|24585646|121|
+1151402|25979505|25979505|121|
+1151405|26262979|26262979|121|
+1151409|28575334|28575334|121|
+1151411|31290185|31290185|121|
+1155368|28795667|28795667|121|
+1155371|16609202|16609202|121|
+1155662|27081236|27081236|121|
+1155666|32295902|32295902|121|
+1155668|26157687|26157687|121|
+1155672|30630655|30630655|121|
+1155685|28101775|28101775|121|
+1155694|25421035|25421035|121|
+1155817|32076489|32076489|121|
+1160997|Horno Gapsa|Horno Gapsa|121|
+1161455|30106678|30106678|121|
+1186101|RX FINAL BATCH|RX FINAL BATCH|6|
+1186102|RX INTERMEDIO BATCH|RX INTERMEDIO BATCH|6|
+1186103|COLUMNA DESPOJADO BATCH|COLUMNA DESPOJADO BATCH|6|
+1199169|CAMION DE ESTIRENO|CAMION DE ESTIRENO|21|
+1215137|PORTAFEED|PORTAFEED|2|
+1233886|AH-101|AH-101|122|
+1233887|AV-202|AV-202|122|
+1233888|AV-301|AV-301|122|
+1233889|AH-402|AH-402|122|
+1233891|AV-802|AV-802|122|
+1233894|TAMB. PHP|TAMB. PHP|2|
+1234150|DD-101|DD-101|122|
+1234151|DD-201|DD-201|122|
+1234152|DD-301|DD-301|122|
+1272696|22831312|22831312|121|
+1272723|32074589|32074589|121|
+1278270|AGUA SEPARADOR D13-212-A|AGUA SEPARADOR D13-212-A|20|
+1278271|AGUA SEPARADOR D13-212-B|AGUA SEPARADOR D13-212-B|20|
+1307939|Canalon|Canalon|123|
+1310253|Pileta Vacio II|Pileta Vacio II|122|
+1311329|17139274|17139274|121|
+1311332|32722120|32722120|121|
+1311333|30405429|30405429|121|
+1311334|29923557|29923557|121|
+1331005|AIRE PLANTA EEE ETBZ|AIRE PLANTA EEE ETBZ|106|
+1361809|E-14 Succion bba D3-B23098203A|E-14 Succion bba D3-B23098203A|151|
+1361810|E-15 Valvula bloqueo|E-15 Valvula bloqueo|151|
+1361811|E-16 Valvula bloqueo|E-16 Valvula bloqueo|151|
+1371340|CARGA POSTFRACC.|CARGA POSTFRACC.|12|
+1375854|23760761|23760761|121|
+1375858|25958988|25958988|121|
+1375864|28944354|28944354|121|
+1386126|TANQUE LPG|TANQUE LPG|12|
+1388645|TK-NAFTA|TK-NAFTA|137|
+1442631|27747353|27747353|121|
+1444584|30695796|30695796|121|
+1444592|25971260|25971260|121|
+1453673|CARGA RECAR|CARGA RECAR|42|
+1453675|REFINADO 11D14 204|REFINADO 11D14 204|42|
+1453676|REFINADO 11D14 205|REFINADO 11D14 205|42|
+1453677|FDO EXTRACTORA|FDO EXTRACTORA|42|
+1453678|FDO WATER STRIPPER|FDO WATER STRIPPER|42|
+1453679|COL. LAV. DE EXTRACTO|COL. LAV. DE EXTRACTO|42|
+1453681|REFLUJO DE FONDO|REFLUJO DE FONDO|42|
+1453682|TETON 11D13 251|TETON 11D13 251|42|
+1453683|SDA LAV. REFINADO|SDA LAV. REFINADO|42|
+1458808|BARCO ETILBZ|BARCO ETILBZ|19|
+1461485|LPG POLIDUCTO|LPG POLIDUCTO|15|
+1469042|AIRE INGRESO A PLANTA|AIRE INGRESO A PLANTA|112|
+1478963|CIMA DESISOBUTANIZADORA|CIMA DESISOBUTANIZADORA|12|
+1478964|FONDO DESISOBUTANIZADORA|FONDO DESISOBUTANIZADORA|12|
+1483716|ISOTANQUE I-5|ISOTANQUE I-5|20|
+1493343|TK506|TK506|44|
+1493344|TK501-506|TK501-506|44|
+1524934|LABORATORIO SL|LABORATORIO SL|124|
+1548423|BUQUE BENCENO|BUQUE BENCENO|20|
+1578554|PILETA API-P1|PILETA API-P1|150|
+1578555|ZONA SEPARACION DE GASES-P2|ZONA SEPARACION DE GASES-P2|150|
+1578556|ZONA COMPRESOR GAS CRUDO-P3|ZONA COMPRESOR GAS CRUDO-P3|150|
+1578557|ZONA CRAQUEO-P4|ZONA CRAQUEO-P4|150|
+1594274|CARGA T. PREFRACC|CARGA T. PREFRACC|41|
+1610660|INGRESO|INGRESO|112|
+1610661|CARGADERO|CARGADERO|112|
+1614194|30851852|30851852|121|
+1614195|33195276|33195276|121|
+1633644|27292323|27292323|121|
+1650552|Aire R17|Aire R17|123|
+1650553|Aire R18|Aire R18|123|
+1664903|SL Planta Fluvial|SL Planta Fluvial|137|
+1670958|33132923|33132923|121|
+1700117|PRIMER PISO-COMP NH3-N1 OESTE|PRIMER PISO-COMP NH3-N1 OESTE|150|
+1700118|ENTRE PISO-COMP NH3-N1 OESTE|ENTRE PISO-COMP NH3-N1 OESTE|150|
+1700119|PLANTA BAJA-COMP NH3-N1 OESTE|PLANTA BAJA-COMP NH3-N1 OESTE|150|
+1700120|PLANTA BAJA-COMP NH3-N2 ESTE|PLANTA BAJA-COMP NH3-N2 ESTE|150|
+1700121|ENTRE PISO-COMP NH3-N2 ESTE|ENTRE PISO-COMP NH3-N2 ESTE|150|
+1700122|PRIMER PISO-COMP NH3-N2 ESTE|PRIMER PISO-COMP NH3-N2 ESTE|150|
+1736044|TK NAFTA CATALITICA|TK NAFTA CATALITICA|44|
+1736046|TK NAFTA BASE SUPER|TK NAFTA BASE SUPER|44|
+1736047|TK NAFTA BASE PODIUM|TK NAFTA BASE PODIUM|44|
+1739520|Tk Tetralene PGSM|Tk Tetralene PGSM|18|
+1772201|24044783|24044783|121|
+1772202|21658901|21658901|121|
+1772203|31815317|31815317|121|
+1772204|27124801|27124801|121|
+1783988|28624052|28624052|121|
+1786141|23695165|23695165|121|
+1825090|17460072|17460072|121|
+1825091|23936472|23936472|121|
+1825092|33720317|33720317|121|
+1827525|18068068|18068068|121|
+1827526|31537740|31537740|121|
+1827527|30792353|30792353|121|
+1827528|34752316|34752316|121|
+1827529|29693810|29693810|121|
+1834213|E19 Bloq. Bomba 32-D3-514|E19 Bloq. Bomba 32-D3-514|135|
+1834215|E31 ASP.Bomba 32-D3-512|E31 ASP.Bomba 32-D3-512|135|
+1834216|E35 Recic.bomba 32-D3-512|E35 Recic.bomba 32-D3-512|135|
+1834217|E36 Desc. Benceno - camiones|E36 Desc. Benceno - camiones|135|
+1834218|E37 Desc. 32-D3-626 al 32 -D9-5|E37 Desc. 32-D3-626 al 32 -D9-5|135|
+1834220|E39 Barrido con vapor|E39 Barrido con vapor|135|
+1834222|E40 Bypass recirculando/ entrad|E40 Bypass recirculando/ entrad|135|
+1834223|E41 Bloq. Filtro|E41 Bloq. Filtro|135|
+1834224|E43 Recirc.bomba 32-D3-512|E43 Recirc.bomba 32-D3-512|135|
+1834225|E44 Entrada desc.camion a tk|E44 Entrada desc.camion a tk|135|
+1834226|E45 By-pass de líneas|E45 By-pass de líneas|135|
+1834227|E61 Entrada 32-D9-538|E61 Entrada 32-D9-538|135|
+1834228|E62 Bloqueo de filtro|E62 Bloqueo de filtro|135|
+1926558|BUQUE|BUQUE|44|
+1926559|BUQUE/MUELLE|BUQUE/MUELLE|50|
+1926560|BARCO/MUELLE|BARCO/MUELLE|50|
+1936151|IRAM|IRAM|114|
+1962120|PRC_102|PRC_102|41|
+1993871|REGENERADOR DE SOLVENTE|REGENERADOR DE SOLVENTE|42|
+2003524|SDA 11D2-330|SDA 11D2-330|43|
+2004061|FDO. DESBUTA.BUTADIENO|FDO. DESBUTA.BUTADIENO|14|
+2019441|Solucion DFL|Solucion DFL|5|
+2019443|852|852|135|
+2019444|853|853|135|
+2019445|854|854|135|
+2019446|855|855|135|
+2019447|856|856|135|
+2019448|857|857|135|
+2019449|858|858|135|
+2019450|859|859|135|
+2019451|860|860|135|
+2019452|861|861|135|
+2019453|862|862|135|
+2037225|EEE Agua de Proceso|EEE Agua de Proceso|116|
+2046095|ZONA CARGADERO CAMIONES|ZONA CARGADERO CAMIONES|150|
+2065683|CIMA TORRE 12D14-301|CIMA TORRE 12D14-301|13|
+2065684|FDO. TORRE 12D14-301|FDO. TORRE 12D14-301|13|
+2115907|651 Succion D3-201|651 Succion D3-201|64|
+2116181|652 Descarga D3-201|652 Descarga D3-201|64|
+2116182|653 Succion D3-202|653 Succion D3-202|64|
+2117775|COMPRESOR FREON NORTE|COMPRESOR FREON NORTE|4|
+2117776|COMPRESOR FREON CENTRO|COMPRESOR FREON CENTRO|4|
+2117777|COMPRESOR FREON SUR|COMPRESOR FREON SUR|4|
+2123227|654 Descarga D3-202|654 Descarga D3-202|64|
+2123228|655 Entrada FV-285|655 Entrada FV-285|64|
+2123229|656 Reguladora FV-285|656 Reguladora FV-285|64|
+2123230|657 Salida FV-285|657 Salida FV-285|64|
+2123231|658 Salida FV-274|658 Salida FV-274|64|
+2123232|659 Reguladora FV-274|659 Reguladora FV-274|64|
+2123233|660 Entrada FV-274|660 Entrada FV-274|64|
+2123234|661 Omega bloqueos ExtractoTk516|661 Omega bloqueos ExtractoTk516|64|
+2123235|662 Omega bloqueos ExtractoTK516|662 Omega bloqueos ExtractoTK516|64|
+2123236|663 Omega bloqueos ExtractoTK513|663 Omega bloqueos ExtractoTK513|64|
+2123237|664 Omega bloqueos ExtractoTK513|664 Omega bloqueos ExtractoTK513|64|
+2123238|665 Entrada Produccion a Tk 513|665 Entrada Produccion a Tk 513|64|
+2123239|666 Aspiracion normal Tk 513|666 Aspiracion normal Tk 513|64|
+2123240|667 Aspiracion de la olla Tk 513|667 Aspiracion de la olla Tk 513|64|
+2123241|668 Drenaje Tk 513|668 Drenaje Tk 513|64|
+2123242|669 Ex aspiracion de agua Tk 513|669 Ex aspiracion de agua Tk 513|64|
+2123243|670 Ex aspiracion de agua Tk 513|670 Ex aspiracion de agua Tk 513|64|
+2123244|671 Drenaje Tk 513|671 Drenaje Tk 513|64|
+2123245|672 Succion D3-220|672 Succion D3-220|64|
+2123246|673 Descarga D3-220|673 Descarga D3-220|64|
+2123247|674 Recirculacion D3-220|674 Recirculacion D3-220|64|
+2123248|675 Succion D3-219|675 Succion D3-219|64|
+2123249|676 Descarga D3-219|676 Descarga D3-219|64|
+2123251|678 Entrada FV-230|678 Entrada FV-230|64|
+2123252|679 By-pass FV-230|679 By-pass FV-230|64|
+2123253|680 PSV alivio|680 PSV alivio|64|
+2123254|681 Reguladora FV-230|681 Reguladora FV-230|64|
+2123255|682 Salida FV-230|682 Salida FV-230|64|
+2123256|683 Entrada TV-230|683 Entrada TV-230|64|
+2123257|684 By-pass TV-230|684 By-pass TV-230|64|
+2123258|685 Reguladora TV-230|685 Reguladora TV-230|64|
+2123259|686 Salida TV-230|686 Salida TV-230|64|
+2123260|687 Entrada D1-301|687 Entrada D1-301|64|
+2123261|688 By-pass D1-301|688 By-pass D1-301|64|
+2123262|689 Salida D1-30|689 Salida D1-30|64|
+2123263|690 By-pass D2-216|690 By-pass D2-216|64|
+2123264|691 Salida lado tubos D2-216|691 Salida lado tubos D2-216|64|
+2123265|692 Entrada lado tubos D2-216|692 Entrada lado tubos D2-216|64|
+2123266|693 Entrada al PV-350|693 Entrada al PV-350|64|
+2123267|694 Reguladora PV-350|694 Reguladora PV-350|64|
+2123268|695 By-pass PV-350|695 By-pass PV-350|64|
+2123269|696 Salida PV-350|696 Salida PV-350|64|
+2123270|697 Succion D3-348|697 Succion D3-348|64|
+2123271|698 Descarga D3-348|698 Descarga D3-348|64|
+2123272|699 Succion D3-347|699 Succion D3-347|64|
+2123273|700 Descarga D3-348|700 Descarga D3-348|64|
+2123274|701 Entrada al D2-208|701 Entrada al D2-208|64|
+2123275|702 By-pass D2-208|702 By-pass D2-208|64|
+2123276|703 Salida D2-208|703 Salida D2-208|64|
+2123277|704 Salida by-pass D2-208|704 Salida by-pass D2-208|64|
+2123278|705 Entrada FV-354|705 Entrada FV-354|64|
+2123279|706 By-pass FV-354|706 By-pass FV-354|64|
+2123280|707 Reguladora FV-354|707 Reguladora FV-354|64|
+2123281|708 Salida FV-354|708 Salida FV-354|64|
+2123282|709 Entrada FV-351|709 Entrada FV-351|64|
+2123283|710 By-pass FV-351|710 By-pass FV-351|64|
+2123284|711 Reguladora FV-351|711 Reguladora FV-351|64|
+2123285|712 Salida FV-351|712 Salida FV-351|64|
+2123286|713 Blq produccion de BzTK 516|713 Blq produccion de BzTK 516|64|
+2123290|714 Blq producción de Bz a TK529|714 Blq producción de Bz a TK529|64|
+2123291|715 Recirculacion forzada D3-347|715 Recirculacion forzada D3-347|64|
+2123292|716 Recirculacion forzada D3-347|716 Recirculacion forzada D3-347|64|
+2123293|717 Bloqueo Bz a Tk 516|717 Bloqueo Bz a Tk 516|64|
+2123294|718 Bloqueo producción de Bz|718 Bloqueo producción de Bz|64|
+2123295|719 Bloqueo alimentacion BZ AEEE|719 Bloqueo alimentacion BZ AEEE|64|
+2123297|720 Produccion Bz a tk 530|720 Produccion Bz a tk 530|64|
+2123298|721 Bloqueo alimentacion Bz EEE|721 Bloqueo alimentacion Bz EEE|64|
+2123299|722 Derivac prod de Bz a Tk 536|722 Derivac prod de Bz a Tk 536|64|
+2123300|723 Entrada prod de Bz a TK 536|723 Entrada prod de Bz a TK 536|64|
+2123301|724 Entrada produccion Tk 529|724 Entrada produccion Tk 529|64|
+2123302|725 Salida Tk 529 a EEE|725 Salida Tk 529 a EEE|64|
+2123304|726 Salida Tk 536 a EEE|726 Salida Tk 536 a EEE|64|
+2123305|727 Aspiracion normal Tk 529|727 Aspiracion normal Tk 529|64|
+2123306|728 Aspiracion olla Tk 529|728 Aspiracion olla Tk 529|64|
+2123308|729 Aspiracion normal Tk 536|729 Aspiracion normal Tk 536|64|
+2123309|730 Aspiracion olla Tk 536|730 Aspiracion olla Tk 536|64|
+2123310|731 Salida Tk 536 a EEE|731 Salida Tk 536 a EEE|64|
+2123311|732 Aspiracion D3-505 del Tk 536|732 Aspiracion D3-505 del Tk 536|64|
+2123312|733 Derivacion aspiración Tk 536|733 Derivacion aspiración Tk 536|64|
+2123313|734 Derivacion prod de Bz a 528|734 Derivacion prod de Bz a 528|64|
+2123314|735 Bloq Bz de Muelle/Camiones A|735 Bloq Bz de Muelle/Camiones A|64|
+2123315|736 Bloq Bz de Muelle/Camiones B|736 Bloq Bz de Muelle/Camiones B|64|
+2123316|737 Bloq Bz de Muelle/Camiones C|737 Bloq Bz de Muelle/Camiones C|64|
+2123317|738 Bloq Bz de Muelle/Camion D|738 Bloq Bz de Muelle/Camion D|64|
+2123318|739 Bloq Bz de Muelle/Camion E|739 Bloq Bz de Muelle/Camion E|64|
+2123319|740 Succion D3-350|740 Succion D3-350|64|
+2123320|741 Descarga D3-350|741 Descarga D3-350|64|
+2123321|742 Recirculacion D3-350|742 Recirculacion D3-350|64|
+2123323|743 Succion D3-349|743 Succion D3-349|64|
+2123324|744 Recirculacion D3-349|744 Recirculacion D3-349|64|
+2123327|745 Descarga D3-349|745 Descarga D3-349|64|
+2123328|746 Entrada FRC-350|746 Entrada FRC-350|64|
+2123329|747 Reguladora FRC-350|747 Reguladora FRC-350|64|
+2123330|748 Salida FRC-350|748 Salida FRC-350|64|
+2123331|749 By-pass FRC-350|749 By-pass FRC-350|64|
+2123332|750 Derivacion carga PygasTk510|750 Derivacion carga PygasTk510|64|
+2123333|751 Entrada FV-812|751 Entrada FV-812|64|
+2123334|752 Reguladora FV-812|752 Reguladora FV-812|64|
+2123335|753 By-pass FV-812|753 By-pass FV-812|64|
+2123337|754 Salida FV-812|754 Salida FV-812|64|
+2123339|755 Bloq prod Pygas a Tk 538|755 Bloq prod Pygas a Tk 538|64|
+2123340|756 Entrada FV-811|756 Entrada FV-811|64|
+2123341|757 By-pass FV-811|757 By-pass FV-811|64|
+2123342|758 Recirculacion interna Pygas|758 Recirculacion interna Pygas|64|
+2123343|759 By-pass FV-811|759 By-pass FV-811|64|
+2123344|760 Salida Fv-811|760 Salida Fv-811|64|
+2123345|761 Entrada filtro D15-802|761 Entrada filtro D15-802|64|
+2123346|762 Entrada a filtro D15-801|762 Entrada a filtro D15-801|64|
+2123347|763 Valvula vaciado D15-801|763 Valvula vaciado D15-801|64|
+2123348|764 Salida D15-801|764 Salida D15-801|64|
+2123349|765 Valvula a O.D. D15-801|765 Valvula a O.D. D15-801|64|
+2123350|766 Valvula a O.D. D15-802|766 Valvula a O.D. D15-802|64|
+2123351|767 Salida D15-802|767 Salida D15-802|64|
+2123352|768 Valvula vaciado D15-802|768 Valvula vaciado D15-802|64|
+2123353|769 Succion D3-804|769 Succion D3-804|64|
+2123354|770 Recirculacion D3-804|770 Recirculacion D3-804|64|
+2123355|771 Descarga D3-804|771 Descarga D3-804|64|
+2123356|772 Succion D3-803|772 Succion D3-803|64|
+2123357|773 Descarga D3-803|773 Descarga D3-803|64|
+2123358|774 Recirculacion D3-803|774 Recirculacion D3-803|64|
+2123359|775 Entrada al FV-801|775 Entrada al FV-801|64|
+2123360|776 Reguladora FV-801|776 Reguladora FV-801|64|
+2123361|777 Salida FV-801|777 Salida FV-801|64|
+2123362|778 By-pass FV-801|778 By-pass FV-801|64|
+2123363|779 Entrada FV-803|779 Entrada FV-803|64|
+2123364|780 Reguladora FV-803|780 Reguladora FV-803|64|
+2123365|781 Salida FV-803|781 Salida FV-803|64|
+2123366|782 Entrada producto al D2-803|782 Entrada producto al D2-803|64|
+2123367|783 Salida producto del D2-803|783 Salida producto del D2-803|64|
+2123368|784 By-pass D2-803|784 By-pass D2-803|64|
+2123369|785 Entrada Mezclador Estatico|785 Entrada Mezclador Estatico|64|
+2123370|786 By-pass Mezclador Estatico|786 By-pass Mezclador Estatico|64|
+2123371|787 Salida Mezclador Estatico|787 Salida Mezclador Estatico|64|
+2123372|788 Succion D3-805|788 Succion D3-805|64|
+2123373|789 Succion D3-806|789 Succion D3-806|64|
+2123374|790 Descarga D3-806|790 Descarga D3-806|64|
+2123375|791 Descarga D3-805|791 Descarga D3-805|64|
+2123376|792 Entrada TRC-804|792 Entrada TRC-804|64|
+2123377|793 Reguladora TRC-804|793 Reguladora TRC-804|64|
+2123378|794 By-pass TRC-804|794 By-pass TRC-804|64|
+2123379|795 Salida TRC-804|795 Salida TRC-804|64|
+2123380|796 Entrada TRC-804|796 Entrada TRC-804|64|
+2123381|797 Reguladora TRC-804|797 Reguladora TRC-804|64|
+2123382|798 Salida TRC-804|798 Salida TRC-804|64|
+2123383|799 Drenaje D13-807|799 Drenaje D13-807|64|
+2123384|800 Entrada LV-812|800 Entrada LV-812|64|
+2123385|801 Reguladora LV-812|801 Reguladora LV-812|64|
+2123386|802 By-pass LV-812|802 By-pass LV-812|64|
+2123387|803 Salida LV-812|803 Salida LV-812|64|
+2123388|804 Entrada FV-807|804 Entrada FV-807|64|
+2123389|805 Reguladora FV-807|805 Reguladora FV-807|64|
+2123390|806 By-pass FV-807|806 By-pass FV-807|64|
+2123391|807 Salida FV-807|807 Salida FV-807|64|
+2123392|808 Drenaje D13-808|808 Drenaje D13-808|64|
+2123393|809 Entrada FV-809|809 Entrada FV-809|64|
+2123394|810 Reguladora FV-809|810 Reguladora FV-809|64|
+2123395|811 By-pass FV-809|811 By-pass FV-809|64|
+2123396|812 Salida FV-809|812 Salida FV-809|64|
+2123397|813 Drenaje D13-810|813 Drenaje D13-810|64|
+2123398|814 Succion D3-808|814 Succion D3-808|64|
+2123399|815 Succion D3-807|815 Succion D3-807|64|
+2123400|816 Descarga D3-808|816 Descarga D3-808|64|
+2123401|817 Descarga D3-807|817 Descarga D3-807|64|
+2123402|818 Entrada FV-809|818 Entrada FV-809|64|
+2123403|819 By-pass FV-809|819 By-pass FV-809|64|
+2123404|820 Reguladora FV-809|820 Reguladora FV-809|64|
+2123405|821 Salida FV-809|821 Salida FV-809|64|
+2123406|822 Blq Recirulacion a Tb pulmon|822 Blq Recirulacion a Tb pulmon|64|
+2123407|823 Bloq producc Pygas TK510|823 Bloq producc Pygas TK510|64|
+2123408|677 Recirculacion D3 219|677 Recirculacion D3 219|64|
+2130202|901|901|60|
+2130203|902|902|60|
+2130204|903|903|60|
+2130205|904|904|60|
+2130206|905|905|60|
+2130207|906|906|60|
+2130209|907|907|60|
+2130210|908|908|60|
+2130212|909|909|60|
+2130213|910|910|60|
+2130214|911|911|60|
+2130215|912|912|60|
+2130216|913|913|60|
+2130217|914|914|60|
+2130218|126|126|60|
+2130219|125|125|60|
+2130220|124|124|60|
+2130221|123|123|60|
+2130223|121|121|60|
+2130225|127|127|60|
+2180253|122|122|60|
+2180254|133|133|60|
+2180255|134|134|60|
+2180256|104|104|60|
+2180257|102|102|60|
+2180258|103|103|60|
+2180259|105|105|60|
+2180260|101|101|60|
+2180261|107|107|60|
+2180262|118|118|60|
+2180263|106|106|60|
+2180264|147|147|60|
+2180265|079|079|60|
+2180266|080|080|60|
+2180267|073|073|60|
+2180268|148|148|60|
+2180269|068|068|60|
+2180270|067|067|60|
+2180271|070|070|60|
+2180272|078|078|60|
+2180273|075|075|60|
+2180274|076|076|60|
+2180275|099|099|60|
+2180277|091|091|60|
+2180278|092|092|60|
+2180279|093|093|60|
+2180280|094|094|60|
+2180282|100|100|60|
+2180283|066|066|60|
+2180285|082|082|60|
+2180286|090|090|60|
+2180287|089|089|60|
+2180288|069|069|60|
+2180289|077|077|60|
+2180290|072|072|60|
+2180291|083|083|60|
+2180292|064|064|60|
+2180293|074|074|60|
+2180294|096|096|60|
+2180295|059|059|60|
+2180296|052|052|60|
+2180297|132|132|60|
+2180298|058|058|60|
+2180299|062|062|60|
+2180300|055|055|60|
+2180301|056|056|60|
+2180302|095|095|60|
+2180303|084|084|60|
+2180304|098|098|60|
+2180305|087|087|60|
+2180306|085|085|60|
+2180307|088|088|60|
+2180309|061|061|60|
+2180311|063|063|60|
+2180312|097|097|60|
+2180313|054|054|60|
+2180316|057|057|60|
+2180317|051|051|60|
+2180318|053|053|60|
+2180319|060|060|60|
+2180320|081|081|60|
+2180322|071|071|60|
+2180323|130|130|60|
+2180324|065|065|60|
+2180325|131|131|60|
+2180326|129|129|60|
+2180331|851|851|135|
+2180332|863|863|135|
+2180333|864|864|135|
+2180334|865|865|135|
+2180335|866|866|135|
+2180336|867|867|135|
+2180337|868|868|135|
+2180338|869|869|135|
+2180339|870|870|135|
+2180340|871|871|135|
+2180341|872|872|135|
+2180342|873|873|135|
+2180343|874|874|135|
+2180344|875|875|135|
+2180345|876|876|135|
+2180346|877|877|135|
+2180347|878|878|135|
+2180348|879|879|135|
+2180349|880|880|135|
+2180350|881|881|135|
+2180351|882|882|135|
+2180352|883|883|135|
+2180353|884|884|135|
+2180354|885|885|135|
+2180355|886|886|135|
+2180356|887|887|135|
+2180357|888|888|135|
+2180358|603|603|135|
+2180359|604|604|135|
+2180361|606|606|135|
+2180362|607|607|135|
+2180363|608|608|135|
+2180364|609|609|135|
+2180365|001|001|135|
+2180366|002|002|135|
+2180367|003|003|135|
+2180368|004|004|135|
+2180369|006|006|135|
+2180370|151|151|62|
+2180371|152|152|62|
+2180372|153|153|62|
+2180373|154|154|62|
+2180374|155|155|62|
+2180375|156|156|62|
+2180376|157|157|62|
+2180377|158|158|62|
+2180378|159|159|62|
+2180379|160|160|62|
+2180380|161|161|62|
+2180381|162|162|62|
+2180382|163|163|62|
+2180383|164|164|62|
+2180384|165|165|62|
+2180471|166|166|62|
+2180472|167|167|62|
+2180663|168|168|62|
+2180664|169|169|62|
+2180665|170|170|62|
+2180666|171|171|62|
+2180667|172|172|62|
+2180668|173|173|62|
+2180669|174|174|62|
+2180670|175|175|62|
+2180671|176|176|62|
+2180672|177|177|62|
+2180673|178|178|62|
+2180674|179|179|62|
+2180675|950|950|62|
+2180676|951|951|62|
+2180677|952|952|62|
+2180678|953|953|62|
+2180679|954|954|62|
+2180680|955|955|62|
+2180681|956|956|62|
+2180682|957|957|62|
+2180683|958|958|62|
+2180684|959|959|62|
+2180685|960|960|62|
+2180686|961|961|62|
+2180687|962|962|62|
+2180688|963|963|62|
+2180689|964|964|62|
+2180690|965|965|62|
+2180691|966|966|62|
+2254294|TK PROPANO-PROPILENO|TK PROPANO-PROPILENO|18|
+2294052|LABORATORIO CROMATOGRAFIA|LABORATORIO CROMATOGRAFIA|113|
+2294053|LABORATORIO ANALITICA|LABORATORIO ANALITICA|113|
+2294054|LABORATORIO CAUCHO|LABORATORIO CAUCHO|113|
+2294055|LABORATORIO SOLUCIONES|LABORATORIO SOLUCIONES|113|
+2365699|TK 504|TK 504|44|
+2472794|FDO T. BENCENO|FDO T. BENCENO|43|
+2474013|Reforma A 800|Reforma A 800|159|
+2514820|CAMION REFORMADO LIVIANO|CAMION REFORMADO LIVIANO|49|
+2534837|PROPANO DE CARGA|PROPANO DE CARGA|17|
+2597331|CAMION JABON DE RESINA|CAMION JABON DE RESINA|5|
+2606681|11-D1-101 Desulfur|11-D1-101 Desulfur|107|
+2606682|11-D1-102 Reactor 1 ESTE|11-D1-102 Reactor 1 ESTE|107|
+2606683|11-D1-102 Reactor 1 OESTE|11-D1-102 Reactor 1 OESTE|107|
+2606684|11-D1-103 Reactor 2 ESTE|11-D1-103 Reactor 2 ESTE|107|
+2606685|11-D1-103 Reactor 2 OESTE|11-D1-103 Reactor 2 OESTE|107|
+2606686|11-D1-104 Reactor 3|11-D1-104 Reactor 3|107|
+2606687|11-D1-105 Reboiler|11-D1-105 Reboiler|107|
+2606688|11-D1-301 HDA|11-D1-301 HDA|107|
+2606689|16-D1-101 A|16-D1-101 A|106|
+2606690|16-D-1-101 B|16-D-1-101 B|106|
+2606691|16-D1-101 C|16-D1-101 C|106|
+2606692|16-D1-101 D|16-D1-101 D|106|
+2606693|16-D1-101 E|16-D1-101 E|106|
+2606694|16-D1-101 F|16-D1-101 F|106|
+2606695|17-D1-201|17-D1-201|106|
+2606696|17-D1-202|17-D1-202|106|
+2606697|14-D16-301 Zona 1|14-D16-301 Zona 1|104|
+2606698|14-D16-301 Zona 2|14-D16-301 Zona 2|104|
+2606699|14-D16-301 Zona 3|14-D16-301 Zona 3|104|
+2606700|14-D16-301 Zona 4|14-D16-301 Zona 4|104|
+2606701|14-D16-301 Zona 5|14-D16-301 Zona 5|104|
+2606702|14-D16-302 Extractor Oeste|14-D16-302 Extractor Oeste|104|
+2606703|14-D16-302 Extractor Eeste|14-D16-302 Extractor Eeste|104|
+2606704|30-F-101 Turbo/Caldera 1 GN|30-F-101 Turbo/Caldera 1 GN|108|
+2606705|30-F-101 Turbo/Caldera 2 GN/CL|30-F-101 Turbo/Caldera 2 GN/CL|108|
+2606706|30-F-101 Turbo/Caldera 3 GN/CL|30-F-101 Turbo/Caldera 3 GN/CL|108|
+2606707|21|21|102|
+2615876|AIRE PERIMETRO 1|AIRE PERIMETRO 1|112|
+2615877|AIRE PERIMETRO 2|AIRE PERIMETRO 2|112|
+2615878|AIRE PERIMETRO 3|AIRE PERIMETRO 3|112|
+2615879|AIRE PERIMETRO 4|AIRE PERIMETRO 4|112|
+2615880|AIRE PERIMETRO 5|AIRE PERIMETRO 5|112|
+2615881|AIRE PERIMETRO 6|AIRE PERIMETRO 6|112|
+2615882|AIRE PERIMETRO 7|AIRE PERIMETRO 7|112|
+2615883|AIRE F1|AIRE F1|112|
+2615884|AIRE F2|AIRE F2|112|
+2615885|AIRE B1|AIRE B1|112|
+2615886|AIRE B2|AIRE B2|112|
+2615887|AIRE B3|AIRE B3|112|
+2615888|AIRE B4|AIRE B4|112|
+2615889|AIRE B5|AIRE B5|112|
+2615890|2|2|102|
+2615891|1|1|102|
+2615892|3|3|102|
+2615893|4|4|102|
+2615894|8|8|102|
+2615895|9|9|102|
+2615896|10|10|102|
+2615897|13|13|102|
+2615898|16|16|102|
+2615899|23|23|102|
+2615900|24|24|102|
+2615901|27|27|102|
+2615902|31|31|102|
+2615903|32|32|102|
+2615904|34|34|102|
+2615905|35|35|102|
+2615906|36|36|102|
+2615907|400|400|102|
+2615908|403|403|102|
+2615909|405|405|102|
+2615910|408|408|102|
+2615911|415|415|102|
+2615912|418|418|102|
+2615913|427|427|102|
+2615914|501|501|102|
+2615915|502|502|102|
+2615916|503|503|102|
+2615917|504|504|102|
+2615918|505|505|102|
+2615919|506|506|102|
+2615920|507|507|102|
+2615921|508|508|102|
+2615922|509|509|102|
+2615923|510|510|102|
+2615924|511|511|102|
+2615925|512|512|102|
+2615926|526|526|102|
+2615927|533|533|102|
+2615928|534|534|102|
+2615929|535|535|102|
+2615930|536|536|102|
+2615931|537|537|102|
+2615932|538|538|102|
+2615933|540|540|102|
+2615934|542|542|102|
+2615935|543|543|102|
+2615937|P600|P600|102|
+2615938|P601|P601|102|
+2615940|P602|P602|102|
+2615941|P605|P605|102|
+2615942|EEE|EEE|102|
+2615943|LE1|LE1|102|
+2615944|LE2|LE2|102|
+2615945|LE3|LE3|102|
+2615946|D|D|102|
+2615947|O|O|102|
+2615948|P|P|102|
+2615949|Q|Q|102|
+2615950|PAD3|PAD3|102|
+2615951|PAD7|PAD7|102|
+2615952|PAD9|PAD9|102|
+2615953|PAD13|PAD13|102|
+2615954|PAD18|PAD18|102|
+2615955|PAD19|PAD19|102|
+2615956|PAD27|PAD27|102|
+2615957|PAD28|PAD28|102|
+2615958|PAD34|PAD34|102|
+2615959|PAD35|PAD35|102|
+2615960|PM3|PM3|102|
+2615961|PM6|PM6|102|
+2615962|PM10|PM10|102|
+2615963|PM12|PM12|102|
+2615964|PM15|PM15|102|
+2615965|PM35|PM35|102|
+2615966|PM36|PM36|102|
+2620330|P603|P603|102|
+2620331|P604|P604|102|
+2626945|CAMION HEXANO|CAMION HEXANO|15|
+2627586|185|185|62|
+2627587|186|186|62|
+2627588|187|187|62|
+2627589|188|188|62|
+2627590|189|189|62|
+2627591|190|190|62|
+2627592|191|191|62|
+2627593|192|192|62|
+2627594|193|193|62|
+2627595|194|194|62|
+2627596|195|195|62|
+2627597|196|196|62|
+2652304|SALIDA TK 30-D9-124|SALIDA TK 30-D9-124|143|
+2679027|CAMION NAFTA VIRGEN|CAMION NAFTA VIRGEN|49|
+2683583|COMPRESOR 301 LADO HDS|COMPRESOR 301 LADO HDS|41|
+2720759|C.RERUN+C.FLASH|C.RERUN+C.FLASH|12|
+2754177|FDO TORRE HIGH FLASH|FDO TORRE HIGH FLASH|43|

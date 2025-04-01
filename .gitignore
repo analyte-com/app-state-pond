@@ -2,6 +2,7 @@
 
 # This repo local ignores
 bundle
+dist
 pond/db
 
 # Logs
