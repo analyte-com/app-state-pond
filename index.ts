@@ -54,7 +54,7 @@ async function run() {
       ,p.TAG as code
       ,p.TAG as description
       ,p.IDDEPTO as departmentId
-      ,p.COTIPTOMUE as type
+      ,'-' as type
       from PTO_MUE p
   `);    
 

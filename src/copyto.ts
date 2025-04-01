@@ -38,10 +38,12 @@ export async function copyToCSV(
     const data = [].concat(result?.recordset as any);
     for (let j = 0; j < data.length; j++) {
       let dataRow = (data[j] || []).map(t => {
-        if (typeof t === 'string') return `${t}`.replaceAll(SEPR, '')
-        return t;
+        return (''+t)
+          .replace(/[^\P{C}]/gu, '')  // remove all control chars
+          .replaceAll(SEPR, '')       // remove SEPR char 
+          .replace('null','NULL');    // convert to db NULL
       }).join(SEPR);
-      //logger.info(dataRow);
+      // logger.debug(dataRow);
       writer.write(dataRow + '\n');
     }
 
