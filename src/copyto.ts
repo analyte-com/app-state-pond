@@ -39,6 +39,10 @@ export async function copyToCSV(
     for (let j = 0; j < data.length; j++) {
       let dataRow = (data[j] || []).map(t => {
         return (''+t)
+          // remove all characters that are not:
+          // - printable ASCII (except control chars)
+          // - printable Unicode (letters, marks, numbers, symbols, punctuation, spaces)
+          // This excludes control characters and other non-printable codes.
           .replace(/[^\P{C}]/gu, '')  // remove all control chars
           .replaceAll(SEPR, '')       // remove SEPR char 
           .replace('null','NULL');    // convert to db NULL
