@@ -16,7 +16,9 @@ const logLevel = LogLevel.DEBUG;
 async function open(dbname: string): Promise<any | null> {
   try {
     dbname = dbname || './temp.db';
-    const db = await DuckDBInstance.create(dbname); 
+    const db = await DuckDBInstance.create(dbname, {
+      access_mode: 'READ_WRITE' // or 'READ_ONLY'
+    }); 
     const dbx = await db.connect();
     logger.info(`duckdb open db '${dbname}':`, JSON.stringify(dbx));
     return dbx;
