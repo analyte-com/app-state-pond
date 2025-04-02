@@ -2,10 +2,9 @@ import { write } from "bun";
 import * as sql from "mssql"; // Import the mssql package
 import { exec } from "./ducky";
 import { logger } from "@mazito/logger";
+import { env } from "./env";
 
 const SEPR = '|'; // CSV delimiter used instead of ','
-
-const env = process.env;
 
 export async function copyToCSV(
   pool: sql.ConnectionPool,
@@ -84,5 +83,24 @@ export async function copyTo(
   }
   catch (error) {
     logger.error(`copyTo failed='${tableName}'`, error);
+  }
+}
+
+export async function importTo(
+  pond: any,
+  tableName: string
+) {
+  try {
+    const csvName = `${env.POND_IMPORTS}/${tableName}.csv`
+  
+    await exec(pond, `DROP TABLE if exists ${tableName};`);
+  
+    await exec(pond, `
+      CREATE TABLE ${tableName} AS 
+      SELECT * FROM read_csv('${csvName}', header = true);
+    `);
+  }
+  catch (error) {
+    logger.error(`importTo failed='${tableName}'`, error);
   }
 }
