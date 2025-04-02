@@ -1,67 +1,37 @@
-import { open, exec, query} from './src/ducky.ts';
-import { connectRdb } from "./src/connect-mssql.ts";
-import { copyTo } from "./src/copyto"; 
 import { logger, LogLevel } from '@mazito/logger';
+import { copyAllFromMSSql } from "./src/copy-all-from-mssql";
+import { importAllFromCsv } from "./src/import-all-from-csv";
+import { env } from "./src/env";
 
 logger.level(LogLevel.DEBUG);
 
-const env = process.env;
+const args = Bun.argv.slice(2); 
 
 async function run() {
-  // Open the Duckdb db
-  let pond = await open(`${env.POND_DB}`);
+  logger.info('Env', env);
+  logger.info('Args', args);
 
-  // Connect to the MSSQL database
-  const rdb = await connectRdb(env);
+  if (!args.length) {
+    console.log(`\nUsage
+      \n  bun index.ts import-from-csv
+      \n  bun index.ts copy-from-mssql
+    `)
+    return;
+  }
 
-  await copyTo(pond, 'vclients', rdb, `select 
-      IDCLI as id,
-      CODIGOCLI as code,
-      DESCCLI as description
-      from CLIENTE
-  `);
+  if (args[0] === 'import-from-csv') {
+    await importAllFromCsv();
+    return;
+  }  
 
-  await copyTo(pond, 'vdepartments', rdb, `select 
-      IDDEPTO as id
-      ,DESCDEPTO as description
-      ,PLANTA as facility
-      ,-1 as clientId 
-      from DEPARTAMENTO
-  `);    
+  if (args[0] === 'copy-from-mssql') {
+    await copyAllFromMSSql();
+    return;
+  }  
 
-  await copyTo(pond, 'vmaterials', rdb, `select 
-      ma.IDMAT as id
-      , ma.CODIGO as code
-      ,ma.DESCMAT as description
-      ,ma.COTIMAT as typeCode
-      ,co.DESCRIPCION as type
-      ,CASE ma.[REQUIERE_LOTE]
-          WHEN 'S' THEN CAST(1 AS BIT)
-          ELSE CAST(0 AS BIT)
-      END as batchRequired
-      ,CASE ma.[REQUIERE_REF]
-          WHEN 'S' THEN CAST(1 AS BIT)
-          ELSE CAST(0 AS BIT)
-      END as batchRefRequired
-      ,ma.[MASCARA_LOTE] batchMask
-      ,ma.[MASCARA_REF] batchRefMask
-      from MATERIAL ma, CODIGO co
-      where ma.COTIMAT = co.CODIGO and co.TIPO = 'TIMAT'
-  `);    
-
-  await copyTo(pond, 'vpoints', rdb, `select 
-      p.IDGRU as id
-      ,p.TAG as code
-      ,p.TAG as description
-      ,p.IDDEPTO as departmentId
-      ,p.COTIPTOMUE as type
-      from PTO_MUE p
-  `);    
-
-  // Close the connection
-  await rdb?.close();
+  logger.info("No action selected");
 };
 
 run().catch((error) => {
-  logger.error("Error copying from MSSQL", error);
+  logger.error("Error running Pond", error);
 });
