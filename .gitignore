@@ -3,7 +3,7 @@
 # This repo local ignores
 bundle
 dist
-pond/db
+db
 
 # Logs
 logs
