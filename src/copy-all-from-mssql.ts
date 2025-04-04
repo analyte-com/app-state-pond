@@ -152,6 +152,22 @@ export async function copyAllFromMSSql() {
     order by dm.IDESP, dm.SECUENCIA
   ;`);  
   
+  await copyTo(pond, 'vtasks', rdb, `select 
+      lt.IDTAR as id
+      ,ta.NOMTAR as code
+      ,ta.DESCTAR as description
+      ,ta.COTITAR as typeCode
+      ,co.DESCRIPCION as type
+    from  LISTA_TAR lt, TAREA ta, CODIGO co
+    where  
+      ta.IDTAR = lt.IDTAR 
+      and lt.IDTARRAIZ = ta.IDTAR
+      and ta.IDTAR != -1
+      and ta.COTITAR in ('DETE','ENSA','CALI','PREP')
+      and (ta.COTITAR = co.CODIGO and CO.TIPO = 'TITAR')  
+    order by ta.DESCTAR
+  ;`);  
+
   // Close the connection
   await rdb?.close();
 };
