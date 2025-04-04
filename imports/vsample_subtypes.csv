@@ -1,0 +1,16 @@
+id|code|description|typeCode|type|comment
+-1|AMBIENTAL|AMBIENTAL|AMBIENTAL|Ambiental| 
+-1|CARGADERO|CARGADERO|CARGADERO|Cargadero| 
+-1|CONTROL|CONTROL INTERNO|AMBIENTAL|Ambiental|
+-1|EMBALAJE|EMBALAJE|EMBALAJE|Embalaje| 
+-1|IQ.ENV|IQ.ENV|IQ.ENV|IQ (Envasado)| 
+-1|IQ.GRANEL|IQ.GRANEL|IQ.GRANEL|IQ (Granel)| 
+-1|M.PRIM|M.PRIM|M.PRIM|Materia Prima| 
+-1|MUE_ESP|MUESTRA ESPECIAL|AMBIENTAL|Ambiental|
+-1|NO_CATA|No Catalogado|NO_CATA|No Catalogado| 
+-1|OI|OI|OI|Otros Insumos| 
+-1|P.TERM|P.TERM|P.TERM|Prod. Terminado| 
+-1|PGA|PGA|AMBIENTAL|Ambiental|
+-1|PROCESO|PROCESO|PROCESO|Corriente de Proceso| 
+-1|SERV. A CO|SERV. A CO|SERV. A CO|SERV. A COMPANIA RELAC.| 
+-1|SM|SERVICIO MEDICO|SM|Servicio Medico| 
