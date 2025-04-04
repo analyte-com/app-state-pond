@@ -168,6 +168,24 @@ export async function copyAllFromMSSql() {
     order by ta.DESCTAR
   ;`);  
 
+  await copyTo(pond, 'vextensions', rdb, `select 
+      datr.IDDEAT as id
+      ,datr.NOMDEAT as code
+      ,datr.DESCDEAT as description
+      ,datr.COTIDEAT as typeCode
+      ,datr.REQUERIDO as required
+      ,datr.SQLDEAT as helper
+      ,timue.COTIMUE as sampleTypeCode 
+      ,datr.IDDEGRU as extensionId
+      ,dgr.NOMDEGRU as extensionCode
+      ,dgr.DESCDEGRU as extension
+    from TIPO_MUE timue, DE_GRU dgr, DE_AT datr
+    where
+      timue.IDDEGRU = dgr.IDDEGRU
+      and dgr.IDDEGRU = datr.IDDEGRU
+    order by sampleTypeCode, extensionCode, code
+  ;`);  
+
   // Close the connection
   await rdb?.close();
 };
