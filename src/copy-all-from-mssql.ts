@@ -186,6 +186,15 @@ export async function copyAllFromMSSql() {
     order by sampleTypeCode, extensionCode, code
   ;`);  
 
+
+  await copyTo(pond, 'vsamples', rdb, 
+    `select TOP(100000) * from vSAMPLES`
+  );  
+
+  await copyTo(pond, 'vuser_departments', rdb, 
+    `select * from VUSER_DEPARTMENTS order by userId, departmentId`
+  );  
+
   // Close the connection
   await rdb?.close();
 };

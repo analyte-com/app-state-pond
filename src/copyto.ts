@@ -78,7 +78,7 @@ export async function copyTo(
   
     await exec(pond, `
       CREATE TABLE ${tableName} AS 
-      SELECT * FROM read_csv('${csvName}', header = true);
+      SELECT * FROM read_csv('${csvName}', header = true, strict_mode=false);
     `);
   }
   catch (error) {
