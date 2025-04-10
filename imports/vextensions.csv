@@ -81,4 +81,3 @@ id|code|description|typeCode|required|helper|sampleTypeCode|extensionId|extensio
 163|Punto de muestra|Punto de muestra|ALFA|N| |SERV. A CO|30|NO_CATA|No Catalogado
 161|Fecha de Muestreo|Fecha de Muestreo|FECHA|N| |SM|29|SERV_MEDICO|Datos agregados para muestras de Orina
 160|Operario|Operario|ALFA|N| |SM|29|SERV_MEDICO|Datos agregados para muestras de Orina
-erario|Operario|ALFA|N| |SM|29|SERV_MEDICO|Datos agregados para muestras de Orina
