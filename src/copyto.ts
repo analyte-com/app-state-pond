@@ -1,45 +1,61 @@
 import { write } from "bun";
 import * as sql from "mssql"; // Import the mssql package
-import parquet, { ParquetWriter } from "@dsnp/parquetjs";
+import parquet, { ParquetSchema, ParquetWriter } from "@dsnp/parquetjs";
 import { exec } from "./ducky";
 import { logger } from "@mazito/logger";
 import { buildParquetSchema, cleanupValue } from "./parquet-utils";
 import { env } from "./env";
 
-
-export async function copyToParquet(
+/**
+ * Copy from MSSQL to a paged Parquet file
+ * @param pool 
+ * @param queryStmt 
+ * @param fileName 
+ */
+export async function copyToParquetPaged(
   pool: sql.ConnectionPool,
   queryStmt: string,
   fileName: string
 ) {
   let writer: ParquetWriter | null = null;
+  let parquetSchema: ParquetSchema | null = null;
+  let columns: any[] = [];
   
   try {
     logger.info(`copyToParquet: file= '${fileName}'`);
     let page = 1, total = 0;
-    const PAGE_SIZE = 25000;
+    const MAX_ROWS = 50000;
     let hasMoreData = true;
-    let columns: any[] = [];
 
     while (hasMoreData) {
-      const result = await queryChunked(pool, queryStmt, page, PAGE_SIZE);
+      // run the query limited to MAX_ROWS rows
+      const result = await queryChunkedByPage(pool, queryStmt, page, MAX_ROWS);
       
+      // we need the Parquet schema to create the writer 
+      // we use the first Chunked page for this
       if (page === 1) {
-        // we need the Parquet schema to create the writer 
-        // we use the first Chunked page for this
         columns = result.recordset.columns;
-        let parquetSchema = buildParquetSchema(columns);
-
-        // we can open ParquetWriter now
-        writer = await parquet.ParquetWriter.openFile(parquetSchema, fileName);
+        parquetSchema = buildParquetSchema(columns);
       }
+
+      // we open the ParquetWriter and we create one file for each page
+      // with the name 'vxxx001.parquet' and following 
+      const chunkName = `${fileName}${page.toString().padStart(3, '0')}`;
+      writer = await parquet.ParquetWriter.openFile(
+        parquetSchema!, 
+        `${chunkName}.parquet`
+      );
 
       // now we can write the data 
       const chunk = [].concat(result?.recordset as any);
-      await writeParquetChunk(writer, columns, chunk)
+      await writeParquetChunk(writer, columns, chunk, chunkName);
+
+      // now flush the file to disk
+      await writer?.close();
+      writer = null;
 
       // check if we've reached the end
-      hasMoreData = (result.recordset.length >= PAGE_SIZE);
+      hasMoreData = (result.recordset.length >= MAX_ROWS);
       total = total + chunk.length;
       page = page + 1;
     }
@@ -51,24 +67,129 @@ export async function copyToParquet(
   } 
   finally {
     // now flush the file to disk
-    await writer?.close();
+    if (writer) await writer?.close();
     logger.elapsed(`copyToParquet: writer closed`);
   }
 };
 
 /**
- * Executes the query returning a max of PAGE_SIZE rows, starting at given @page
+ * Copies from MSSQL to a Parquet file, using IDs as limits.
+ * @param pool 
+ * @param queryStmt 
+ * @param fileName 
+ * @param minMaxStmt - the uqery to get Min and Max ID values
+ */
+export async function copyToParquetById(
+  pool: sql.ConnectionPool,
+  queryStmt: string,
+  fileName: string,
+  minMaxStmt: string
+) {
+  let writer: ParquetWriter | null = null;
+  let parquetSchema: ParquetSchema | null = null;
+  let columns: any[] = [];
+  
+  try {
+    logger.info(`copyToParquet: file= '${fileName}'`);
+    let page = 1, total = 0;
+    const MAX_ROWS = 50000;
+    let hasMoreData = true;
+    let idColIndex = 0;
+    let startId = 0, endId = 0, lastId = 0;
+
+    // get limits for the ID values
+    let [min, max] = await queryMinMax(pool, minMaxStmt);
+    startId = min;
+    lastId = max;
+
+    while (hasMoreData) {
+      // run the query limited to MAX_ROWS rows
+      endId = startId + MAX_ROWS
+      const result = await queryChunkedByIds(pool, queryStmt, startId, endId);
+      
+      // we need the Parquet schema to create the writer 
+      // we use the first Chunked page for this
+      if (page === 1) {
+        columns = result.recordset.columns;
+        parquetSchema = buildParquetSchema(columns);
+
+        // find which column is the ID column
+        columns.forEach((t,k) => { 
+          if (t.name.toLowerCase() == 'id') idColIndex = k;
+        });
+      }
+
+      // we open the ParquetWriter and we create one file for each page
+      // with the name 'vxxx001.parquet' and following 
+      const chunkName = `${fileName}${page.toString().padStart(3, '0')}`;
+      writer = await parquet.ParquetWriter.openFile(
+        parquetSchema!, 
+        `${chunkName}.parquet`
+      );
+
+      // now we can write the data 
+      const chunk = [].concat(result?.recordset as any);
+      await writeParquetChunk(writer, columns, chunk, chunkName);
+
+      // now flush the file to disk
+      await writer?.close();
+      writer = null;
+
+      // check if we've reached the end
+      //const last = chunk.length ? chunk[chunk.length - 1][idColIndex] || ;
+      hasMoreData = (endId < lastId!);
+      //console.log(last, lastId, hasMoreData);
+      
+      total = total + chunk.length;
+      startId = endId + 1;
+      page = page + 1;
+    }
+
+    logger.elapsed(`copyToParquet: done= ${total} rows`);
+  } 
+  catch (error) {
+    logger.error(`copyToParquet: failed= '${fileName}'`, error);
+  } 
+  finally {
+    // now flush the file to disk
+    if (writer) await writer?.close();
+    logger.elapsed(`copyToParquet: writer closed`);
+  }
+};
+
+
+/**
+ * Executes the query to get Min and Max ID
+ * @returns min, max
+ */
+async function queryMinMax(
+  pool: sql.ConnectionPool,
+  stmt: string
+): Promise<[number, number]> {
+  logger.timer(`copyToParquet: query min/max sql= ${stmt}`);
+  
+  let request = new sql.Request(pool);
+  request.arrayRowMode = true;
+  const result = await request.query(`${stmt}`);
+  let [min, max] = result.recordset[0];
+
+  logger.elapsed(`copyToParquet: query min= ${min} max = ${max}`);
+  return [min, max];
+}
+
+/**
+ * Query chunks using AX_ROWS rows, starting at given @page
  * @param pool 
  * @param page 
  * @param stmt - the query to execute
- * @param PAGE_SIZE 
+ * @param MAX_ROWS 
  * @returns 
  */
-async function queryChunked(
+async function queryChunkedByPage(
   pool: sql.ConnectionPool,
   stmt: string,
   page: number, 
-  PAGE_SIZE: number
+  MAX_ROWS: number
 ): Promise<any> {
   logger.timer(`copyToParquet: query start page= ${page}`);
   
@@ -76,15 +197,54 @@ async function queryChunked(
   request.arrayRowMode = true;
   
   const result = await request
-    .input('pageSize', sql.Int, PAGE_SIZE)
-    .input('offset', sql.Int, ((page - 1) * PAGE_SIZE))
+    .input('pageSize', sql.Int, MAX_ROWS)
+    .input('offset', sql.Int, ((page - 1) * MAX_ROWS))
     .query(`${stmt} OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY`);
 
   logger.elapsed(`copyToParquet: query end page= ${page} count= ${result.recordset.length}`);
   return result;
 }
 
-async function writeParquetChunk(writer: any, columns: any[], data: any[]) {
+/**
+ * Query chunks using a range of IDs as limits
+ * @param pool 
+ * @param stmt 
+ * @param startId 
+ * @param endId 
+ * @returns 
+ */
+async function queryChunkedByIds(
+  pool: sql.ConnectionPool,
+  stmt: string,
+  startId: number, 
+  endId: number
+): Promise<any> {
+  logger.timer(`copyToParquet: query start startId= ${startId}`);
+  
+  let request = new sql.Request(pool);
+  request.arrayRowMode = true;
+  
+  const result = await request
+    .input('startId', sql.Int, startId)
+    .input('endId', sql.Int, endId)
+    .query(`${stmt}`);
+
+  logger.elapsed(`copyToParquet: query end start= ${startId} end= ${endId} count= ${result.recordset.length}`);
+  return result;
+}
+
+/**
+ * Writes ths data chunk to a parquet file
+ * @param writer 
+ * @param columns 
+ * @param data 
+ */
+async function writeParquetChunk(
+  writer: any, 
+  columns: any[], 
+  data: any[],
+  chunkName: string
+) {
   for (let j = 0; j < data.length; j++) {
     // the data row we will write to Parquet
     //  it is an object with the column names as keys
@@ -94,18 +254,26 @@ async function writeParquetChunk(writer: any, columns: any[], data: any[]) {
     // and build the parquet row
     for (let k=0; k < (data[j] as any[]).length; k++) {
       // we do some cleanup of the value before copying it
-      parquetRow[columns[k].name] = cleanupValue(data[j][k]);
+      parquetRow[columns[k].name] = cleanupValue(data[j][k], columns[k]);
     }
     //console.log(`data ${j}: `, data[j]);
-    //console.log(`row ${j}: `, parquetRow);
+    //console.log(`row ${j}: `, JSON.stringify(parquetRow));
     
     // logger.debug(dataRow);
     await writer.appendRow(parquetRow);
   }
 
-  logger.elapsed(`copyToParquet: appended rows= ${data.length}`);
+  logger.elapsed(`copyToParquet: saved file= ${chunkName} rows= ${data.length}`);
 }
 
+/**
+ * Copies from an MSSQL table to a Duckdb table
+ * @param pond 
+ * @param tableName 
+ * @param rdb 
+ * @param query 
+ * @returns 
+ */
 export async function copyTo(
   pond: any,
   tableName: string,
@@ -113,19 +281,39 @@ export async function copyTo(
   query: string
 ) {
   try {
-    const fileName = `${env.POND_IMPORTS}/${tableName}.parquet`
+    const fileName = `${env.POND_IMPORTS}/${tableName}`
     
-    await copyToParquet(rdb, query, fileName);
-    return;
+    await copyToParquetPaged(rdb, query, fileName);
     
     await exec(pond, `DROP TABLE if exists ${tableName};`);
   
-    let described = await exec(pond, `DESCRIBE SELECT * FROM '${fileName}'`);
-    console.log(described);
+    await exec(pond, `
+      CREATE TABLE ${tableName} AS 
+      SELECT * FROM read_parquet('${fileName}*.parquet');
+    `);
+  }
+  catch (error) {
+    logger.error(`copyTo failed='${tableName}'`, error);
+  }
+}
+
+export async function copyToById(
+  pond: any,
+  tableName: string,
+  rdb: sql.ConnectionPool,
+  query: string,
+  minMaxQuery: string
+) {
+  try {
+    const fileName = `${env.POND_IMPORTS}/${tableName}`;
+ 
+    await copyToParquetById(rdb, query, fileName, minMaxQuery);
+    
+    await exec(pond, `DROP TABLE if exists ${tableName};`);
 
     await exec(pond, `
       CREATE TABLE ${tableName} AS 
-      SELECT * FROM read_parquet('${fileName}');
+      SELECT * FROM read_parquet('${fileName}*.parquet');
     `);
   }
   catch (error) {

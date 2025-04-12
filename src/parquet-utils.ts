@@ -53,7 +53,7 @@ function toParquetType(col: any): ParquetType {
     || (col.type === sql.DateTime2)
     || (col.type === sql.DateTimeOffset)
     || (col.type === sql.SmallDateTime)
-  ) istype = 'UTF8';
+  ) istype = 'TIMESTAMP_MICROS';
 
   return { type: istype, optional: isoptional }
 }
@@ -69,13 +69,32 @@ function isDateType(col: any): boolean {
   return false;
 }
 
-function cleanupValue(value: any): any {
+// Explicitly convert to UTC microseconds
+function convertToUTCParquetTimestampMicros(dateValue: any) {
+  if (!(dateValue instanceof Date)) return null;
+  return Date.UTC(
+    dateValue.getUTCFullYear(),
+    dateValue.getUTCMonth(),
+    dateValue.getUTCDate(),
+    dateValue.getUTCHours(),
+    dateValue.getUTCMinutes(),
+    dateValue.getUTCSeconds(),
+    dateValue.getUTCMilliseconds()
+  ) * 1000;
+}
+
+function cleanupValue(value: any, column?: any): any {
   if (typeof value === 'string') {
     if (value.toUpperCase() === 'NULL') return null;
     return value.replace(/[^\P{C}]/gu, '')  // remove all control chars
   }
+  if (isDateType(column)) {
+    //console.log('isDateType', column.name, value, value+'');
+    return convertToUTCParquetTimestampMicros(value);
+  }
   return value;
 }
+
 
 /**
  * Builds the Parquet schema for the seto of SQL columns. 

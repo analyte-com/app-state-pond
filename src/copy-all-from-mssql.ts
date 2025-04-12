@@ -1,6 +1,6 @@
 import { open, exec, query} from "./ducky";
 import { connectRdb } from "./connect-mssql";
-import { copyTo } from "./copyto"; 
+import { copyTo, copyToById } from "./copyto"; 
 import { logger, LogLevel } from '@mazito/logger';
 import { env } from "./env";
 
@@ -21,13 +21,13 @@ export async function copyAllFromMSSql() {
       order by IDCLI
   `);
 
-/*  
   await copyTo(pond, 'vdepartments', rdb, `select 
       IDDEPTO as id
       ,DESCDEPTO as description
       ,PLANTA as facility
       ,-1 as clientId 
       from DEPARTAMENTO
+      order by IDDEPTO
   `);    
 
   await copyTo(pond, 'vmaterials', rdb, `select 
@@ -48,6 +48,7 @@ export async function copyAllFromMSSql() {
       ,ma.[MASCARA_REF] batchRefMask
       from MATERIAL ma, CODIGO co
       where ma.COTIMAT = co.CODIGO and co.TIPO = 'TIMAT'
+      order by ma.IDMAT
   `);    
 
   await copyTo(pond, 'vdepartment_materials', rdb, `select 
@@ -74,7 +75,8 @@ export async function copyAllFromMSSql() {
       and co.TIPO = 'TIMAT'
       and ma.IDMAT=mdep.IDMAT
       and mdep.IDDEPTO=dep.IDDEPTO
-  ;`);
+    order by ma.IDMAT, mdep.IDDEPTO  
+  `);
 
   await copyTo(pond, 'vpoints', rdb, `select 
       p.IDGRU as id
@@ -83,6 +85,7 @@ export async function copyAllFromMSSql() {
       ,p.IDDEPTO as departmentId
       ,p.COTIPTOMUE as type
       from PTO_MUE p
+      order by p.IDGRU
   `);    
 
   await copyTo(pond, 'vsample_types', rdb, `select 
@@ -102,7 +105,8 @@ export async function copyAllFromMSSql() {
     ,tm.COMENTARIO as comment
     from CODIGO tm
     where tm.TIPO  = 'TIMUE'
-  ;`);  
+    order by tm.CODIGO
+  `);  
 
   await copyTo(pond, 'vsample_subtypes', rdb, `select 
       -1 as id
@@ -114,7 +118,8 @@ export async function copyAllFromMSSql() {
     from CODIGO sub, CODIGO tm
     where tm.CODIGO=sub.COLIBRE 
     and sub.TIPO='SUBTIMUE' and tm.TIPO='TIMUE'
-  ;`);  
+    order by sub.CODIGO
+  `);  
 
   await copyTo(pond, 'vmaterial_specifications', rdb, `select 
       spec.IDESP as id
@@ -134,7 +139,7 @@ export async function copyAllFromMSSql() {
         and co.TIPO = 'EESP'
         and spec.COESTADO <> 'ER'
     order by mat.DESCMAT, spec.VERSION
-  ;`);
+  `);
 
   await copyTo(pond, 'vspecification_tasks', rdb, `select 
       dm.IDDEMA as id
@@ -152,7 +157,7 @@ export async function copyAllFromMSSql() {
       and ta.COTITAR IN ('DETE','ENSA','PREP','CALI')
       and (root.IDTAR = dm.IDTAR_1)
     order by dm.IDESP, dm.SECUENCIA
-  ;`);  
+  `);  
   
   await copyTo(pond, 'vtasks', rdb, `select 
       lt.IDTAR as id
@@ -168,7 +173,7 @@ export async function copyAllFromMSSql() {
       and ta.COTITAR in ('DETE','ENSA','CALI','PREP')
       and (ta.COTITAR = co.CODIGO and CO.TIPO = 'TITAR')  
     order by ta.DESCTAR
-  ;`);  
+  `);  
 
   await copyTo(pond, 'vextensions', rdb, `select 
       datr.IDDEAT as id
@@ -186,18 +191,78 @@ export async function copyAllFromMSSql() {
       timue.IDDEGRU = dgr.IDDEGRU
       and dgr.IDDEGRU = datr.IDDEGRU
     order by sampleTypeCode, extensionCode, code
-  ;`);  
-
-
+  `);  
   
-  await copyTo(pond, 'vuser_departments', rdb, 
-  `select * from VUSER_DEPARTMENTS order by userId, departmentId`
-  );  
-*/
+  await copyTo(pond, 'vuser_departments', rdb, `select 
+    * 
+    from VUSER_DEPARTMENTS 
+    order by userId, departmentId
+  `);  
  
-  await copyTo(pond, 'vsamples', rdb, 
-    `select * from VSAMPLES order by ID`
-  );  
+  await copyToById(pond, 'vsamples', rdb, `select
+      --muestra
+      m.UID as uid,
+      m.IDMUE as 'id', 
+      --m.IDMUTO as 'toId',
+      m.NOMBRE as 'code',
+        m.COTIMUE as 'typeCode',
+        m.COSUBTIMUE as 'subtypeCode', 
+        m.COESTADO as 'stateCode', 
+        m.COSUBESTADO as 'substateCode',
+        m.RESPMUE as 'belongsTo', 
+        m.FETOMADESDE as 'collectStartUtc', 
+        m.FETOMAHASTA as 'collectEndUtc',
+        m.FEESTADO as 'stateUtc', 
+        m.RESPONSABLE as 'assignedUser', 
+        m.RECLASIFICACION as 'reclasified',
+        m.REPROCESO as 'reprocessed', 
+        m.CLASIFICACION as 'clasified', 
+        m.CALIFICACION as 'qualified',
+        m.COMENTARIO as 'comment'
+      --departamento
+      ,d.IDDEPTO as 'departmentId'
+      ,d.DESCDEPTO as 'department' 
+      ,d.PLANTA as 'departmentFacility'
+        ,m.TAGPTOMUE as 'pointTag'
+      ,d.COMENTARIO as 'departmentComment'
+      --material
+      ,mat.IDMAT as 'materialId'
+      ,mat.CODIGO as 'materialCode'
+        ,CASE 
+        WHEN m.IDESP IS NULL THEN -1
+        ELSE m.IDESP
+      END as 'specificationId' 
+        ,mat.COTIMAT as 'materialType'
+        ,mat.DESCMAT as 'material'
+      ,CASE  
+        WHEN m.DESCPRONOCATA IS NULL THEN ''
+        ELSE m.DESCPRONOCATA
+      END as 'uncataloged'
+      ,m.LOTE as 'batch'
+        ,m.REFERENCIA as 'batchRef'
+        ,mat.COMENTARIO as 'materialComment'
+        --mat.REQUIERE_LOTE as 'materialBatchRequired', 
+        --mat.REQUIERE_REF as 'materialBatchRefRequired',
+        --mat.MASCARA_LOTE as 'materialBatchMask', 
+        --mat.MASCARA_REF as 'materialBatchRefMask', 
+        -- mat.IDMATBASE as 'MATERIAL_IDMATBASE',
+        -- cliente
+        ,cli.IDCLI as clientId
+        ,cli.CODIGOCLI as clientCode
+        ,cli.DESCCLI as clientDescription
+        -- proveedor
+        ,prv.IDPRO as supplierId
+        ,prv.CODIGOPRO as supplierCode
+        ,prv.DESCPRO as supplierDescription
+    from MUESTRA m, DEPARTAMENTO d, MATERIAL mat, CLIENTE cli, PROVEEDOR prv
+    where 
+      m.IDMUE >= @startId and m.IDMUE <= @endId
+      and m.IDDEPTO = d.IDDEPTO
+      and m.IDMAT = mat.IDMAT
+      and m.IDCLI = cli.IDCLI 
+      and m.IDPRO = prv.IDPRO
+    order by IDMUE asc
+  `, 'select MIN(IDMUE), MAX(IDMUE) from MUESTRA');  
 
   // Close the connection
   await rdb?.close();
