@@ -14,6 +14,7 @@ async function connectRdb(env: any): Promise < mssql.ConnectionPool | null > {
       password: `${env.MSSQL_PASSW}`,
       database: `${env.MSSQL_DB}`,
       server: `${env.MSSQL_HOST}`, // Or your server address
+      requestTimeout: 180000, // 3 mins 
       pool: {
         max: 10,
         min: 0,
