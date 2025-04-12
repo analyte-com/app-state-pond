@@ -1,67 +1,110 @@
 import { write } from "bun";
 import * as sql from "mssql"; // Import the mssql package
+import parquet, { ParquetWriter } from "@dsnp/parquetjs";
 import { exec } from "./ducky";
 import { logger } from "@mazito/logger";
+import { buildParquetSchema, cleanupValue } from "./parquet-utils";
 import { env } from "./env";
 
-const SEPR = '|'; // CSV delimiter used instead of ','
 
-export async function copyToCSV(
+export async function copyToParquet(
   pool: sql.ConnectionPool,
   queryStmt: string,
-  csvName: string
+  fileName: string
 ) {
-  let writer;
+  let writer: ParquetWriter | null = null;
+  
   try {
-    // open file
-    const file = Bun.file(csvName);
-    writer = file.writer();
-    logger.info(`copyToCSV: file= '${csvName}'`);
-    
-    // run the query
-    logger.timer(`copyToCSV: query start`);
-    let request = new sql.Request(pool);
-    request.arrayRowMode = true;
-    const result = await request.query(queryStmt);
-    logger.elapsed(`copyToCSV: query end`);
-    
-    // write header row
-    const columns = result.recordset.columns;
-    let headerRow = (columns || []).map(t => {
-      return `${t.name}`
-    }).join(SEPR)
-    logger.elapsed(`copyToCSV: header= '${headerRow}'`);
-    writer.write(headerRow + '\n');
+    logger.info(`copyToParquet: file= '${fileName}'`);
+    let page = 1, total = 0;
+    const PAGE_SIZE = 25000;
+    let hasMoreData = true;
+    let columns: any[] = [];
 
-    // write data rows
-    const data = [].concat(result?.recordset as any);
-    for (let j = 0; j < data.length; j++) {
-      let dataRow = (data[j] || []).map(t => {
-        return (''+t)
-          // remove all characters that are not:
-          // - printable ASCII (except control chars)
-          // - printable Unicode (letters, marks, numbers, symbols, punctuation, spaces)
-          // This excludes control characters and other non-printable codes.
-          .replace(/[^\P{C}]/gu, '')  // remove all control chars
-          .replaceAll(SEPR, '')       // remove SEPR char 
-          .replace('null','NULL');    // convert to db NULL
-      }).join(SEPR);
-      // logger.debug(dataRow);
-      writer.write(dataRow + '\n');
+    while (hasMoreData) {
+      const result = await queryChunked(pool, queryStmt, page, PAGE_SIZE);
+      
+      if (page === 1) {
+        // we need the Parquet schema to create the writer 
+        // we use the first Chunked page for this
+        columns = result.recordset.columns;
+        let parquetSchema = buildParquetSchema(columns);
+
+        // we can open ParquetWriter now
+        writer = await parquet.ParquetWriter.openFile(parquetSchema, fileName);
+      }
+
+      // now we can write the data 
+      const chunk = [].concat(result?.recordset as any);
+      await writeParquetChunk(writer, columns, chunk)
+
+      // check if we've reached the end
+      hasMoreData = (result.recordset.length >= PAGE_SIZE);
+      total = total + chunk.length;
+      page = page + 1;
     }
 
-    // done ! 
-    logger.elapsed(`copyToCSV: done= ${data.length} rows`);
+    logger.elapsed(`copyToParquet: done= ${total} rows`);
   } 
   catch (error) {
-    logger.error(`copyToCSV: failed= '${csvName}'`, error);
+    logger.error(`copyToParquet: failed= '${fileName}'`, error);
   } 
   finally {
-    // close file
-    writer?.flush();
-    writer?.end();
+    // now flush the file to disk
+    await writer?.close();
+    logger.elapsed(`copyToParquet: writer closed`);
   }
 };
+
+/**
+ * Executes the query returning a max of PAGE_SIZE rows, starting at given @page
+ * @param pool 
+ * @param page 
+ * @param stmt - the query to execute
+ * @param PAGE_SIZE 
+ * @returns 
+ */
+async function queryChunked(
+  pool: sql.ConnectionPool,
+  stmt: string,
+  page: number, 
+  PAGE_SIZE: number
+): Promise<any> {
+  logger.timer(`copyToParquet: query start page= ${page}`);
+  
+  let request = new sql.Request(pool);
+  request.arrayRowMode = true;
+  
+  const result = await request
+    .input('pageSize', sql.Int, PAGE_SIZE)
+    .input('offset', sql.Int, ((page - 1) * PAGE_SIZE))
+    .query(`${stmt} OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY`);
+
+  logger.elapsed(`copyToParquet: query end page= ${page} count= ${result.recordset.length}`);
+  return result;
+}
+
+async function writeParquetChunk(writer: any, columns: any[], data: any[]) {
+  for (let j = 0; j < data.length; j++) {
+    // the data row we will write to Parquet
+    //  it is an object with the column names as keys
+    const parquetRow: any = {};
+
+    // traverse the columns of each result row 
+    // and build the parquet row
+    for (let k=0; k < (data[j] as any[]).length; k++) {
+      // we do some cleanup of the value before copying it
+      parquetRow[columns[k].name] = cleanupValue(data[j][k]);
+    }
+    //console.log(`data ${j}: `, data[j]);
+    //console.log(`row ${j}: `, parquetRow);
+    
+    // logger.debug(dataRow);
+    await writer.appendRow(parquetRow);
+  }
+
+  logger.elapsed(`copyToParquet: appended rows= ${data.length}`);
+}
 
 export async function copyTo(
   pond: any,
@@ -70,15 +113,19 @@ export async function copyTo(
   query: string
 ) {
   try {
-    const csvName = `${env.POND_IMPORTS}/${tableName}.csv`
+    const fileName = `${env.POND_IMPORTS}/${tableName}.parquet`
     
-    await copyToCSV(rdb, query, csvName);
-  
+    await copyToParquet(rdb, query, fileName);
+    return;
+    
     await exec(pond, `DROP TABLE if exists ${tableName};`);
   
+    let described = await exec(pond, `DESCRIBE SELECT * FROM '${fileName}'`);
+    console.log(described);
+
     await exec(pond, `
       CREATE TABLE ${tableName} AS 
-      SELECT * FROM read_csv('${csvName}', header = true, strict_mode=false);
+      SELECT * FROM read_parquet('${fileName}');
     `);
   }
   catch (error) {

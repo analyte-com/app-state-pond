@@ -9,6 +9,7 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "@dsnp/parquetjs": "^1.8.6",
     "@duckdb/node-api": "^1.2.1-alpha.17",
     "@duckdb/node-bindings": "^1.2.1-alpha.17",
     "@duckdb/node-bindings-darwin-arm64": "^1.2.1-alpha.17",

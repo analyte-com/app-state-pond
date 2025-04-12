@@ -13,13 +13,15 @@ export async function copyAllFromMSSql() {
   // Connect to the MSSQL database
   const rdb = await connectRdb(env);
 
-  await copyTo(pond, 'vclients', rdb, `select 
+  await copyTo(pond, 'vclients', rdb, `select
       IDCLI as id,
       CODIGOCLI as code,
       DESCCLI as description
       from CLIENTE
+      order by IDCLI
   `);
 
+/*  
   await copyTo(pond, 'vdepartments', rdb, `select 
       IDDEPTO as id
       ,DESCDEPTO as description
@@ -187,12 +189,14 @@ export async function copyAllFromMSSql() {
   ;`);  
 
 
-  await copyTo(pond, 'vsamples', rdb, 
-    `select TOP(100000) * from vSAMPLES`
-  );  
-
+  
   await copyTo(pond, 'vuser_departments', rdb, 
-    `select * from VUSER_DEPARTMENTS order by userId, departmentId`
+  `select * from VUSER_DEPARTMENTS order by userId, departmentId`
+  );  
+*/
+ 
+  await copyTo(pond, 'vsamples', rdb, 
+    `select * from VSAMPLES order by ID`
   );  
 
   // Close the connection
