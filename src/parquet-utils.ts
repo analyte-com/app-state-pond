@@ -70,17 +70,14 @@ function isDateType(col: any): boolean {
 }
 
 // Explicitly convert to UTC microseconds
-function convertToUTCParquetTimestampMicros(dateValue: any) {
+function toUTCTimestampMicros(dateValue: any, gmtOffset?: number) {
   if (!(dateValue instanceof Date)) return null;
-  return Date.UTC(
-    dateValue.getUTCFullYear(),
-    dateValue.getUTCMonth(),
-    dateValue.getUTCDate(),
-    dateValue.getUTCHours(),
-    dateValue.getUTCMinutes(),
-    dateValue.getUTCSeconds(),
-    dateValue.getUTCMilliseconds()
-  ) * 1000;
+
+  // 1. Treat the MSSQL date as GMT-3 (add 3 hours to get UTC)
+  const utcTime = dateValue.getTime() - (gmtOffset || 0)*36000*1000;
+  
+  // 2. Convert to microseconds
+  return utcTime * 1000;
 }
 
 function cleanupValue(value: any, column?: any): any {
@@ -90,7 +87,7 @@ function cleanupValue(value: any, column?: any): any {
   }
   if (isDateType(column)) {
     //console.log('isDateType', column.name, value, value+'');
-    return convertToUTCParquetTimestampMicros(value);
+    return toUTCTimestampMicros(value, -3);
   }
   return value;
 }
