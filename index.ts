@@ -1,6 +1,6 @@
 import { logger, LogLevel } from '@mazito/logger';
 import { copyAllFromMSSql } from "./src/copy-all-from-mssql";
-import { importAllFromCsv } from "./src/import-all-from-csv";
+import { importAll } from "./src/import-all";
 import { env } from "./src/env";
 
 logger.level(LogLevel.DEBUG);
@@ -19,8 +19,8 @@ async function run() {
     return;
   }
 
-  if (args[0] === 'import-from-csv') {
-    await importAllFromCsv();
+  if (args[0] === 'import-from-parquet') {
+    await importAll();
     return;
   }  
 

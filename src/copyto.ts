@@ -326,13 +326,13 @@ export async function importTo(
   tableName: string
 ) {
   try {
-    const csvName = `${env.POND_IMPORTS}/${tableName}.csv`
-  
+    const fileName = `${env.POND_IMPORTS}/${tableName}`;
+    
     await exec(pond, `DROP TABLE if exists ${tableName};`);
-  
+
     await exec(pond, `
       CREATE TABLE ${tableName} AS 
-      SELECT * FROM read_csv('${csvName}', header = true);
+      SELECT * FROM read_parquet('${fileName}*.parquet');
     `);
   }
   catch (error) {

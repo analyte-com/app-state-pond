@@ -5,7 +5,7 @@ import { env } from "./env";
 
 logger.level(LogLevel.DEBUG);
 
-export async function importAllFromCsv() {
+export async function importAll() {
   // Open the Duckdb db
   let pond = await open(`${env.POND_DB}`);
 
