@@ -194,8 +194,31 @@ export async function copyAllFromMSSql() {
   `);  
   
   await copyTo(pond, 'vuser_departments', rdb, `select 
-    * 
-    from VUSER_DEPARTMENTS 
+      u.IDUSUA as userId
+      ,u.login as userCode
+      ,u.NOMBRE as userFullname
+      ,u.CARGO as userRole
+      ,ued.IDDEPTO as departmentId
+      ,dep.DESCDEPTO as department
+      ,ued.RESPMUE as responsibleCode
+      ,ued.PUEDESOLICITAR as canRequest
+      ,ued.PUEDETOMAR as canCollect 
+      ,ued.PUEDEENVIAR as canSend
+      ,ued.PUEDEASIGNAR as canAssign
+      ,ued.PUEDEEDITAR as canEdit
+      ,ued.PUEDEFINALIZAR as canClose
+      ,ued.PUEDEREPROCESAR as canReprocess
+      ,ued.PUEDERECLASIFICAR as canReclasify
+      ,ued.PUEDEREVISAR as canReview
+      ,ued.EDITA_ESPECIFS_DE as canSpecify
+    from 
+      USUARIO_EN_DEPARTAMENTO ued, 
+      USUARIO u, 
+      DEPARTAMENTO dep
+    where 
+      ued.LOGIN=u.LOGIN
+      and ued.IDDEPTO = dep.IDDEPTO
+      and ued.IDDEPTO <> -1
     order by userId, departmentId
   `);  
  
