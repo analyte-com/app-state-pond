@@ -99,12 +99,12 @@ export async function copyToParquetById(
 
     // get limits for the ID values
     let [min, max] = await queryMinMax(pool, minMaxStmt);
-    startId = min;
+    startId = 0; //min;
     lastId = max;
 
     while (hasMoreData) {
       // run the query limited to MAX_ROWS rows
-      endId = startId + MAX_ROWS
+      endId = startId + MAX_ROWS -1;
       const result = await queryChunkedByIds(pool, queryStmt, startId, endId);
       
       // we need the Parquet schema to create the writer 
