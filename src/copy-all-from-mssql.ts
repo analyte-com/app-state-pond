@@ -12,7 +12,7 @@ export async function copyAllFromMSSql() {
 
   // Connect to the MSSQL database
   const rdb = await connectRdb(env);
-/*
+
   await copyTo(pond, 'vclients', rdb, `select
       IDCLI as id,
       CODIGOCLI as code,
@@ -192,7 +192,7 @@ export async function copyAllFromMSSql() {
       and dgr.IDDEGRU = datr.IDDEGRU
     order by sampleTypeCode, extensionCode, code
   `);  
-*/
+
   await copyTo(pond, 'vuser_departments', rdb, `select 
       u.IDUSUA as userId
       ,u.login as userCode
