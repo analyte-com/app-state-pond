@@ -12,7 +12,7 @@ export async function copyAllFromMSSql() {
 
   // Connect to the MSSQL database
   const rdb = await connectRdb(env);
-
+/*
   await copyTo(pond, 'vclients', rdb, `select
       IDCLI as id,
       CODIGOCLI as code,
@@ -192,7 +192,7 @@ export async function copyAllFromMSSql() {
       and dgr.IDDEGRU = datr.IDDEGRU
     order by sampleTypeCode, extensionCode, code
   `);  
-  
+*/
   await copyTo(pond, 'vuser_departments', rdb, `select 
       u.IDUSUA as userId
       ,u.login as userCode
@@ -221,62 +221,57 @@ export async function copyAllFromMSSql() {
       and ued.IDDEPTO <> -1
     order by userId, departmentId
   `);  
- 
+
   await copyToById(pond, 'vsamples', rdb, `select
       --muestra
       m.UID as uid,
       m.IDMUE as 'id', 
       --m.IDMUTO as 'toId',
       m.NOMBRE as 'code',
-        m.COTIMUE as 'typeCode',
-        m.COSUBTIMUE as 'subtypeCode', 
-        m.COESTADO as 'stateCode', 
-        m.COSUBESTADO as 'substateCode',
-        m.RESPMUE as 'belongsTo', 
-        m.FETOMADESDE as 'collectStartUtc', 
-        m.FETOMAHASTA as 'collectEndUtc',
-        m.FEESTADO as 'stateUtc', 
-        m.RESPONSABLE as 'assignedUser', 
-        m.RECLASIFICACION as 'reclasified',
-        m.REPROCESO as 'reprocessed', 
-        m.CLASIFICACION as 'clasified', 
-        m.CALIFICACION as 'qualified',
-        m.COMENTARIO as 'comment'
+      m.COTIMUE as 'typeCode',
+      m.COSUBTIMUE as 'subtypeCode', 
+      m.COESTADO as 'stateCode', 
+      m.COSUBESTADO as 'substateCode',
+      m.RESPMUE as 'belongsTo', 
+      m.FETOMADESDE as 'collectStartUtc', 
+      m.FETOMAHASTA as 'collectEndUtc',
+      m.FEESTADO as 'stateUtc', 
+      m.RESPONSABLE as 'createdBy', 
+      m.RECLASIFICACION as 'reclasified',
+      m.REPROCESO as 'reprocessed', 
+      m.CLASIFICACION as 'clasified', 
+      m.CALIFICACION as 'qualified',
+      m.COMENTARIO as 'comment'
       --departamento
       ,d.IDDEPTO as 'departmentId'
       ,d.DESCDEPTO as 'department' 
-      ,d.PLANTA as 'departmentFacility'
-        ,m.TAGPTOMUE as 'pointTag'
+      ,d.PLANTA as 'facility'
+      ,m.TAGPTOMUE as 'pointTag'
       ,d.COMENTARIO as 'departmentComment'
       --material
       ,mat.IDMAT as 'materialId'
       ,mat.CODIGO as 'materialCode'
-        ,CASE 
+      ,CASE 
         WHEN m.IDESP IS NULL THEN -1
         ELSE m.IDESP
       END as 'specificationId' 
-        ,mat.COTIMAT as 'materialType'
-        ,mat.DESCMAT as 'material'
+      ,mat.COTIMAT as 'materialType'
+      ,mat.DESCMAT as 'material'
       ,CASE  
         WHEN m.DESCPRONOCATA IS NULL THEN ''
         ELSE m.DESCPRONOCATA
       END as 'uncataloged'
       ,m.LOTE as 'batch'
-        ,m.REFERENCIA as 'batchRef'
-        ,mat.COMENTARIO as 'materialComment'
-        --mat.REQUIERE_LOTE as 'materialBatchRequired', 
-        --mat.REQUIERE_REF as 'materialBatchRefRequired',
-        --mat.MASCARA_LOTE as 'materialBatchMask', 
-        --mat.MASCARA_REF as 'materialBatchRefMask', 
-        -- mat.IDMATBASE as 'MATERIAL_IDMATBASE',
-        -- cliente
-        ,cli.IDCLI as clientId
-        ,cli.CODIGOCLI as clientCode
-        ,cli.DESCCLI as clientDescription
-        -- proveedor
-        ,prv.IDPRO as supplierId
-        ,prv.CODIGOPRO as supplierCode
-        ,prv.DESCPRO as supplierDescription
+      ,m.REFERENCIA as 'batchRef'
+      ,mat.COMENTARIO as 'materialComment'
+      -- cliente
+      ,cli.IDCLI as clientId
+      ,cli.CODIGOCLI as clientCode
+      ,cli.DESCCLI as client
+      -- proveedor
+      ,prv.IDPRO as supplierId
+      ,prv.CODIGOPRO as supplierCode
+      ,prv.DESCPRO as supplier
     from MUESTRA m, DEPARTAMENTO d, MATERIAL mat, CLIENTE cli, PROVEEDOR prv
     where 
       m.IDMUE >= @startId and m.IDMUE <= @endId

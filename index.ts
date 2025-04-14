@@ -13,7 +13,7 @@ async function run() {
 
   if (!args.length) {
     console.log(`\nUsage
-      \n  bun index.ts import-from-csv
+      \n  bun index.ts import-from-parquet
       \n  bun index.ts copy-from-mssql
     `)
     return;
