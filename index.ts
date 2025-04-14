@@ -13,13 +13,13 @@ async function run() {
 
   if (!args.length) {
     console.log(`\nUsage
-      \n  bun index.ts import-from-parquet
+      \n  bun index.ts import-all
       \n  bun index.ts copy-from-mssql
     `)
     return;
   }
 
-  if (args[0] === 'import-from-parquet') {
+  if (args[0] === 'import-all') {
     await importAll();
     return;
   }  

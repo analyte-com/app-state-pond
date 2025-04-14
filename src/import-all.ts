@@ -11,7 +11,17 @@ export async function importAll() {
 
   await importTo(pond, 'vclients');
   await importTo(pond, 'vdepartments');    
+  await importTo(pond, 'vdepartment_materials');    
   await importTo(pond, 'vmaterials');    
+  await importTo(pond, 'vmaterial_specifications');    
   await importTo(pond, 'vpoints');    
+  await importTo(pond, 'vsample_subtypes');    
+  await importTo(pond, 'vsample_types');    
+  await importTo(pond, 'vspecification_tasks');    
+  await importTo(pond, 'vtasks');    
+  await importTo(pond, 'vextensions');    
+  await importTo(pond, 'vuser_departments');    
+  await importTo(pond, 'vsamples');    
 };
+
 
