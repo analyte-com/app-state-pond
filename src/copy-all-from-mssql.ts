@@ -3,6 +3,7 @@ import { connectRdb } from "./connect-mssql";
 import { copyTo, copyToById } from "./copyto"; 
 import { logger, LogLevel } from '@mazito/logger';
 import { env } from "./env";
+import { clientsView, samplesView } from './qualify-views';
 
 logger.level(LogLevel.DEBUG);
 
@@ -13,13 +14,7 @@ export async function copyAllFromMSSql() {
   // Connect to the MSSQL database
   const rdb = await connectRdb(env);
 
-  await copyTo(pond, 'vclients', rdb, `select
-      IDCLI as id,
-      CODIGOCLI as code,
-      DESCCLI as description
-      from CLIENTE
-      order by IDCLI
-  `);
+  await copyTo(pond, 'vclients', rdb, clientsView);
 
   await copyTo(pond, 'vdepartments', rdb, `select 
       IDDEPTO as id
@@ -222,65 +217,9 @@ export async function copyAllFromMSSql() {
     order by userId, departmentId
   `);  
 
-  await copyToById(pond, 'vsamples', rdb, `select
-      --muestra
-      m.UID as uid,
-      m.IDMUE as 'id', 
-      --m.IDMUTO as 'toId',
-      m.NOMBRE as 'code',
-      m.COTIMUE as 'typeCode',
-      m.COSUBTIMUE as 'subtypeCode', 
-      m.COESTADO as 'stateCode', 
-      m.COSUBESTADO as 'substateCode',
-      m.RESPMUE as 'belongsTo', 
-      m.FETOMADESDE as 'collectStartUtc', 
-      m.FETOMAHASTA as 'collectEndUtc',
-      m.FEESTADO as 'stateUtc', 
-      m.RESPONSABLE as 'createdBy', 
-      m.RECLASIFICACION as 'reclasified',
-      m.REPROCESO as 'reprocessed', 
-      m.CLASIFICACION as 'clasified', 
-      m.CALIFICACION as 'qualified',
-      m.COMENTARIO as 'comment'
-      --departamento
-      ,d.IDDEPTO as 'departmentId'
-      ,d.DESCDEPTO as 'department' 
-      ,d.PLANTA as 'facility'
-      ,m.TAGPTOMUE as 'pointTag'
-      ,d.COMENTARIO as 'departmentComment'
-      --material
-      ,mat.IDMAT as 'materialId'
-      ,mat.CODIGO as 'materialCode'
-      ,CASE 
-        WHEN m.IDESP IS NULL THEN -1
-        ELSE m.IDESP
-      END as 'specificationId' 
-      ,mat.COTIMAT as 'materialType'
-      ,mat.DESCMAT as 'material'
-      ,CASE  
-        WHEN m.DESCPRONOCATA IS NULL THEN ''
-        ELSE m.DESCPRONOCATA
-      END as 'uncataloged'
-      ,m.LOTE as 'batch'
-      ,m.REFERENCIA as 'batchRef'
-      ,mat.COMENTARIO as 'materialComment'
-      -- cliente
-      ,cli.IDCLI as clientId
-      ,cli.CODIGOCLI as clientCode
-      ,cli.DESCCLI as client
-      -- proveedor
-      ,prv.IDPRO as supplierId
-      ,prv.CODIGOPRO as supplierCode
-      ,prv.DESCPRO as supplier
-    from MUESTRA m, DEPARTAMENTO d, MATERIAL mat, CLIENTE cli, PROVEEDOR prv
-    where 
-      m.IDMUE >= @startId and m.IDMUE <= @endId
-      and m.IDDEPTO = d.IDDEPTO
-      and m.IDMAT = mat.IDMAT
-      and m.IDCLI = cli.IDCLI 
-      and m.IDPRO = prv.IDPRO
-    order by IDMUE asc
-  `, 'select MIN(IDMUE), MAX(IDMUE) from MUESTRA');  
+  await copyToById(pond, 'vsamples', rdb, samplesView, 
+    'select MIN(IDMUE), MAX(IDMUE) from MUESTRA'
+  );  
 
   // Close the connection
   await rdb?.close();
