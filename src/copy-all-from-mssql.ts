@@ -204,7 +204,7 @@ export async function copyAllFromMSSql() {
       ,ued.PUEDESOLICITAR as canRequest
       ,ued.PUEDETOMAR as canCollect 
       ,ued.PUEDEENVIAR as canSend
-      ,ued.PUEDEASIGNAR as canAssign
+      ,ued.PUEDEASIGNAR as canAssign -- corresponde con puedeIngresar
       ,ued.PUEDEEDITAR as canEdit
       ,ued.PUEDEFINALIZAR as canClose
       ,ued.PUEDEREPROCESAR as canReprocess
