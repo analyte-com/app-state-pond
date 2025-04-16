@@ -72,12 +72,16 @@ function isDateType(col: any): boolean {
 // Explicitly convert to UTC microseconds
 function toUTCTimestampMicros(dateValue: any, gmtOffset?: number) {
   if (!(dateValue instanceof Date)) return null;
+  const MAX_TSMICROS = 9223372036854775807n;
 
   // 1. Treat the MSSQL date as GMT-3 (add 3 hours to get UTC)
   const utcTime = dateValue.getTime() - (gmtOffset || 0)*36000*1000;
   
   // 2. Convert to microseconds
-  return utcTime * 1000;
+  let microsecs = BigInt(utcTime * 1000);
+  if (microsecs < 0) return 1000n;
+  if (microsecs >= MAX_TSMICROS) microsecs = MAX_TSMICROS - 1000n ;
+  return microsecs;
 }
 
 function cleanupValue(value: any, column?: any): any {
