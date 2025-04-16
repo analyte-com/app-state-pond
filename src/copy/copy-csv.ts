@@ -2,7 +2,7 @@ import { write } from "bun";
 import * as sql from "mssql"; // Import the mssql package
 import { exec } from "./ducky";
 import { logger } from "@mazito/logger";
-import { env } from "./env";
+import { env } from "../utils/env";
 
 const SEPR = '|'; // CSV delimiter used instead of ','
 

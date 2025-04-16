@@ -1,7 +1,7 @@
 import { logger, LogLevel } from '@mazito/logger';
 import { copyAllFromMSSql } from "./src/copy-all-from-mssql";
 import { importAll } from "./src/import-all";
-import { env } from "./src/env";
+import { env } from "./src/utils/env";
 
 logger.level(LogLevel.DEBUG);
 

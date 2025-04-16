@@ -144,7 +144,7 @@ export const specificationTasksView = `select
   order by dm.IDESP, dm.SECUENCIA
 `;  
 
-export const vtasksView = `select 
+export const tasksView = `select 
     lt.IDTAR as id
     ,ta.NOMTAR as code
     ,ta.DESCTAR as description

@@ -1,10 +1,9 @@
-import { write } from "bun";
 import * as sql from "mssql"; // Import the mssql package
 import parquet, { ParquetSchema, ParquetWriter } from "@dsnp/parquetjs";
 import { exec } from "./ducky";
 import { logger } from "@mazito/logger";
 import { buildParquetSchema, cleanupValue } from "./parquet-utils";
-import { env } from "./env";
+import { env } from "../utils/env";
 
 /**
  * Copy from MSSQL to a paged Parquet file
@@ -12,7 +11,7 @@ import { env } from "./env";
  * @param queryStmt 
  * @param fileName 
  */
-export async function copyToParquetPaged(
+async function exportToParquetPaged(
   pool: sql.ConnectionPool,
   queryStmt: string,
   fileName: string
@@ -79,7 +78,7 @@ export async function copyToParquetPaged(
  * @param fileName 
  * @param minMaxStmt - the uqery to get Min and Max ID values
  */
-export async function copyToParquetById(
+async function exportToParquetById(
   pool: sql.ConnectionPool,
   queryStmt: string,
   fileName: string,
@@ -99,7 +98,7 @@ export async function copyToParquetById(
 
     // get limits for the ID values
     let [min, max] = await queryMinMax(pool, minMaxStmt);
-    startId = 0; //min;
+    startId = min;
     lastId = max;
 
     while (hasMoreData) {
@@ -274,7 +273,7 @@ async function writeParquetChunk(
  * @param query 
  * @returns 
  */
-export async function copyTo(
+export async function copyToParquetPaged(
   pond: any,
   tableName: string,
   rdb: sql.ConnectionPool,
@@ -283,7 +282,7 @@ export async function copyTo(
   try {
     const fileName = `${env.POND_IMPORTS}/${tableName}`
     
-    await copyToParquetPaged(rdb, query, fileName);
+    await exportToParquetPaged(rdb, query, fileName);
     
     await exec(pond, `DROP TABLE if exists ${tableName};`);
   
@@ -297,7 +296,7 @@ export async function copyTo(
   }
 }
 
-export async function copyToById(
+export async function copyToParquetById(
   pond: any,
   tableName: string,
   rdb: sql.ConnectionPool,
@@ -306,8 +305,7 @@ export async function copyToById(
 ) {
   try {
     const fileName = `${env.POND_IMPORTS}/${tableName}`;
- 
-    await copyToParquetById(rdb, query, fileName, minMaxQuery);
+    await exportToParquetById(rdb, query, fileName, minMaxQuery);
     
     await exec(pond, `DROP TABLE if exists ${tableName};`);
 
@@ -318,24 +316,5 @@ export async function copyToById(
   }
   catch (error) {
     logger.error(`copyTo failed='${tableName}'`, error);
-  }
-}
-
-export async function importTo(
-  pond: any,
-  tableName: string
-) {
-  try {
-    const fileName = `${env.POND_IMPORTS}/${tableName}`;
-    
-    await exec(pond, `DROP TABLE if exists ${tableName};`);
-
-    await exec(pond, `
-      CREATE TABLE ${tableName} AS 
-      SELECT * FROM read_parquet('${fileName}*.parquet');
-    `);
-  }
-  catch (error) {
-    logger.error(`importTo failed='${tableName}'`, error);
   }
 }
