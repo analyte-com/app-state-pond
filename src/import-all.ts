@@ -16,6 +16,7 @@ export async function importAll() {
   // Open the Duckdb db
   let pond = await open(`${env.POND_DB}`);
 
+  await importFromParquetTo(pond, 'vcodes');
   await importFromParquetTo(pond, 'vclients');
   await importFromParquetTo(pond, 'vdepartments');    
   await importFromParquetTo(pond, 'vdepartment_materials');    

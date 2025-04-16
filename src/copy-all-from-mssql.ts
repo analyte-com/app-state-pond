@@ -12,7 +12,7 @@ import { logger, LogLevel } from "@mazito/logger";
 import { env } from "./utils/env";
 import * as views from "./qualify-views";
 
-logger.level(LogLevel.DEBUG);
+logger.level(LogLevel.INFO);
 
 export async function copyAllFromMSSql() {
   // Open the Duckdb db
@@ -21,7 +21,9 @@ export async function copyAllFromMSSql() {
   // Connect to the MSSQL database
   const rdb = await connectRdb(env);
 
-  await copyToParquetPaged(pond, 'vclients', rdb, views.clientsView);
+  await copyToParquetPaged(pond, 'vcodes', rdb, views.codesView);
+
+/*   await copyToParquetPaged(pond, 'vclients', rdb, views.clientsView);
 
   await copyToParquetPaged(pond, 'vdepartments', rdb, views.departmentsView);    
 
@@ -34,11 +36,11 @@ export async function copyAllFromMSSql() {
   await copyToParquetPaged(pond, 'vsample_types', rdb, views.sampleTypesView);  
 
   await copyToParquetPaged(pond, 'vsample_subtypes', rdb, views.sampleSubtypesView);  
-
+ */
   await copyToParquetPaged(pond, 'vmaterial_specifications', rdb, views.materialSpecificationsView);
 
   await copyToParquetPaged(pond, 'vspecification_tasks', rdb, views.specificationTasksView);  
-  
+/*   
   await copyToParquetPaged(pond, 'vtasks', rdb, views.tasksView);  
 
   await copyToParquetPaged(pond, 'vextensions', rdb, views.extensionsView);  
@@ -49,7 +51,7 @@ export async function copyAllFromMSSql() {
     views.samplesView, 
     'select 0 as MIN, MAX(IDMUE) from MUESTRA'
   );  
-
+ */
   // Close the connection
   await rdb?.close();
 };

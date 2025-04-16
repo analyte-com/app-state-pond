@@ -1,3 +1,20 @@
+export const codesView = `select
+  TIPO as type
+  ,CODIGO as code
+  ,DESCRIPCION as description
+  ,case 
+    when COLIBRE IS NULL then ''
+    else COLIBRE
+  end as freeCode
+  ,TISIST as isSystem
+  ,case 
+    when COMENTARIO IS NULL then ''
+    else COMENTARIO
+  end as comment
+  from CODIGO
+  order by type, code 
+`;
+
 export const clientsView = `select
     IDCLI as id,
     CODIGOCLI as code,
