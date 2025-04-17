@@ -5,7 +5,7 @@
  * such as 'vsamples001.parquet', 'vsamples002.parquet', etc.
  * All files have the '.parquet' extension
  */
-import { open } from "./copy/pond/ducky";
+import { open } from "./pond/ducky";
 import { importFromParquetTo } from "./copy/import-parquet"; 
 import { logger, LogLevel } from '@mazito/logger';
 import { env } from "./utils/env";

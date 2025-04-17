@@ -32,19 +32,21 @@ async function open(dbname: string): Promise<any | null> {
 /**
  * Executes an SQL statement
  * @param stmt 
+ * @returns - true if Ok, false if exec failed
  */
-async function exec(dbx: any, stmt: string) {
-  if (!dbx || !stmt) return;
+async function exec(dbx: any, stmt: string): Promise<boolean> {
+  if (!dbx || !stmt) return false;
   stmt = cleanup(stmt);
   try {
     logger.level(logLevel);
     logger.timer(`duckdb exec stmt= ${stmt}`);
     const done = await dbx.run(stmt);
     logger.elapsed(`duckdb exec done= `, JSON.stringify(done));
+    return true;
   }
   catch (err) {
     logger.error(`duckdb exec `, err);
-    return;
+    return false;
   }
 }
 

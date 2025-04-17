@@ -1,4 +1,4 @@
-import { exec } from "./pond/ducky";
+import { exec } from "../pond/ducky";
 import { logger } from "@mazito/logger";
 import { env } from "../utils/env";
 

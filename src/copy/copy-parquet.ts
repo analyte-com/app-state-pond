@@ -1,6 +1,6 @@
 import * as sql from "mssql"; // Import the mssql package
 import parquet, { ParquetSchema, ParquetWriter } from "@dsnp/parquetjs";
-import { exec } from "./pond/ducky";
+import { exec } from "../pond/ducky";
 import { logger } from "@mazito/logger";
 import { buildParquetSchema, cleanupValue } from "./parquet-utils";
 import { env } from "../utils/env";
