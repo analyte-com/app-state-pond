@@ -5,18 +5,21 @@
  * Or can be copied paginating by a range of Ids (copyToParquetById), 
  * which is useful for bigger tables (like MUESTRA or TAREA_MUE).
  */
-import { open, exec, query} from "./pond/ducky";
 import { connectRdb } from "./copy/connect-mssql";
 import { copyToParquetById, copyToParquetPaged } from "./copy/copy-parquet"; 
 import { logger, LogLevel } from "@mazito/logger";
-import { env } from "./utils/env";
+import { env, KVS } from "./utils";
+import { triggerCheckpoint, getActiveConnection, READ_WRITE } from "./pond";
 import * as views from "./qualify-views";
 
 logger.level(LogLevel.INFO);
 
 export async function copyAllFromMSSql() {
   // Open the Duckdb db
-  let pond = await open(`${env.POND_DB}`);
+  let pond = await getActiveConnection(READ_WRITE);
+
+  // Open KVS
+  KVS.openDb();
 
   // Connect to the MSSQL database
   const rdb = await connectRdb(env);
@@ -50,8 +53,10 @@ export async function copyAllFromMSSql() {
   await copyToParquetById(pond, 'vsamples', rdb, 
     views.samplesView, 
     'select 0 as MIN, MAX(IDMUE) from MUESTRA'
-  );  
+  );
 
   // Close the connection
   await rdb?.close();
+ 
+  await triggerCheckpoint();
 };
