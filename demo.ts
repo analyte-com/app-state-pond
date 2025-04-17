@@ -1,4 +1,4 @@
-import { open, exec, query} from './src/copy/ducky.ts';
+import { open, exec, query} from './src/copy/pond/ducky.ts';
 
 async function run() {
   let dbx = await open(`${process.env.POND_DB}`);
