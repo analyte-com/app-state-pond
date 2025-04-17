@@ -8,13 +8,17 @@
 import { open } from "./pond/ducky";
 import { importFromParquetTo } from "./copy/import-parquet"; 
 import { logger, LogLevel } from '@mazito/logger';
-import { env } from "./utils/env";
+import { env, KVS } from "./utils";
+import { triggerCheckpoint, getActiveConnection, READ_WRITE } from "./pond";
 
 logger.level(LogLevel.DEBUG);
 
 export async function importAll() {
   // Open the Duckdb db
-  let pond = await open(`${env.POND_DB}`);
+  let pond = await getActiveConnection(READ_WRITE);
+
+  // Open KVS
+  KVS.openDb();
 
   await importFromParquetTo(pond, 'vcodes');
   await importFromParquetTo(pond, 'vclients');
@@ -30,4 +34,6 @@ export async function importAll() {
   await importFromParquetTo(pond, 'vextensions');    
   await importFromParquetTo(pond, 'vuser_departments');    
   await importFromParquetTo(pond, 'vsamples');    
+
+  await triggerCheckpoint();
 };
