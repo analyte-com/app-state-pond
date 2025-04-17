@@ -129,11 +129,15 @@ async function getActiveConnection(mode: any): Promise<DuckDBConnection> {
 
     // if no active instance, must open one and connect
     if (!activeInstance) {
-      if (mode.access_mode === READ_WRITE.access_mode)
-        activeInstance = await openWriter(env.POND_DB!)
-      if (mode.access_mode === READ_ONLY.access_mode)
-        activeInstance = await openReader(env.POND_DB!)
-      throw Error(`Invalid access mode=${mode.access_mode}`)
+      switch (mode.access_mode) {
+        case 'READ_WRITE': 
+          activeInstance = await openWriter(env.POND_DB!); 
+          break;
+        case 'READ_ONLY':
+          activeInstance = await openReader(env.POND_DB!);
+          break;
+        default:  throw Error(`Invalid access mode=${mode.access_mode}`);
+      }
     }
       
     activeConnection = await activeInstance?.connect() as DuckDBConnection;

@@ -21,7 +21,6 @@ class KVS {
   public static put(key: string, data: any) {
     const db = KVS.openDb();
     db.put(key, data);
-    logger.elapsed(`KVS put key=${key}`);
     // db.transaction(() => {
     // });
   }
