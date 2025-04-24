@@ -283,3 +283,73 @@ export const samplesView = `select
     and m.IDPRO = prv.IDPRO
   order by IDMUE asc
 `;  
+
+const sampleTasksView = `select
+    -- tarea mue
+    tm.IDTARMUE as 'id'
+    --,tm.IDTARMUE2 as 'id2'
+    ,tm.COTITAR as 'typeCode'
+    ,tm.NOMTAR2 as 'description'
+    -- muestra 
+    ,tm.IDMUE as 'sampleId'
+    -- tareas
+    ,tm.IDLISTA as 'taskTreeId' 
+    ,tm.SECUENCIA as 'sequence'
+    ,tm.NIVEL as 'level'
+    ,t.IDTAR as 'taskId'
+    ,tm.IDTARRAIZ as 'taskRootId'
+    ,concat(tm.IDLISTA,':',tm.IDTARRAIZ,':',tm.IDTAR) as 'taskPath'
+    ,case 
+      when tm.IDTARRAIZ = tm.IDTAR then t.NOMTAR
+      else concat(troot.NOMTAR,'/',t.NOMTAR)
+    end as 'taskName'
+    ,case 
+      when tm.IDTARRAIZ = tm.IDTAR then t.DESCTAR
+      else concat(troot.DESCTAR,'/',t.DESCTAR)
+    end as 'taskDescription'
+    -- valor
+    ,dete.COTIVAL as 'valueTypeCode'
+    ,case 
+      when ltrim(rtrim(tm.VALOR)) LIKE '<%' then '<'
+      when ltrim(rtrim(tm.VALOR)) LIKE '>%' then '>'
+      else ''
+    end as valueOffdetection
+    ,replace(ltrim(case 
+      when ltrim(rtrim(VALOR)) LIKE '[<>]%' then SUBSTRING(ltrim(rtrim(tm.VALOR)), 2, LEN(tm.VALOR)) 
+      else tm.VALOR end),',', '.') 
+    as 'value'
+    ,tm.COUDMTARMUE as 'valueUdm'
+    ,tm.STSVAL as 'valueStateCode'
+    -- status de la tareas
+    ,tm.STSTAR as 'stateCode'
+    ,tm.STSMOD as 'modifiedCode' 
+    ,tm.FEREALIZADA as 'doneUtc'
+    ,case when tm.REALIZADAPOR IS NULL then -1 else tm.REALIZADAPOR end as 'doneById'
+    ,case when tm.REALIZADAPOR IS NULL then '' else u.NOMBRE end as 'doneBy'
+    ,concat(tm.NOTAS,' ',tm.COMENTARIO) AS 'notes'
+    ,tm.TIREAL as 'timeUsed'
+    ,tm.COUDMTI as 'timeUsedUdm'
+    -- repeticiones y replicas de la tarea
+    ,tm.REPETICION as 'repetitionNum'
+    ,tm.REPLICADO as 'replicationNum'
+    -- instrumento
+    ,case when tm.IDEQUI IS NULL then -1 else tm.IDEQUI end as 'instrumentId'
+    ,case when tm.IDEQUI IS NULL then '' else equi.DESCEQUI end as 'instrument'
+    ,tm.STSEQUI as 'intrumentStateCode'
+    -- tarea
+    ,t.SIMPLE as 'taskIsSimple'
+    ,t.TINETO as 'taskTimeUsed'
+    ,t.COUDMTIEMPO as 'taskNetTimeUdm'
+    ,t.COSTO as 'taskCost'
+    ,t.COUDMCOSTO as 'taskCostUdm'
+    -- DEPRECATED ,tm.STSREP
+  from TAREA_MUE tm 
+    join TAREA t on tm.idtar = t.idtar
+    join TAREA troot ON tm.IDTARRAIZ = troot.IDTAR
+    left join EQUIPO equi ON tm.IDEQUI = equi.IDEQUI
+    left join USUARIO u ON tm.REALIZADAPOR = u.IDUSUA
+    left join DETERMINACION dete ON tm.IDTAR = dete.IDTAR and tm.COTITAR = 'DETE'
+    left join ENSAYO ensa ON tm.IDTAR = ensa.IDTAR and tm.COTITAR = 'ENSA'
+    left join MEDICION medi ON tm.IDTAR = medi.IDTAR and tm.COTITAR = 'MED'
+  order by tm.IDTARMUE asc
+`
