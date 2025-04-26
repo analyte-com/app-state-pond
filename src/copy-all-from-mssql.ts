@@ -23,7 +23,7 @@ export async function copyAllFromMSSql() {
 
   // Connect to the MSSQL database
   const rdb = await connectRdb(env);
-
+/*
   await copyToParquetPaged(pond, 'vcodes', rdb, views.codesView);
 
   await copyToParquetPaged(pond, 'vclients', rdb, views.clientsView);
@@ -53,6 +53,12 @@ export async function copyAllFromMSSql() {
   await copyToParquetById(pond, 'vsamples', rdb, 
     views.samplesView, 
     'select 0 as MIN, MAX(IDMUE) from MUESTRA'
+  );
+*/
+
+  await copyToParquetById(pond, 'vsample_tasks', rdb, 
+    views.sampleTasksView, 
+    'select 0 as MIN, MAX(IDTARMUE) from TAREA_MUE'
   );
 
   // Close the connection

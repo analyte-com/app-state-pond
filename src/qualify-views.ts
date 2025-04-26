@@ -284,7 +284,7 @@ export const samplesView = `select
   order by IDMUE asc
 `;  
 
-const sampleTasksView = `select
+export const sampleTasksView = `select
     -- tarea mue
     tm.IDTARMUE as 'id'
     --,tm.IDTARMUE2 as 'id2'
@@ -298,7 +298,7 @@ const sampleTasksView = `select
     ,tm.NIVEL as 'level'
     ,t.IDTAR as 'taskId'
     ,tm.IDTARRAIZ as 'taskRootId'
-    ,concat(tm.IDLISTA,':',tm.IDTARRAIZ,':',tm.IDTAR) as 'taskPath'
+    ,concat(tm.IDLISTA,'/',tm.IDTARRAIZ,'/',tm.IDTAR) as 'taskPath'
     ,case 
       when tm.IDTARRAIZ = tm.IDTAR then t.NOMTAR
       else concat(troot.NOMTAR,'/',t.NOMTAR)
@@ -351,5 +351,68 @@ const sampleTasksView = `select
     left join DETERMINACION dete ON tm.IDTAR = dete.IDTAR and tm.COTITAR = 'DETE'
     left join ENSAYO ensa ON tm.IDTAR = ensa.IDTAR and tm.COTITAR = 'ENSA'
     left join MEDICION medi ON tm.IDTAR = medi.IDTAR and tm.COTITAR = 'MED'
-  order by tm.IDTARMUE asc
-`
+  where 
+    tm.IDTARMUE >= @startId and tm.IDTARMUE <= @endId
+  order by tm.IDTARMUE asc, tm.IDMUE asc
+`;
+
+
+/*
+-- Draft view for creating the full path for tasks in LISTA_TAR
+CREATE VIEW vTASKTREE as
+WITH HierarchyCTE AS (
+    -- Base case: select all root nodes (where IDTAR1 = -1)
+    SELECT 
+        IDLISTA,
+        IDTARRAIZ,
+        IDTAR1,
+        IDTAR,
+        SECUENCIA,
+        NOMTAR2,
+        PRIORIDAD,
+        REPETICION,
+        COMENTARIO,
+        NIVEL,
+        IDLISTA AS IDROOT  -- For root nodes, IDROOT is their own IDLISTA
+    FROM 
+        [dbo].[LISTA_TAR]
+    WHERE 
+        IDTAR1 = -1
+    
+    UNION ALL
+    
+    -- Recursive case: join child nodes with their parents
+    SELECT 
+        c.IDLISTA,
+        c.IDTARRAIZ,
+        c.IDTAR1,
+        c.IDTAR,
+        c.SECUENCIA,
+        c.NOMTAR2,
+        c.PRIORIDAD,
+        c.REPETICION,
+        c.COMENTARIO,
+        c.NIVEL,
+        p.IDROOT  -- Inherit the IDROOT from the parent
+    FROM 
+        [dbo].[LISTA_TAR] c
+    INNER JOIN 
+        HierarchyCTE p ON c.IDTAR1 = p.IDLISTA  -- Match child's IDTAR1 to parent's IDLISTA
+    WHERE 
+        c.IDTAR1 <> -1
+)
+SELECT 
+    IDLISTA as id,
+    IDROOT rootId,
+    IDTAR1 parentId,
+    IDTARRAIZ as taskRootId,
+    IDTAR taskId,
+    SECUENCIA sequence,
+    NOMTAR2 description,
+    PRIORIDAD priority,
+    REPETICION repetition,
+    COMENTARIO comment,
+    NIVEL level
+FROM 
+    HierarchyCTE;
+*/
