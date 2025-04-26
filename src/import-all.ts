@@ -34,6 +34,7 @@ export async function importAll() {
   await importFromParquetTo(pond, 'vextensions');    
   await importFromParquetTo(pond, 'vuser_departments');    
   await importFromParquetTo(pond, 'vsamples');    
+  await importFromParquetTo(pond, 'vsample_tasks');    
 
   await triggerCheckpoint();
 };

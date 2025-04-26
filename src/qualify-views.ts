@@ -296,19 +296,14 @@ export const sampleTasksView = `select
     ,tm.IDLISTA as 'taskTreeId' 
     ,tm.SECUENCIA as 'sequence'
     ,tm.NIVEL as 'level'
-    ,t.IDTAR as 'taskId'
     ,tm.IDTARRAIZ as 'taskRootId'
-    ,concat(tm.IDLISTA,'/',tm.IDTARRAIZ,'/',tm.IDTAR) as 'taskPath'
-    ,case 
-      when tm.IDTARRAIZ = tm.IDTAR then t.NOMTAR
-      else concat(troot.NOMTAR,'/',t.NOMTAR)
-    end as 'taskName'
-    ,case 
-      when tm.IDTARRAIZ = tm.IDTAR then t.DESCTAR
-      else concat(troot.DESCTAR,'/',t.DESCTAR)
-    end as 'taskDescription'
+    ,tm.IDTAR as 'taskId'
     -- valor
-    ,dete.COTIVAL as 'valueTypeCode'
+    ,case 
+		when tm.COTITAR = 'DETE' then dete.COTIVAL 
+		when tm.COTITAR = 'MEDI' then medi.COTIVALOR
+		else ''
+    end as 'valueTypeCode'
     ,case 
       when ltrim(rtrim(tm.VALOR)) LIKE '<%' then '<'
       when ltrim(rtrim(tm.VALOR)) LIKE '>%' then '>'
@@ -326,7 +321,7 @@ export const sampleTasksView = `select
     ,tm.FEREALIZADA as 'doneUtc'
     ,case when tm.REALIZADAPOR IS NULL then -1 else tm.REALIZADAPOR end as 'doneById'
     ,case when tm.REALIZADAPOR IS NULL then '' else u.NOMBRE end as 'doneBy'
-    ,concat(tm.NOTAS,' ',tm.COMENTARIO) AS 'notes'
+    ,cast(tm.NOTAS+' '+tm.COMENTARIO as varchar) AS 'notes'
     ,tm.TIREAL as 'timeUsed'
     ,tm.COUDMTI as 'timeUsedUdm'
     -- repeticiones y replicas de la tarea
@@ -336,83 +331,14 @@ export const sampleTasksView = `select
     ,case when tm.IDEQUI IS NULL then -1 else tm.IDEQUI end as 'instrumentId'
     ,case when tm.IDEQUI IS NULL then '' else equi.DESCEQUI end as 'instrument'
     ,tm.STSEQUI as 'intrumentStateCode'
-    -- tarea
-    ,t.SIMPLE as 'taskIsSimple'
-    ,t.TINETO as 'taskTimeUsed'
-    ,t.COUDMTIEMPO as 'taskNetTimeUdm'
-    ,t.COSTO as 'taskCost'
-    ,t.COUDMCOSTO as 'taskCostUdm'
-    -- DEPRECATED ,tm.STSREP
   from TAREA_MUE tm 
     join TAREA t on tm.idtar = t.idtar
     join TAREA troot ON tm.IDTARRAIZ = troot.IDTAR
     left join EQUIPO equi ON tm.IDEQUI = equi.IDEQUI
     left join USUARIO u ON tm.REALIZADAPOR = u.IDUSUA
     left join DETERMINACION dete ON tm.IDTAR = dete.IDTAR and tm.COTITAR = 'DETE'
-    left join ENSAYO ensa ON tm.IDTAR = ensa.IDTAR and tm.COTITAR = 'ENSA'
     left join MEDICION medi ON tm.IDTAR = medi.IDTAR and tm.COTITAR = 'MED'
   where 
     tm.IDTARMUE >= @startId and tm.IDTARMUE <= @endId
   order by tm.IDTARMUE asc, tm.IDMUE asc
 `;
-
-
-/*
--- Draft view for creating the full path for tasks in LISTA_TAR
-CREATE VIEW vTASKTREE as
-WITH HierarchyCTE AS (
-    -- Base case: select all root nodes (where IDTAR1 = -1)
-    SELECT 
-        IDLISTA,
-        IDTARRAIZ,
-        IDTAR1,
-        IDTAR,
-        SECUENCIA,
-        NOMTAR2,
-        PRIORIDAD,
-        REPETICION,
-        COMENTARIO,
-        NIVEL,
-        IDLISTA AS IDROOT  -- For root nodes, IDROOT is their own IDLISTA
-    FROM 
-        [dbo].[LISTA_TAR]
-    WHERE 
-        IDTAR1 = -1
-    
-    UNION ALL
-    
-    -- Recursive case: join child nodes with their parents
-    SELECT 
-        c.IDLISTA,
-        c.IDTARRAIZ,
-        c.IDTAR1,
-        c.IDTAR,
-        c.SECUENCIA,
-        c.NOMTAR2,
-        c.PRIORIDAD,
-        c.REPETICION,
-        c.COMENTARIO,
-        c.NIVEL,
-        p.IDROOT  -- Inherit the IDROOT from the parent
-    FROM 
-        [dbo].[LISTA_TAR] c
-    INNER JOIN 
-        HierarchyCTE p ON c.IDTAR1 = p.IDLISTA  -- Match child's IDTAR1 to parent's IDLISTA
-    WHERE 
-        c.IDTAR1 <> -1
-)
-SELECT 
-    IDLISTA as id,
-    IDROOT rootId,
-    IDTAR1 parentId,
-    IDTARRAIZ as taskRootId,
-    IDTAR taskId,
-    SECUENCIA sequence,
-    NOMTAR2 description,
-    PRIORIDAD priority,
-    REPETICION repetition,
-    COMENTARIO comment,
-    NIVEL level
-FROM 
-    HierarchyCTE;
-*/
