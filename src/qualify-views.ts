@@ -162,20 +162,183 @@ export const specificationTasksView = `select
 `;  
 
 export const tasksView = `select 
-    lt.IDTAR as id
-    ,ta.NOMTAR as code
-    ,ta.DESCTAR as description
-    ,ta.COTITAR as typeCode
+    task.IDTAR as id
+    ,task.NOMTAR as code
+    ,task.DESCTAR as description
+    ,task.COTITAR as typeCode
     ,co.DESCRIPCION as type
-  from  LISTA_TAR lt, TAREA ta, CODIGO co
+    ,task.TINETO as taskNetTime
+    ,task.COUDMTIEMPO as taskNetTimeUdm
+    ,task.COSTO as taskCost
+    ,task.COUDMCOSTO as taskCostUdm
+    -- values
+    ,case
+      when task.COTITAR = 'ENSA' then ''
+      when task.COTITAR = 'DETE' then det.COTIVAL
+      when task.COTITAR = 'MEDI' then medi.COTIVALOR
+      when task.COTITAR = 'CALI' then cali.COTIVAL
+      else ''
+    end as valueTypeCode
+    ,case
+      when task.COTITAR = 'ENSA' then ''
+      when task.COTITAR = 'DETE' then det.COUDMDET
+      when task.COTITAR = 'MEDI' then medi.COUDMMED
+      when task.COTITAR = 'CALI' then 'NUME'
+      else ''
+    end as valueUdm
+    ,case
+      when task.COTITAR = 'ENSA' then ''
+      when task.COTITAR = 'DETE' then cast(det.DECIMALES as varchar(2))
+      when task.COTITAR = 'MEDI' then ''
+      when task.COTITAR = 'CALI' then ''
+      else ''
+    end as decimals
+    ,case
+      when task.COTITAR = 'ENSA' then ''
+      when task.COTITAR = 'DETE' then cast(det.VALMIN as varchar)
+      when task.COTITAR = 'MEDI' then ''
+      when task.COTITAR = 'CALI' then cast(cali.VALMIN as varchar)
+      else ''
+    end as valueMin
+    ,case
+      when task.COTITAR = 'ENSA' then ''
+      when task.COTITAR = 'DETE' then cast(det.VALMAX as varchar)
+      when task.COTITAR = 'MEDI' then ''
+      when task.COTITAR = 'CALI' then cast(cali.VALMAX as varchar)
+      else ''
+    end as valueMax
+    ,case
+      when task.COTITAR = 'ENSA' then ''
+      when task.COTITAR = 'DETE' then cast(det.VALREF as varchar)
+      when task.COTITAR = 'MEDI' then ''
+      when task.COTITAR = 'CALI' then cast(cali.VALREF as varchar)
+      else ''
+    end as valueRef
+    ,case
+      when det.COTIVAL like 'E:%' then (SELECT STRING_AGG(CODIGO, ',') AS enums FROM ENUM WHERE TIPO like RIGHT(det.COTIVAL, LEN(det.COTIVAL)-2) GROUP BY TIPO)
+      when medi.COTIVALOR like 'E:%' then (SELECT STRING_AGG(CODIGO, ',') AS enums FROM ENUM WHERE TIPO like RIGHT(det.COTIVAL, LEN(det.COTIVAL)-2) GROUP BY TIPO)
+      else ''
+    end as valueEnums
+    ,case 
+      when prop.IDPROP IS NULL then -1
+      else prop.IDPROP
+    end as propertyId
+    ,case 
+      when prop.DESCPROP IS NULL then 'N/A'
+      else prop.DESCPROP
+    end as property
+    ,case 
+      when task.COTITAR = 'ENSA' then ensa.IDMET
+      when task.COTITAR = 'DETE' then det.IDMET
+      when task.COTITAR = 'MEDI' then medi.IDMET
+      when task.COTITAR = 'CALI' then cali.IDMET
+      else ''
+    end as methodId
+    ,case 
+      when met.DESCMET IS NULL then ''
+      else met.DESCMET
+    end as method
+    ,case 
+      when task.COTITAR = 'ENSA' then ensa.NORMA
+      when task.COTITAR = 'DETE' then det.NORMA
+      when task.COTITAR = 'MEDI' then ''
+      when task.COTITAR = 'CALI' then ''
+      else ''
+    end standard
+    ,case 
+      when task.COTITAR = 'ENSA' then ensa.COMENTARIO
+      when task.COTITAR = 'DETE' then det.COMENTARIO
+      when task.COTITAR = 'MEDI' then medi.COMENTARIO
+      when task.COTITAR = 'CALI' then cali.COMENTARIO
+      else ''
+    end as comment
+  from  
+    TAREA task
+    inner join CODIGO co on (task.COTITAR = co.CODIGO and co.TIPO = 'TITAR')
+    left outer join DETERMINACION det on det.IDTAR = task.IDTAR
+    left outer join ENSAYO ensa on ensa.IDTAR =  task.IDTAR
+    left outer join MEDICION medi on medi.IDTAR =  task.IDTAR
+    left outer join CALIBRACION cali on cali.IDTAR =  task.IDTAR
+    left outer join METODO met on (met.IDMET=ensa.IDMET or met.IDMET=det.IDMET or met.IDMET=medi.IDMET or met.IDMET=cali.IDMET)
+    left outer join PROPIEDAD prop on (prop.IDPROP=det.IDPROP)
   where  
-    ta.IDTAR = lt.IDTAR 
-    and lt.IDTARRAIZ = ta.IDTAR
-    and ta.IDTAR != -1
-    and ta.COTITAR in ('DETE','ENSA','CALI','PREP')
-    and (ta.COTITAR = co.CODIGO and CO.TIPO = 'TITAR')  
-  order by ta.DESCTAR
+    task.IDTAR != -1
+    and task.COTITAR in ('DETE','ENSA','CALI','PREP')
+  order by task.DESCTAR
 `;  
+
+// El arbol de tareas, basado en LISTA_TAR pero con mejoras en:
+// - la descripcion completa de la tarea cuando incluye varios hijos y nietos
+// - un mejor ordenamineto basado en orden del Root y secuencia de cada hijo 
+export const tasksTreeView = `
+  WITH HierarchyCTE AS (
+    -- Base case: root nodes (IDTAR1 = -1)
+    SELECT 
+        IDLISTA,
+        IDTARRAIZ,
+        IDTAR1,
+        IDTAR,
+        SECUENCIA,
+        NOMTAR2,
+        PRIORIDAD,
+        REPETICION,
+        COMENTARIO,
+        NIVEL,
+        IDLISTA AS IDROOT,
+        CAST(RTRIM(NOMTAR2) AS VARCHAR(1000)) AS fullName  -- Explicit CAST with sufficient length
+    FROM 
+        [dbo].[LISTA_TAR]
+    WHERE 
+        IDTAR1 = -1
+    
+    UNION ALL
+    
+    -- Recursive case: child nodes
+    SELECT 
+        c.IDLISTA,
+        c.IDTARRAIZ,
+        c.IDTAR1,
+        c.IDTAR,
+        c.SECUENCIA,
+        c.NOMTAR2,
+        c.PRIORIDAD,
+        c.REPETICION,
+        c.COMENTARIO,
+        c.NIVEL,
+        p.IDROOT,
+        CAST(p.fullName + ' / ' + RTRIM(c.NOMTAR2) AS VARCHAR(1000))  -- Same CAST in recursive part
+    FROM 
+        [dbo].[LISTA_TAR] c
+    INNER JOIN 
+        HierarchyCTE p ON c.IDTAR1 = p.IDLISTA
+    WHERE 
+        c.IDTAR1 <> -1
+  )
+  SELECT 
+    tree.IDLISTA as id
+    ,tree.IDROOT rootId
+    ,tree.IDTAR1 parentId
+    ,tree.SECUENCIA as sequence
+    ,tree.NIVEL as level
+    ,tree.FULLNAME as description
+    ,tree.PRIORIDAD as priority
+    ,tree.REPETICION as repetition
+    ,tree.IDTARRAIZ as taskRootId
+    ,tree.IDTAR as taskId
+    ,tree.NOMTAR2 as taskName
+    ,case 
+      when tree.COMENTARIO IS NULL then ''
+      else tree.COMENTARIO 
+    end as comment
+    ,case 
+      when tree.IDLISTA = -1 then tree.NOMTAR2
+      else rtrim(cast(troot.NOMTAR2 as varchar))+'/'+right('000'+cast(tree.SECUENCIA as varchar),3)
+    end as ordering
+  FROM 
+    HierarchyCTE tree
+    left outer join HierarchyCTE troot on troot.IDLISTA = tree.IDROOT
+  ORDER by ordering asc	
+`;
 
 export const extensionsView = `select 
     datr.IDDEAT as id

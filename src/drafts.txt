@@ -1,7 +1,7 @@
 DROP VIEW vTASKTREE;
 GO
 
-CREATE VIEW vTASKTREE as
+CREATE VIEW vTasksTree AS
 WITH HierarchyCTE AS (
     -- Base case: root nodes (IDTAR1 = -1)
     SELECT 
@@ -46,75 +46,30 @@ WITH HierarchyCTE AS (
         c.IDTAR1 <> -1
 )
 SELECT 
-    IDLISTA as id,
-    IDROOT rootId,
-    IDTAR1 parentId,
-    IDTARRAIZ as taskRootId,
-    IDTAR taskId,
-    SECUENCIA sequence,
-    NOMTAR2 description,
-    FULLNAME as descriptionPath,
-    PRIORIDAD priority,
-    REPETICION repetition,
-    COMENTARIO comment,
-    NIVEL level
+  tree.IDLISTA as id
+  ,tree.IDROOT rootId
+  ,tree.IDTAR1 parentId
+  ,tree.SECUENCIA as sequence
+  ,tree.NIVEL as level
+  ,tree.FULLNAME as description
+  ,tree.PRIORIDAD as priority
+  ,tree.REPETICION as repetition
+  ,tree.IDTARRAIZ as taskRootId
+  ,tree.IDTAR as taskId
+  ,tree.NOMTAR2 as taskName
+  ,case 
+		when tree.COMENTARIO IS NULL then ''
+		else tree.COMENTARIO 
+	end as comment
+	,case 
+		when tree.IDLISTA = -1 then tree.NOMTAR2
+		else rtrim(cast(troot.NOMTAR2 as varchar))+'/'+right('000'+cast(tree.SECUENCIA as varchar),3)
+	end as ordering
 FROM 
-    HierarchyCTE;
-GO    
-*/
-
-SELECT
-	tree.*,
-	case 
-		when tree.parentId = -1 then tree.description
-		else rtrim(cast(troot.description as varchar))+'/'+right('000'+cast(tree.sequence as varchar),3)
-	end as ordering,
-	task.COTITAR as taskTypeCode,
-	task.TINETO as taskNetTime,
-	task.COUDMTIEMPO as taskNetTimeUdm,
-	task.COSTO as taskCost,
-	task.COUDMCOSTO as taskCostUdm,
-	-- values
-	case
-		when task.COTITAR = 'ENSA' then ''
-		when task.COTITAR = 'DETE' then det.COTIVAL
-		when task.COTITAR = 'MEDI' then medi.COTIVALOR
-		else ''
-	end as valueTypeCode,
-	case
-		when task.COTITAR = 'ENSA' then ''
-		when task.COTITAR = 'DETE' then det.COUDMDET
-		when task.COTITAR = 'MEDI' then medi.COUDMMED
-		else ''
-	end as valueUdm,
-	case
-		when task.COTITAR = 'ENSA' then ''
-		when task.COTITAR = 'DETE' then cast(det.VALMIN as varchar)
-		when task.COTITAR = 'MEDI' then ''
-		else ''
-	end as valueMin,
-	case
-		when task.COTITAR = 'ENSA' then ''
-		when task.COTITAR = 'DETE' then cast(det.VALMAX as varchar)
-		when task.COTITAR = 'MEDI' then ''
-		else ''
-	end as valueMax,
-	case
-		when det.COTIVAL like 'E:%' then (SELECT STRING_AGG(CODIGO, ',') AS enums FROM ENUM WHERE TIPO like RIGHT(det.COTIVAL, LEN(det.COTIVAL)-2) GROUP BY TIPO)
-		--when task.COTITAR = 'DETE' then cast(det.VALMAX as varchar)
-		--when task.COTITAR = 'MEDI' then ''
-		else ''
-	end as enumValues
-FROM 
-	vTASKTREE tree
-	left outer join vTASKTREE troot on troot.id = tree.rootId
-	left outer join TAREA task on task.IDTAR = tree.taskId
-	left outer join DETERMINACION det on det.IDTAR = tree.taskId
-	left outer join ENSAYO ensa on ensa.IDTAR = tree.taskId
-	left outer join MEDICION medi on medi.IDTAR = tree.taskId
-where tree.taskId <> -1
-ORDER BY ordering;
+    HierarchyCTE tree
+	left outer join HierarchyCTE troot on troot.IDLISTA = tree.IDROOT
+ORDER by ordering asc	
+;
 
 select count(*) from lista_tar;
-
-select count(*) from vTASKTREE;
+select count(*) from vTasksTree;
