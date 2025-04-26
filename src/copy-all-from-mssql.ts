@@ -46,12 +46,12 @@ export async function copyAllFromMSSql() {
    
   await copyToParquetPaged(pond, 'vtasks', rdb, views.tasksView);  
 
-  await copyToParquetPaged(pond, 'vtasks_tree', rdb, views.tasksTreeView);  
+  await copyToParquetPaged(pond, 'vtask_trees', rdb, views.tasksTreeView);  
 
   await copyToParquetPaged(pond, 'vextensions', rdb, views.extensionsView);  
 
   await copyToParquetPaged(pond, 'vuser_departments', rdb, views.userDepartmentsView);  
-/*
+
   await copyToParquetById(pond, 'vsamples', rdb, 
     views.samplesView, 
     'select 0 as MIN, MAX(IDMUE) from MUESTRA'
@@ -61,7 +61,7 @@ export async function copyAllFromMSSql() {
     views.sampleTasksView, 
     'select 0 as MIN, MAX(IDTARMUE) from TAREA_MUE'
   );
-*/
+
   // Close the connection
   await rdb?.close();
  
