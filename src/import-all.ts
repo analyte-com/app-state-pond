@@ -31,6 +31,7 @@ export async function importAll() {
   await importFromParquetTo(pond, 'vsample_types');    
   await importFromParquetTo(pond, 'vspecification_tasks');    
   await importFromParquetTo(pond, 'vtasks');    
+  await importFromParquetTo(pond, 'vtask_trees');    
   await importFromParquetTo(pond, 'vextensions');    
   await importFromParquetTo(pond, 'vuser_departments');    
   await importFromParquetTo(pond, 'vsamples');    
