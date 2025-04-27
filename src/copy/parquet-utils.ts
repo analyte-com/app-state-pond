@@ -3,7 +3,8 @@ import * as sql from "mssql"; // Import the mssql package
 
 export {
   buildParquetSchema,
-  cleanupValue
+  cleanupValue,
+  type ParquetType
 }
 
 type ParquetType = {
