@@ -177,7 +177,7 @@ async function queryMinMax(
 }
 
 /**
- * Query chunks using AX_ROWS rows, starting at given @page
+ * Query chunks using MAX_ROWS rows, starting at given @page
  * @param pool 
  * @param page 
  * @param stmt - the query to execute
@@ -256,7 +256,7 @@ async function writeParquetChunk(
       parquetRow[columns[k].name] = cleanupValue(data[j][k], columns[k]);
     }
     //console.log(`data ${j}: `, data[j]);
-    //console.log(`row ${j}: `, JSON.stringify(parquetRow));
+    console.log(`row ${j}: `, JSON.stringify(parquetRow));
     
     // logger.debug(dataRow);
     await writer.appendRow(parquetRow);
