@@ -447,8 +447,8 @@ export const samplesView = `select
   order by IDMUE asc
 `;  
 
-export const sampleTasksView = `select
-    -- tarea mue
+export const sampleTasksView = `SELECT
+  	-- tarea mue
     tm.IDTARMUE as 'id'
     --,tm.IDTARMUE2 as 'id2'
     ,tm.COTITAR as 'typeCode'
@@ -463,9 +463,9 @@ export const sampleTasksView = `select
     ,tm.IDTAR as 'taskId'
     -- valor
     ,case 
-		when tm.COTITAR = 'DETE' then dete.COTIVAL 
-		when tm.COTITAR = 'MEDI' then medi.COTIVALOR
-		else ''
+		  when tm.COTITAR = 'DETE' then dete.COTIVAL 
+		  when tm.COTITAR = 'MEDI' then medi.COTIVALOR
+		  else ''
     end as 'valueTypeCode'
     ,case 
       when ltrim(rtrim(tm.VALOR)) LIKE '<%' then '<'
@@ -478,9 +478,12 @@ export const sampleTasksView = `select
     as 'value'
     ,tm.COUDMTARMUE as 'valueUdm'
     ,tm.STSVAL as 'valueStateCode'
+	  ,costsval.DESCRIPCION as 'valueState'
     -- status de la tareas
     ,tm.STSTAR as 'stateCode'
+  	,coststar.DESCRIPCION as 'state'
     ,tm.STSMOD as 'modifiedCode' 
+	  ,costsmod.DESCRIPCION as 'modified'
     ,tm.FEREALIZADA as 'doneUtc'
     ,case when tm.REALIZADAPOR IS NULL then -1 else tm.REALIZADAPOR end as 'doneById'
     ,case when tm.REALIZADAPOR IS NULL then '' else u.NOMBRE end as 'doneBy'
@@ -488,20 +491,28 @@ export const sampleTasksView = `select
     ,tm.TIREAL as 'timeUsed'
     ,tm.COUDMTI as 'timeUsedUdm'
     -- repeticiones y replicas de la tarea
+	  ,tm.STSREP as 'repeatedCode'
+	  ,costsrep.DESCRIPCION as 'repeated'
     ,tm.REPETICION as 'repetitionNum'
     ,tm.REPLICADO as 'replicationNum'
     -- instrumento
     ,case when tm.IDEQUI IS NULL then -1 else tm.IDEQUI end as 'instrumentId'
     ,case when tm.IDEQUI IS NULL then '' else equi.DESCEQUI end as 'instrument'
     ,tm.STSEQUI as 'intrumentStateCode'
-  from TAREA_MUE tm 
+	  ,costsequi.DESCRIPCION as 'instrumentState'
+  FROM TAREA_MUE tm 
     join TAREA t on tm.idtar = t.idtar
-    join TAREA troot ON tm.IDTARRAIZ = troot.IDTAR
-    left join EQUIPO equi ON tm.IDEQUI = equi.IDEQUI
-    left join USUARIO u ON tm.REALIZADAPOR = u.IDUSUA
-    left join DETERMINACION dete ON tm.IDTAR = dete.IDTAR and tm.COTITAR = 'DETE'
-    left join MEDICION medi ON tm.IDTAR = medi.IDTAR and tm.COTITAR = 'MED'
-  where 
+    join TAREA troot on tm.IDTARRAIZ = troot.IDTAR
+    left join CODIGO coststar on tm.STSTAR = coststar.CODIGO and coststar.TIPO='STSTAR'
+    left join CODIGO costsval on tm.STSVAL = costsval.CODIGO and costsval.TIPO='STSVAL'
+    left join CODIGO costsmod on tm.STSMOD = costsmod.CODIGO and costsmod.TIPO='STSMOD'
+    left join CODIGO costsrep on tm.STSREP = costsrep.CODIGO and costsrep.TIPO='STSREP'
+    left join CODIGO costsequi on tm.STSEQUI = costsequi.CODIGO and costsequi.TIPO='STSEQUI'
+    left join EQUIPO equi on tm.IDEQUI = equi.IDEQUI
+    left join USUARIO u on tm.REALIZADAPOR = u.IDUSUA
+    left join DETERMINACION dete on tm.IDTAR = dete.IDTAR and tm.COTITAR = 'DETE'
+    left join MEDICION medi on tm.IDTAR = medi.IDTAR and tm.COTITAR = 'MED'
+  WHERE 
     tm.IDTARMUE >= @startId and tm.IDTARMUE <= @endId
-  order by tm.IDTARMUE asc, tm.IDMUE asc
+  ORDER BY tm.IDTARMUE asc, tm.IDMUE asc
 `;
