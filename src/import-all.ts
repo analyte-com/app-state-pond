@@ -7,6 +7,7 @@
  */
 import { open } from "./pond/ducky";
 import { importFromParquetTo } from "./copy/import-parquet"; 
+import { importMetadataTo } from "./copy/import-metadata";
 import { logger, LogLevel } from '@mazito/logger';
 import { env, KVS } from "./utils";
 import { triggerCheckpoint, getActiveConnection, READ_WRITE } from "./pond";
@@ -20,6 +21,10 @@ export async function importAll() {
   // Open KVS
   KVS.openDb();
 
+  // some Metadata files 
+  await importMetadataTo(pond, 'sample_columns');
+
+  // the Parquet data files
   await importFromParquetTo(pond, 'vcodes');
   await importFromParquetTo(pond, 'vclients');
   await importFromParquetTo(pond, 'vdepartments');    

@@ -1,0 +1,52 @@
+id	description	valueTypeCode
+uid	Muestra (UUID)	VARCHAR
+id	Muestra (ID)	BIGINT
+code	Muestra (código)	VARCHAR
+type	Tipo 	VARCHAR
+typeCode	Tipo (código)	VARCHAR
+subtype	Subtipo	VARCHAR
+subtypeCode	Subtipo (código)	VARCHAR
+state	Estado	VARCHAR
+stateCode	Estado (código)	VARCHAR
+substate	Subestado	VARCHAR
+substateCode	Subestado (código)	VARCHAR
+delegatedTo	Responsable	VARCHAR
+delegatedToCode	Responsable (código)	VARCHAR
+stateUtc	Fecha Estado	TIMESTAMP
+collectedUtc	Fecha Tomada	TIMESTAMP
+collectStartUtc	Tomar desde	TIMESTAMP
+collectEndUtc	Tomar hasta	TIMESTAMP
+createdBy	Creada por	VARCHAR
+reclasified	Reclasificada	BIGINT
+reprocessed	Reprocesada	BIGINT
+clasified	Clasificada	VARCHAR
+qualified	Calificada	VARCHAR
+comment	Comentario	VARCHAR
+facility	Planta	VARCHAR
+department	Departamento	VARCHAR
+departmentId	Departamento (ID)	BIGINT
+departmentComment	Departamento (extra)	VARCHAR
+pointTag	Punto Muestreo (tag)	VARCHAR
+material	Material	VARCHAR
+materialId	Material (ID)	BIGINT
+materialCode	Material (código)	VARCHAR
+materialType	Material (tipo)	VARCHAR
+materialTypeCode	Material (código tipo)	VARCHAR
+materialComment	Material (extra)	VARCHAR
+uncataloged	No calogado	VARCHAR
+batch	Lote	VARCHAR
+batchRef	Sublote	VARCHAR
+specification	Especificación 	VARCHAR
+specificationId	Especificación (ID)	BIGINT
+specificationState	Especificación (estado) 	VARCHAR
+specificationStateCode	Especificación (código estado) 	VARCHAR
+specificationVersion	Especificación (versión)	VARCHAR
+specificationStartUtc	Especificación (vigente desde) 	VARCHAR
+specificationEndUtc	Especificación (vigente hasta)	VARCHAR
+specificationComment	Especificación (comentario)	VARCHAR
+client	Cliente	VARCHAR
+clientId	Cliente (ID)	BIGINT
+clientCode	Cliente (código)	VARCHAR
+supplier	Proveedor	VARCHAR
+supplierId	Proveedor (ID)	BIGINT
+supplierCode	Proveedor (código)	VARCHAR
