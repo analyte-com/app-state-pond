@@ -8,6 +8,7 @@
 import { open } from "./pond/ducky";
 import { importFromParquetTo } from "./copy/import-parquet"; 
 import { importMetadataTo } from "./copy/import-metadata";
+import { applyPatches } from "./pond/patches";
 import { logger, LogLevel } from '@mazito/logger';
 import { env, KVS } from "./utils";
 import { triggerCheckpoint, getActiveConnection, READ_WRITE } from "./pond";
@@ -41,6 +42,9 @@ export async function importAll() {
   await importFromParquetTo(pond, 'vuser_departments');    
   await importFromParquetTo(pond, 'vsamples');    
   await importFromParquetTo(pond, 'vsample_tasks');    
+
+  // we can create additional views, indexes, etc here ...
+  await applyPatches(pond);
 
   await triggerCheckpoint();
 };

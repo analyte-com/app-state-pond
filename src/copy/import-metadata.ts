@@ -8,7 +8,7 @@ export async function importMetadataTo(
 ) {
   try {
     const csvName = `${env.POND_METADATA}/${tableName}.csv`
-    
+  
     await exec(pond, `DROP TABLE if exists ${tableName};`);
   
     await exec(pond, `
@@ -17,6 +17,7 @@ export async function importMetadataTo(
     `);
   }
   catch (error) {
-    logger.error(`copyTo failed='${tableName}'`, error);
+    logger.error(`importMetadataTo failed='${tableName}'`, error);
   }
 }
+
