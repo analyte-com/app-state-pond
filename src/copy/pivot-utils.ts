@@ -4,7 +4,7 @@ import { type ParquetType, toUTCTimestampMicros } from "./parquet-utils";
 import { safeQuery } from "../pond";
 
 export {
-  buildPivotedParquetSchema,
+  buildPivotedSampleTasksParquetSchema,
   taskColumnName,
   parquetValue
   //buildParquetSchema,
@@ -70,7 +70,7 @@ function parquetValue(type: string, value: any): any {
   }
  * @returns a ParquetSchema
  */
-async function buildPivotedParquetSchema(
+async function buildPivotedSampleTasksParquetSchema(
   pond: any
 ): Promise<ParquetSchema> {
   let columns: any = {};
@@ -101,17 +101,23 @@ async function buildPivotedParquetSchema(
     // we build a Field inside the column for each important data
     const fields = {
       id: parquetField('INT', NOT_NULL),
-      state: parquetField('ALFA', NOT_NULL),
+      stateCode: parquetField('ALFA', NOT_NULL),
+      state: parquetField('ALFA'),
       value: parquetField(valueType), // allow NULL
-      offDetection: parquetField('ALFA'),
+      valueOffDetection: parquetField('ALFA'),
+      valueStateCode: parquetField('ALFA'),
       valueState: parquetField('ALFA'),
       doneUtc: parquetField('DATETIME'),
       doneById: parquetField('INT'),
       doneBy: parquetField('ALFA'),
       instrumentId: parquetField('INT'),
       instrument: parquetField('ALFA'),
+      intrumentStateCode: parquetField('ALFA'),
       intrumentState: parquetField('ALFA'),
+      modifiedCode: parquetField('ALFA'),
       modified: parquetField('ALFA'),
+      repeatedCode: parquetField('ALFA'),
+      repeated: parquetField('ALFA'),
       repetitionNum: parquetField('INT'),
       replicationNum: parquetField('INT'),
       notes: parquetField('ALFA')
