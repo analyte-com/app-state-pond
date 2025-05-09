@@ -15,10 +15,11 @@ const patches: string[] = [
     ta.typeCode, 
     ta.valueTypeCode, 
     ta.valueUdm, 
-    ta.valueMin, ta.valueMax, ta.valueRef, 
-    ta.valueEnums,
+    ta.valueMin, ta.valueMax, ta.valueRef, ta.valueEnums,
     ta.decimals as valueDecimals,
-    concat('{"decimals":',ta.decimals,'}') as valueFormat
+    concat('{"decimals":',ta.decimals,'}') as valueFormat,
+    'Tarea' as group,
+    't' as groupCode
   FROM vtask_trees tr JOIN vtasks ta on tr.taskId = ta.id 
   WHERE ta.typeCode = 'DETE'
 ;`
