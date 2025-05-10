@@ -12,8 +12,8 @@ let pond = await getActiveConnection(READ_WRITE);
 let 
   tInlineJoins = 0, tWithCTE = 0, 
   tCreateMaterialized = 0, tMaterializedJoins = 0,
-  tFullTable = 0;
-/*
+  tCreateColumns = 0, tFullTable = 0;
+
 {
   // run using the Inline joins
   let sql = pivotUsingInlineJoins();
@@ -62,7 +62,7 @@ let
   let rs2 = await safeExec(pond, createFullTable);
   logger.elapsed(`End of create full table`);
 }
-*/
+
 {
   // create the materialized tables
   let creates = createMaterializedCols(cols);
@@ -72,9 +72,9 @@ let
     let rs = await safeExec(pond, creates[j]);
   }
   const t2 = (new Date()).getTime();
-  tCreateMaterialized = (t2 - t1)/1000;
-  logger.elapsed(`End of creates time= ${tCreateMaterialized.toFixed(2)}secs`);
-  logger.info(`Create materialized time per column= ${((t2 - t1)/creates.length/1000).toFixed(2)}secs/column`);
+  tCreateColumns = (t2 - t1)/1000;
+  logger.elapsed(`End of creates time= ${tCreateColumns.toFixed(2)}secs`);
+  logger.info(`Create materialized time per column= ${((t2 - t1)/cols.length/1000).toFixed(2)}secs/column`);
 
   // run using the full table
   let sql = usingFulTable(cols);
@@ -85,9 +85,14 @@ let
   logger.elapsed(`End of query time= ${tFullTable.toFixed(2)}secs`);
 }
 
+console.log(`\nMaterialize ${cols.length} Task tables and columns`);
+console.log(`Create Materialized Join time= ${(tCreateMaterialized/cols.length).toFixed(2)} secs/table`);
+console.log(`Create Materialized Cols time= ${(tCreateColumns/cols.length).toFixed(2)} secs/col`);
+
 console.log(`\nResults on ${cols.length} Task tables`);
 console.log(`Using Inline joins time= INFINITE (hangs)`);
 console.log(`Using WithCTE joins time= ${tWithCTE.toFixed(2)} secs`);
 console.log(`Using Materialized Joins time= ${tMaterializedJoins.toFixed(2)} secs`);
-console.log(`Create Materialized Join time= ${(tCreateMaterialized/cols.length).toFixed(2)} secs/table`);
 console.log(`Using Full table time= ${tFullTable.toFixed(2)} secs`);
+console.log(`Using Full table gain= ${(tMaterializedJoins/tFullTable*100).toFixed(2)} %`);
+

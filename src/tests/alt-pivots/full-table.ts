@@ -9,13 +9,6 @@ const CREATEALL = `CREATE OR REPLACE TABLE ALLTx AS (
 const COLx = (id: string) => `ALTER TABLE ALLTx 
   ADD COLUMN t${id} STRUCT(
     id BIGINT,
-    typeCode VARCHAR,
-    description VARCHAR,
-    sequence BIGINT,
-    level BIGINT,
-    taskRootId BIGINT,
-    taskId BIGINT,
-    valueTypeCode VARCHAR,
     valueOffdetection VARCHAR,
     value VARCHAR,
     valueUdm VARCHAR,
@@ -45,13 +38,6 @@ const COLx = (id: string) => `ALTER TABLE ALLTx
 const UPDATEx = (id: string) => `UPDATE ALLTx 
   SET T${id} = row(
     ta${id}.id
-    ,ta${id}.typeCode
-    ,ta${id}.description
-    ,ta${id}.sequence
-    ,ta${id}.level
-    ,ta${id}.taskRootId
-    ,ta${id}.taskId
-    ,ta${id}.valueTypeCode
     ,ta${id}.valueOffdetection
     ,ta${id}.value
     ,ta${id}.valueUdm
