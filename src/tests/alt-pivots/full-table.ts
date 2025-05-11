@@ -85,7 +85,7 @@ export function createMaterializedCols(cols: any[]): string[] {
   sqlCreates.push(CREATEALL);
 
   // now we create one column per Task and update it
-  cols.forEach(({taskTreeId, valueTypeCode}) => {
+  cols.forEach(({taskTreeId}) => {
     sqlCreates.push(COLx(taskTreeId));
     sqlCreates.push(UPDATEx(taskTreeId));
   })

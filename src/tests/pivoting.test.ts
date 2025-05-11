@@ -64,7 +64,7 @@ let
 }
 
 {
-  // create the materialized tables
+  // create the materialized columns
   let creates = createMaterializedCols(cols);
   const t1 = (new Date()).getTime();
   logger.timer(`Start materializing cols=${creates.length}`);
