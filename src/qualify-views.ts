@@ -161,7 +161,7 @@ export const specificationTasksView = `select
   order by dm.IDESP, dm.SECUENCIA
 `;  
 
-export const tasksView = `select 
+export const tasksView = `SELECT
     task.IDTAR as id
     ,task.NOMTAR as code
     ,task.DESCTAR as description
@@ -188,11 +188,11 @@ export const tasksView = `select
     end as valueUdm
     ,case
       when task.COTITAR = 'ENSA' then ''
-      when task.COTITAR = 'DETE' then cast(det.DECIMALES as varchar(2))
+      when task.COTITAR = 'DETE' then '{"decimals":'+cast(det.DECIMALES as varchar(2))+'}'
       when task.COTITAR = 'MEDI' then ''
       when task.COTITAR = 'CALI' then ''
       else ''
-    end as decimals
+    end as valueFormat
     ,case
       when task.COTITAR = 'ENSA' then ''
       when task.COTITAR = 'DETE' then cast(det.VALMIN as varchar)
@@ -270,7 +270,7 @@ export const tasksView = `select
 // El arbol de tareas, basado en LISTA_TAR pero con mejoras en:
 // - la descripcion completa de la tarea cuando incluye varios hijos y nietos
 // - un mejor ordenamineto basado en orden del Root y secuencia de cada hijo 
-export const tasksTreeView = `
+export const taskTreesView = `
   WITH HierarchyCTE AS (
     -- Base case: root nodes (IDTAR1 = -1)
     SELECT 
@@ -387,17 +387,26 @@ export const userDepartmentsView = `select
   order by userId, departmentId
 `;  
 
-export const samplesView = `select
+export const samplesView = `SELECT
     --muestra
     m.UID as uid,
     m.IDMUE as 'id', 
     --m.IDMUTO as 'toId',
     m.NOMBRE as 'code',
     m.COTIMUE as 'typeCode',
+  	cotimue.DESCRIPCION as 'type',
     m.COSUBTIMUE as 'subtypeCode', 
     m.COESTADO as 'stateCode', 
+	  coestado.DESCRIPCION as 'state',
+	  cosubtimue.DESCRIPCION as 'subtype',
     m.COSUBESTADO as 'substateCode',
-    m.RESPMUE as 'belongsTo', 
+	  cosubestado.DESCRIPCION as 'substate',
+    m.RESPMUE as 'delegatedToCode', 
+    case
+      when m.RESPMUE='L' then 'Laboratorio'
+      when m.RESPMUE='P' then 'Planta'
+      else 'Laboratorio'
+    end as 'delegatedTo',
     m.FETOMADESDE as 'collectStartUtc', 
     m.FETOMAHASTA as 'collectEndUtc',
     m.FEESTADO as 'stateUtc', 
@@ -416,19 +425,26 @@ export const samplesView = `select
     --material
     ,mat.IDMAT as 'materialId'
     ,mat.CODIGO as 'materialCode'
-    ,CASE 
-      WHEN m.IDESP IS NULL THEN -1
-      ELSE m.IDESP
-    END as 'specificationId' 
-    ,mat.COTIMAT as 'materialType'
+    ,mat.COTIMAT as 'materialTypeCode'
+  	,cotimat.DESCRIPCION as 'materialType'
     ,mat.DESCMAT as 'material'
     ,CASE  
       WHEN m.DESCPRONOCATA IS NULL THEN ''
       ELSE m.DESCPRONOCATA
     END as 'uncataloged'
-    ,m.LOTE as 'batch'
+    ,CASE 
+      WHEN m.IDESP IS NULL THEN -1
+      ELSE m.IDESP
+    END as 'specificationId' 
+    ,spec.DESCESP as 'specification'
+    ,spec.COESTADO as 'specificationStateCode'
+    ,coeesp.DESCRIPCION as 'specificationState'
+    ,spec.VERSION as 'specificationVersion'
+    ,spec.FEDESDE as 'specificationStartUtc'
+    ,spec.FEHASTA as 'specificationEndUtc'
+    ,spec.COMENTARIO as 'specificationComment'
+      ,m.LOTE as 'batch'
     ,m.REFERENCIA as 'batchRef'
-    ,mat.COMENTARIO as 'materialComment'
     -- cliente
     ,cli.IDCLI as clientId
     ,cli.CODIGOCLI as clientCode
@@ -437,14 +453,22 @@ export const samplesView = `select
     ,prv.IDPRO as supplierId
     ,prv.CODIGOPRO as supplierCode
     ,prv.DESCPRO as supplier
-  from MUESTRA m, DEPARTAMENTO d, MATERIAL mat, CLIENTE cli, PROVEEDOR prv
-  where 
+  FROM 
+    MUESTRA m
+    JOIN DEPARTAMENTO d on d.IDDEPTO=m.IDDEPTO
+    JOIN MATERIAL mat on mat.IDMAT=m.IDMAT
+    JOIN CLIENTE cli on cli.IDCLI=m.IDCLI
+    JOIN PROVEEDOR prv ON prv.IDPRO=m.IDPRO
+    LEFT OUTER JOIN ESPECIFICACION spec on spec.IDESP=m.IDESP
+    LEFT OUTER JOIN CODIGO cotimue on cotimue.CODIGO=m.COTIMUE and cotimue.TIPO='TIMUE'
+    LEFT OUTER JOIN CODIGO cosubtimue on cosubtimue.CODIGO=m.COSUBTIMUE and cosubtimue.TIPO='SUBTIMUE'
+    LEFT OUTER JOIN CODIGO coestado on coestado.CODIGO=m.COESTADO and coestado.TIPO='EM'
+    LEFT OUTER JOIN CODIGO cosubestado on cosubestado.CODIGO=m.COSUBESTADO and cosubestado.TIPO='MUFIN'
+    LEFT OUTER JOIN CODIGO cotimat on cotimat.CODIGO=mat.COTIMAT and cotimat.TIPO='TIMAT'
+    LEFT OUTER JOIN CODIGO coeesp on coeesp.CODIGO=spec.COESTADO and coeesp.TIPO='EESP'
+  WHERE 
     m.IDMUE >= @startId and m.IDMUE <= @endId
-    and m.IDDEPTO = d.IDDEPTO
-    and m.IDMAT = mat.IDMAT
-    and m.IDCLI = cli.IDCLI 
-    and m.IDPRO = prv.IDPRO
-  order by IDMUE asc
+  ORDER BY m.IDMUE asc
 `;  
 
 export const sampleTasksView = `SELECT
