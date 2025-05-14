@@ -256,7 +256,7 @@ async function writeParquetChunk(
       parquetRow[columns[k].name] = cleanupValue(data[j][k], columns[k]);
     }
     //console.log(`data ${j}: `, data[j]);
-    console.log(`row ${j}: `, JSON.stringify(parquetRow));
+    //console.log(`row ${j}: `, JSON.stringify(parquetRow));
     
     // logger.debug(dataRow);
     await writer.appendRow(parquetRow);
