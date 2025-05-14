@@ -1,16 +1,16 @@
 import { logger } from "@mazito/logger";
 
-// we create the ALLTx table 
-const CREATEALL = `CREATE OR REPLACE TABLE ALLTx AS (
+// we create the sample_results table 
+const CREATEALL = `CREATE OR REPLACE TABLE sample_results AS (
   SELECT distinct sampleId FROM vsample_tasks
 );`;
 
 // we create one column for each taskTreeId 
-const COLx = (id: string) => `ALTER TABLE ALLTx 
+const COLx = (id: string, dataType: string) => `ALTER TABLE sample_results 
   ADD COLUMN t${id} STRUCT(
     id BIGINT,
     valueOffdetection VARCHAR,
-    value VARCHAR,
+    value ${dataType === 'NUME' ? 'DOUBLE' : 'VARCHAR' },
     valueUdm VARCHAR,
     valueStateCode VARCHAR,
     valueState VARCHAR,
@@ -35,11 +35,22 @@ const COLx = (id: string) => `ALTER TABLE ALLTx
   )
 ;`.replace('\t',' ');
 
-const UPDATEx = (id: string) => `UPDATE ALLTx 
+const UPDATEx = (id: string, dataType: string) => `UPDATE sample_results 
   SET T${id} = row(
     ta${id}.id
-    ,ta${id}.valueOffdetection
-    ,ta${id}.value
+    ,${dataType === 'NUME' 
+      ? `CASE WHEN NOT REGEXP_MATCHES(ta${id}.value, '^-?[0-9]+(\.[0-9]+)?$') 
+          THEN ta${id}.value 
+          ELSE ta${id}.valueOffDetection
+          END` 
+      : `ta${id}.valueOffDetection`
+    }
+    ,${dataType === 'NUME' 
+      ? `CASE WHEN REGEXP_MATCHES(ta${id}.value, '^-?[0-9]+(\.[0-9]+)?$') 
+          THEN CAST(ta${id}.value AS DOUBLE)
+          ELSE NULL END` 
+      : `ta${id}.value`
+    }
     ,ta${id}.valueUdm
     ,ta${id}.valueStateCode
     ,ta${id}.valueState
@@ -63,7 +74,7 @@ const UPDATEx = (id: string) => `UPDATE ALLTx
     ,ta${id}.instrumentState
   ) 
   FROM (SELECT * FROM vsample_tasks WHERE taskTreeId=${id}) AS ta${id} 
-  WHERE ALLTx.sampleId = ta${id}.sampleId
+  WHERE sample_results.sampleId = ta${id}.sampleId
 ;`;
 
 const COL = (id: string, col: string) =>  
@@ -71,7 +82,7 @@ const COL = (id: string, col: string) =>
 
 const QUERY = (selects: string[]) => `SELECT 
 sampleId, ${selects.join(',')} 
-FROM ALLTx 
+FROM sample_results 
 ORDER BY sampleId asc 
 LIMIT 10000;
 `;
@@ -85,9 +96,9 @@ export function createMaterializedCols(cols: any[]): string[] {
   sqlCreates.push(CREATEALL);
 
   // now we create one column per Task and update it
-  cols.forEach(({taskTreeId}) => {
-    sqlCreates.push(COLx(taskTreeId));
-    sqlCreates.push(UPDATEx(taskTreeId));
+  cols.forEach(({taskTreeId, valueTypeCode}) => {
+    sqlCreates.push(COLx(taskTreeId, valueTypeCode));
+    sqlCreates.push(UPDATEx(taskTreeId, valueTypeCode));
   })
   console.log(`sqlCreates count=${sqlCreates.length}`);
   console.log(`sqlCreates=`, sqlCreates)

@@ -11,16 +11,17 @@ let cols: any = [];
 
 {
   // get all possible columns
-  let sql = `SELECT distinct taskTreeId FROM vsample_tasks ORDER BY taskTreeId`;
+  let sql = `SELECT distinct taskTreeId, valueTypeCode FROM vsample_tasks ORDER BY taskTreeId`;
   let rs = await safeQuery(pond, sql);
-  cols = rs.result.rows.map((t: any) => { return { taskTreeId: t[0] } });
+  cols = rs.result.rows.map((t: any) => { return {taskTreeId: t[0], valueTypeCode: t[1]} });
   logger.info(`Distint tasks to pivot count= ${cols.length}`);
-  //logger.info(`Distint tasks to pivot `, cols);
+  logger.info(`Distint tasks to pivot `, cols);
 }
 
 {
   // create the materialized columns
   let creates = createMaterializedCols(cols);
+
   const t1 = (new Date()).getTime();
   logger.timer(`Start materializing cols=${cols.length} stmts=${creates.length}`);
   for (let j=0; j < creates.length; j++) {
@@ -49,3 +50,12 @@ console.log(`Create Materialized Cols time= ${(tBuildPivoted/cols.length).toFixe
 
 console.log(`\nResults on ${cols.length} Task tables`);
 console.log(`Using Full table time= ${tFullTable.toFixed(2)} secs`);
+
+/*
+Preliminary results
+
+2025-05-10 21:55:18.695 DTS (4068.608s) End of create pivoted
+2025-05-10 21:55:18.695 INF (4068.608s) Create pivoted time= 4068.61secs
+2025-05-10 21:55:18.695 INF (4068.608s) Create pivoted table time per column= 2.50secs/column
+On 1630 columns
+*/
