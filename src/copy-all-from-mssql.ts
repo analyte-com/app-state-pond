@@ -46,7 +46,7 @@ export async function copyAllFromMSSql() {
    
   await copyToParquetPaged(pond, 'vtasks', rdb, views.tasksView);  
 
-  await copyToParquetPaged(pond, 'vtask_trees', rdb, views.tasksTreeView);  
+  await copyToParquetPaged(pond, 'vtask_trees', rdb, views.taskTreesView);  
 
   await copyToParquetPaged(pond, 'vextensions', rdb, views.extensionsView);  
 
