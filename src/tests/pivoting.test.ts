@@ -36,54 +36,48 @@ let
 
 {
   // create the materialized tables
-  let creates = createMaterialized();
-  const t1 = (new Date()).getTime();
-  logger.timer(`Start materializing joins=${creates.length}`);
-  for (let j=0; j < creates.length; j++) {
-    let rs = await safeExec(pond, creates[j]);
-  }
-  const t2 = (new Date()).getTime();
-  tCreateMaterialized = (t2 - t1)/1000;
-  logger.elapsed(`End of creates time= ${tCreateMaterialized.toFixed(2)}secs`);
-  logger.info(`Create materialized time per table= ${((t2 - t1)/creates.length/1000).toFixed(2)}secs/table`);
+  // let creates = createMaterialized();
+  // const t1 = (new Date()).getTime();
+  // logger.timer(`Start materializing joins=${creates.length}`);
+  // for (let j=0; j < creates.length; j++) {
+  //   let rs = await safeExec(pond, creates[j]);
+  // }
+  // const t2 = (new Date()).getTime();
+  // tCreateMaterialized = (t2 - t1)/1000;
+  // logger.elapsed(`End of creates time= ${tCreateMaterialized.toFixed(2)}secs`);
+  // logger.info(`Create materialized time per table= ${((t2 - t1)/creates.length/1000).toFixed(2)}secs/table`);
   
   // run using the materialized tables
+  const t2 = (new Date()).getTime();
   let sql =pivotUsingMaterializedJoins();
   logger.timer(`Start big query len=${sql.length}`);
   let rs = await safeQuery(pond, sql);
   const t3 = (new Date()).getTime();
   tMaterializedJoins = (t3-t2)/1000;
   logger.elapsed(`End of query time= ${tMaterializedJoins.toFixed(2)}secs`);
-
-  logger.timer(`Start big query len=${sql.length}`);
-  const createFullTable = `CREATE TABLE ALLTx AS
-    (${sql.replace(';','')})
-  `;
-  let rs2 = await safeExec(pond, createFullTable);
-  logger.elapsed(`End of create full table`);
 }
 
-{
-  // create the materialized columns
-  let creates = createMaterializedCols(cols);
-  const t1 = (new Date()).getTime();
-  logger.timer(`Start materializing cols=${creates.length}`);
-  for (let j=0; j < creates.length; j++) {
-    let rs = await safeExec(pond, creates[j]);
-  }
-  const t2 = (new Date()).getTime();
-  tCreateColumns = (t2 - t1)/1000;
-  logger.elapsed(`End of creates time= ${tCreateColumns.toFixed(2)}secs`);
-  logger.info(`Create materialized time per column= ${((t2 - t1)/cols.length/1000).toFixed(2)}secs/column`);
-
-  // run using the full table
-  let sql = usingFulTable(cols);
-  logger.timer(`Start big query len=${sql.length}`);
-  let rs = await safeQuery(pond, sql);
-  const t3 = (new Date()).getTime();
-  tFullTable = (t3-t2)/1000;
-  logger.elapsed(`End of query time= ${tFullTable.toFixed(2)}secs`);
-}
+// {
+//   // create the materialized columns
+//   let creates = createMaterializedCols(cols);
+//   const t1 = (new Date()).getTime();
+//   logger.timer(`Start materializing cols=${creates.length}`);
+//   for (let j=0; j < creates.length; j++) {
+//     let rs = await safeExec(pond, creates[j]);
+//   }
+//   const t2 = (new Date()).getTime();
+//   tCreateColumns = (t2 - t1)/1000;
+//   logger.elapsed(`End of creates time= ${tCreateColumns.toFixed(2)}secs`);
+//   logger.info(`Create materialized time per column= ${((t2 - t1)/cols.length/1000).toFixed(2)}secs/column`);
+// 
+//   // run using the full table
+//   let sql = usingFulTable(cols);
+//   logger.timer(`Start big query len=${sql.length}`);
+//   let rs = await safeQuery(pond, sql);
+//   const t3 = (new Date()).getTime();
+//   tFullTable = (t3-t2)/1000;
+//   logger.elapsed(`End of query time= ${tFullTable.toFixed(2)}secs`);
+// }
 
 console.log(`\nMaterialize ${cols.length} Task tables and columns`);
 console.log(`Create Materialized Join time= ${(tCreateMaterialized/cols.length).toFixed(2)} secs/table`);
@@ -93,6 +87,6 @@ console.log(`\nResults on ${cols.length} Task tables`);
 console.log(`Using Inline joins time= INFINITE (hangs)`);
 console.log(`Using WithCTE joins time= ${tWithCTE.toFixed(2)} secs`);
 console.log(`Using Materialized Joins time= ${tMaterializedJoins.toFixed(2)} secs`);
-console.log(`Using Full table time= ${tFullTable.toFixed(2)} secs`);
-console.log(`Using Full table gain= ${(tMaterializedJoins/tFullTable*100).toFixed(2)} %`);
+// console.log(`Using Full table time= ${tFullTable.toFixed(2)} secs`);
+// console.log(`Using Full table gain= ${(tMaterializedJoins/tFullTable*100).toFixed(2)} %`);
 

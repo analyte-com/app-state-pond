@@ -8,7 +8,7 @@
 import { open } from "./pond/ducky";
 import { importFromParquetTo } from "./copy/import-parquet"; 
 import { importMetadataTo } from "./copy/import-metadata";
-import { buildPivotedSampleResults} from "./copy/build-pivoted-results";
+import { buildMaterializedJoins } from "./copy/build-materialized-joins";
 import { applyPatches } from "./pond/patches";
 import { logger, LogLevel } from '@mazito/logger';
 import { env, KVS } from "./utils";
@@ -26,7 +26,7 @@ export async function importAll() {
   // some Metadata files 
   await importMetadataTo(pond, 'sample_columns');
 
-  // the Parquet data files
+  // the Parquet data filesort-all
   await importFromParquetTo(pond, 'vcodes');
   await importFromParquetTo(pond, 'vclients');
   await importFromParquetTo(pond, 'vdepartments');    
@@ -48,7 +48,7 @@ export async function importAll() {
   await applyPatches(pond);
 
   // pivot the vsample_tasks to sample_results table
-  await buildPivotedSampleResults(pond, 'sample_results');
+  await buildMaterializedJoins(pond, 'sample_results');
 
   await triggerCheckpoint();
 };
