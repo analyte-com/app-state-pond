@@ -1,10 +1,12 @@
 import parquet, { ParquetSchema } from "@dsnp/parquetjs";
 import { logger } from "@mazito/logger";
-import { type ParquetType } from "./parquet-utils";
+import { type ParquetType, toUTCTimestampMicros } from "./parquet-utils";
 import { safeQuery } from "../pond";
 
 export {
-  buildPivotedParquetSchema
+  buildPivotedParquetSchema,
+  taskColumnName,
+  parquetValue
   //buildParquetSchema,
   //cleanupValue
 }
@@ -19,6 +21,43 @@ function parquetField(type: string, nullable?: number) {
     case 'NUME': return { type: 'DOUBLE', optional: (nullable != NOT_NULL) }; 
     case 'INT': return { type: 'INT64', optional: (nullable != NOT_NULL) }; 
     case 'DATETIME': return { type: 'TIMESTAMP_MICROS', optional: (nullable != NOT_NULL) }; 
+  }  
+}
+
+// we derive the column name from the TaskTree Id 
+function taskColumnName(treeId: bigint): string {
+  return `T${treeId.toString()}`;
+}
+
+// CAST the value to the correct Parquet datatype
+function parquetValue(type: string, value: any): any {
+  if (type.includes('E:')) type = 'ENUM';
+  switch (type) {
+    case 'ALFA': return value; // it can be NULL
+
+    case 'ENUM': return value; // it can be NULL
+
+    case 'NUME': 
+      // it can be NULL
+      if (value === null || value === undefined) return null;
+      if (value === 'NA' || value === 'N/A') return null; 
+      // change comas to decimal point
+      const tnum = Number.parseFloat(value.replaceAll(',', '.'));
+      if (Number.isNaN(tnum)) return null;
+      if (Number.isFinite(tnum)) return tnum;
+      return null;
+
+    case 'INT': 
+      // it can be NULL
+      if (value === null || value === undefined) return null;
+      let inum = BigInt(value);
+      return inum;
+
+    case 'DATETIME': 
+      if (value === null || value === undefined) return null;
+      return toUTCTimestampMicros(value, -3);
+
+    default: return null;
   }  
 }
 
@@ -57,7 +96,7 @@ async function buildPivotedParquetSchema(
     const [id, isType, valueType] = t;
 
     // we derive the column name from the TaskTree Id 
-    const name = `T${id.toString()}`;
+    const name = taskColumnName(id);
 
     // we build a Field inside the column for each important data
     const fields = {
@@ -73,8 +112,8 @@ async function buildPivotedParquetSchema(
       instrument: parquetField('ALFA'),
       intrumentState: parquetField('ALFA'),
       modified: parquetField('ALFA'),
-      repetitionNum: parquetField('ALFA'),
-      replicationNum: parquetField('ALFA'),
+      repetitionNum: parquetField('INT'),
+      replicationNum: parquetField('INT'),
       notes: parquetField('ALFA')
     }
 
@@ -92,4 +131,5 @@ async function buildPivotedParquetSchema(
   //console.log(new parquet.ParquetSchema(columns));
   return new parquet.ParquetSchema(columns);
 }
-  
+ 
+

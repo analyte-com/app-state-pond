@@ -4,6 +4,7 @@ import * as sql from "mssql"; // Import the mssql package
 export {
   buildParquetSchema,
   cleanupValue,
+  toUTCTimestampMicros,
   type ParquetType
 }
 

@@ -1,0 +1,52 @@
+﻿id	description	typeCode	valueTypeCode	groupCode	group
+uid	Muestra (UUID)		VARCHAR	sample	Muestra
+id	Muestra (ID)		BIGINT	sample	Muestra
+code	Muestra (código)		VARCHAR	sample	Muestra
+type	Tipo 		VARCHAR	sample	Muestra
+typeCode	Tipo (código)		VARCHAR	sample	Muestra
+subtype	Subtipo		VARCHAR	sample	Muestra
+subtypeCode	Subtipo (código)		VARCHAR	sample	Muestra
+state	Estado		VARCHAR	sample	Muestra
+stateCode	Estado (código)		VARCHAR	sample	Muestra
+substate	Subestado		VARCHAR	sample	Muestra
+substateCode	Subestado (código)		VARCHAR	sample	Muestra
+delegatedTo	Responsable		VARCHAR	sample	Muestra
+delegatedToCode	Responsable (código)		VARCHAR	sample	Muestra
+stateUtc	Fecha Estado		TIMESTAMP	sample	Muestra
+collectedUtc	Fecha Tomada		TIMESTAMP	sample	Muestra
+collectStartUtc	Tomar desde		TIMESTAMP	sample	Muestra
+collectEndUtc	Tomar hasta		TIMESTAMP	sample	Muestra
+createdBy	Creada por		VARCHAR	sample	Muestra
+reclasified	Reclasificada		BIGINT	sample	Muestra
+reprocessed	Reprocesada		BIGINT	sample	Muestra
+clasified	Clasificada		VARCHAR	sample	Muestra
+qualified	Calificada		VARCHAR	sample	Muestra
+comment	Comentario		VARCHAR	sample	Muestra
+facility	Planta		VARCHAR	sample	Muestra
+department	Departamento		VARCHAR	sample	Muestra
+departmentId	Departamento (ID)		BIGINT	sample	Muestra
+departmentComment	Departamento (extra)		VARCHAR	sample	Muestra
+pointTag	Punto Muestreo (tag)		VARCHAR	sample	Muestra
+material	Material		VARCHAR	sample	Muestra
+materialId	Material (ID)		BIGINT	sample	Muestra
+materialCode	Material (código)		VARCHAR	sample	Muestra
+materialType	Material (tipo)		VARCHAR	sample	Muestra
+materialTypeCode	Material (código tipo)		VARCHAR	sample	Muestra
+materialComment	Material (extra)		VARCHAR	sample	Muestra
+uncataloged	No calogado		VARCHAR	sample	Muestra
+batch	Lote		VARCHAR	sample	Muestra
+batchRef	Sublote		VARCHAR	sample	Muestra
+specification	Especificación 		VARCHAR	sample	Muestra
+specificationId	Especificación (ID)		BIGINT	sample	Muestra
+specificationState	Especificación (estado) 		VARCHAR	sample	Muestra
+specificationStateCode	Especificación (código estado) 		VARCHAR	sample	Muestra
+specificationVersion	Especificación (versión)		VARCHAR	sample	Muestra
+specificationStartUtc	Especificación (vigente desde) 		VARCHAR	sample	Muestra
+specificationEndUtc	Especificación (vigente hasta)		VARCHAR	sample	Muestra
+specificationComment	Especificación (comentario)		VARCHAR	sample	Muestra
+client	Cliente		VARCHAR	sample	Muestra
+clientId	Cliente (ID)		BIGINT	sample	Muestra
+clientCode	Cliente (código)		VARCHAR	sample	Muestra
+supplier	Proveedor		VARCHAR	sample	Muestra
+supplierId	Proveedor (ID)		BIGINT	sample	Muestra
+supplierCode	Proveedor (código)		VARCHAR	sample	Muestra

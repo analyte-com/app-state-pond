@@ -7,6 +7,9 @@
  */
 import { open } from "./pond/ducky";
 import { importFromParquetTo } from "./copy/import-parquet"; 
+import { importMetadataTo } from "./copy/import-metadata";
+import { buildPivotedSampleResults} from "./copy/build-pivoted-results";
+import { applyPatches } from "./pond/patches";
 import { logger, LogLevel } from '@mazito/logger';
 import { env, KVS } from "./utils";
 import { triggerCheckpoint, getActiveConnection, READ_WRITE } from "./pond";
@@ -20,6 +23,10 @@ export async function importAll() {
   // Open KVS
   KVS.openDb();
 
+  // some Metadata files 
+  await importMetadataTo(pond, 'sample_columns');
+
+  // the Parquet data files
   await importFromParquetTo(pond, 'vcodes');
   await importFromParquetTo(pond, 'vclients');
   await importFromParquetTo(pond, 'vdepartments');    
@@ -36,6 +43,12 @@ export async function importAll() {
   await importFromParquetTo(pond, 'vuser_departments');    
   await importFromParquetTo(pond, 'vsamples');    
   await importFromParquetTo(pond, 'vsample_tasks');    
+  
+  // we can create additional views, indexes, etc here ...
+  await applyPatches(pond);
+
+  // pivot the vsample_tasks to sample_results table
+  await buildPivotedSampleResults(pond, 'sample_results');
 
   await triggerCheckpoint();
 };
