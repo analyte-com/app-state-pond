@@ -8,6 +8,8 @@ import { env } from "../utils/env";
 // This is a set of EXEC commands we can apply to the Pond db AFTER importing 
 // all the needed data. It can be used to create views, indexes or other patches.
 const patches: string[] = [
+
+// The tasks columns metadata
 `CREATE OR REPLACE VIEW tasks_columns AS 
   SELECT 
     tr.id, 
@@ -22,6 +24,8 @@ const patches: string[] = [
   FROM vtask_trees tr JOIN vtasks ta on tr.taskId = ta.id 
   WHERE ta.typeCode = 'DETE'
 ;`
+
+// more views here ...
 ];
 
 export async function applyPatches(pond: any) {
