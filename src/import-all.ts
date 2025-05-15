@@ -22,7 +22,7 @@ export async function importAll() {
 
   // Open KVS
   KVS.openDb();
-/*
+
   // some Metadata files 
   await importMetadataTo(pond, 'sample_columns');
 
@@ -46,10 +46,9 @@ export async function importAll() {
 
   // pivot the vsample_tasks to sample_results table
   await buildMaterializedJoins(pond, 'sample_results');
-*/  
+ 
   // we can create additional views, indexes, etc here ...
   await applyPatches(pond);
-
 
   await triggerCheckpoint();
 };
