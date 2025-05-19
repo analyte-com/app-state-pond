@@ -1,6 +1,7 @@
 import { logger, LogLevel } from '@mazito/logger';
 import { copyAllFromMSSql } from "./src/copy-all-from-mssql";
 import { importAll } from "./src/import-all";
+import { importOne } from "./src/import-one";
 import { env } from "./src/utils/env";
 
 logger.level(LogLevel.DEBUG);
@@ -14,6 +15,7 @@ async function run() {
   if (!args.length) {
     console.log(`\nUsage
       \n  bun index.ts import-all
+      \n  bun index.ts import-one vname
       \n  bun index.ts copy-from-mssql
     `)
     return;
@@ -21,6 +23,11 @@ async function run() {
 
   if (args[0] === 'import-all') {
     await importAll();
+    return;
+  }  
+
+  if (args[0] === 'import-one') {
+    await importOne(args[1]);
     return;
   }  
 
