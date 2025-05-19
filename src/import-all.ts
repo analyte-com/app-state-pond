@@ -29,6 +29,7 @@ export async function importAll() {
   // the Parquet data filesort-all
   await importFromParquetTo(pond, 'vcodes');
   await importFromParquetTo(pond, 'vclients');
+  await importFromParquetTo(pond, 'vsuppliers');
   await importFromParquetTo(pond, 'vdepartments');    
   await importFromParquetTo(pond, 'vdepartment_materials');    
   await importFromParquetTo(pond, 'vmaterials');    
