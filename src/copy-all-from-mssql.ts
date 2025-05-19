@@ -28,6 +28,8 @@ export async function copyAllFromMSSql() {
 
   await copyToParquetPaged(pond, 'vclients', rdb, views.clientsView);
 
+  await copyToParquetPaged(pond, 'vsuppliers', rdb, views.suppliersView);
+
   await copyToParquetPaged(pond, 'vdepartments', rdb, views.departmentsView);    
 
   await copyToParquetPaged(pond, 'vmaterials', rdb, views.materialsView);    

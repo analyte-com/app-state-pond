@@ -18,7 +18,7 @@ const patches: string[] = [
     ta.valueTypeCode, 
     ta.valueUdm, 
     ta.valueMin, ta.valueMax, ta.valueRef, ta.valueEnums,
-    valueFormat,
+    ta.valueFormat,
     'Tarea' as group,
     't' as groupCode
   FROM vtask_trees tr JOIN vtasks ta on tr.taskId = ta.id 

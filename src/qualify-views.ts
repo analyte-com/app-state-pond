@@ -23,6 +23,14 @@ export const clientsView = `select
     order by IDCLI
 `;
 
+export const suppliersView = `SELECT
+    IDPRO as id,
+    CODIGOPRO as code,
+    DESCPRO as description
+    FROM Proveedor
+    ORDER BY IDPRO
+`;
+
 export const departmentsView = `select 
     IDDEPTO as id
     ,DESCDEPTO as description
