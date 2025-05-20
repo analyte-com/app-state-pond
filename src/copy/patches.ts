@@ -22,7 +22,8 @@ const patches: string[] = [
     'Tarea' as group,
     't' as groupCode
   FROM vtask_trees tr JOIN vtasks ta on tr.taskId = ta.id 
-  WHERE ta.typeCode = 'DETE'
+  WHERE ta.typeCode = 'DETE' 
+  AND tr.id in (select distinct taskTreeId from vsample_tasks)
 ;`
 
 // more views here ...
